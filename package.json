@@ -1,0 +1,18 @@
+{
+  "name": "acecollective",
+  "version": "1.0.0",
+  "author": "Jacob Bolda <me@jacobbolda.com>",
+  "description": "The website for the AEC Collective, an Archiecture Engineering and Construction community.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbolda/aeccollective.git"
+  },
+  "license": "SEE LICENSE IN LICENESE FILE",
+  "bugs": {
+    "url": "https://github.com/jbolda/aeccollective/issues"
+  },
+  "homepage": "https://github.com/jbolda/aeccollective#readme"
+}
