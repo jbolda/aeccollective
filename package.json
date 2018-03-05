@@ -4,7 +4,16 @@
   "author": "Jacob Bolda <me@jacobbolda.com>",
   "description": "The website for the AEC Collective, an Archiecture Engineering and Construction community.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "develop": "gatsby develop",
+    "c9": "gatsby develop --host 0.0.0.0 --port 8080",
+    "dev:hard": "yarn run clean && yarn run develop",
+    "build": "yarn clean & yarn jest & gatsby build",
+    "serve": "gatsby serve",
+    "clean": "rm -rf .cache && rm -rf public",
+    "jest": "jest",
+    "test": "yarn lint && yarn jest",
+    "test:update": "jest --updateSnapshot",
+    "test:watch": "jest --watch"
   },
   "repository": {
     "type": "git",
@@ -14,5 +23,16 @@
   "bugs": {
     "url": "https://github.com/jbolda/aeccollective/issues"
   },
-  "homepage": "https://github.com/jbolda/aeccollective#readme"
+  "homepage": "https://github.com/jbolda/aeccollective#readme",
+  "dependencies": {
+    "bulma": "0.6.2",
+    "gatsby": "latest",
+    "gatsby-link": "latest",
+    "gatsby-plugin-sass": "latest",
+    "gatsby-source-filesystem": "latest",
+    "gatsby-transformer-javascript-frontmatter": "latest",
+    "jest": "^22.4.2",
+    "normalize.css": "^8.0.0",
+    "react-helmet": "^5.2.0"
+  }
 }
