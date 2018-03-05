@@ -1,5 +1,5 @@
 import React from "react"
-import MasterLayout from '../../../gatsby-theme-bulma/MasterLayout'
+import MasterLayout from '../../gatsby-theme-bulma/MasterLayout'
 import SimpleTopNav from './components/SimpleTopNav'
 import heartData from './assets/heart-white.svg'
 
