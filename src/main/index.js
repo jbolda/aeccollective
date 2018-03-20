@@ -18,7 +18,7 @@ class SiteIndex extends React.Component {
                 AEC Collective
               </h1>
               <h2 className="subtitle">
-                Community for those in and interested in the Architecture Engineering Construction (AEC) industry.<br/>
+                Community for those in and interested in the Architecture, Engineering, and Construction (AEC) industry.<br/>
                 If you are involved in buildings or infrastructure, join us!
               </h2>
             </div>
