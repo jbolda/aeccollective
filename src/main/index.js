@@ -11,7 +11,7 @@ class SiteIndex extends React.Component {
   render() {
     return (
       <SimpleNav sitemetadata={this.props.data.site.siteMetadata} location={this.props.location}>
-        <section className="hero is-fullheight">
+        <section className="hero is-secondary is-fullheight">
           <div className="hero-body">
             <div className="container has-text-centered">
               <h1 className="title">
@@ -24,11 +24,23 @@ class SiteIndex extends React.Component {
             </div>
           </div>
         </section>
-        <div className="level">
-          <div className="level-item">
-            <iframe src="https://discordapp.com/widget?id=412087578498695171&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
+        <section className="section">
+          <div className="container">
+            <div className="tile is-ancestor">
+              <div className="tile is-parent">
+                <article className="tile is-child notification is-thirdary content">
+                  <p>The AEC Collective is a community for the Architecture, Engineering, and Construction. It is uses the Discord program which is a free voice, video and text chat app that you can access via PC, browser, or mobile phone. We look to help mentor those just starting in the industry, and provide a great place for networking with your peers around the world. We can all benefit from understanding each related niche better, but also understanding our own niche outside of our geographic region.</p>
+                  <p>You can connect to the community by clicking &quot;Connect&quot; on the Discord widget below. It will prompt you to create an account and download the application if you so choose. We look forward to engaging with you!</p>
+                </article>
+              </div>
+              <div className="tile is-parent">
+                <div className="tile is-child has-text-centered">
+                  <iframe src="https://discordapp.com/widget?id=412087578498695171&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
       </SimpleNav>
     )
   }
