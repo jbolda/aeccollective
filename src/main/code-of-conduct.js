@@ -20,7 +20,8 @@ class CodeOfConduct extends React.Component {
             </div>
           </div>
         </section>
-        <section className="container content">
+        <section className="section">
+          <div className="container content">
             <h2 id="our-pledge">Our Pledge</h2>
 
             <p>In the interest of fostering an open and welcoming environment, we as
@@ -85,7 +86,8 @@ class CodeOfConduct extends React.Component {
 
             <p>This Code of Conduct is adapted from the <a href="https://www.contributor-covenant.org">Contributor Covenant</a>, version 1.4,
             available at <a href="https://www.contributor-covenant.org/version/1/4/code-of-conduct.html">https://www.contributor-covenant.org/version/1/4/code-of-conduct.html</a></p>
-            </section>
+          </div>
+        </section>
       </SimpleNav>
     )
   }
