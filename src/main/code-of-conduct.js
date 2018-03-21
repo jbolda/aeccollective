@@ -20,7 +20,7 @@ class CodeOfConduct extends React.Component {
             </div>
           </div>
         </section>
-        <section className="container content">
+        <section className="container is-fluid content">
             <h2 id="our-pledge">Our Pledge</h2>
 
             <p>In the interest of fostering an open and welcoming environment, we as
