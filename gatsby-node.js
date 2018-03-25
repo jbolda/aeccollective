@@ -5,7 +5,8 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   const { createNodeField } = boundActionCreators
   let slug
   if (
-    node.internal.type === `JavascriptFrontmatter`
+    node.internal.type === `JavascriptFrontmatter` ||
+    node.internal.type === `MarkdownRemark`
   ) {
     try {
       const fileNode = getNode(node.parent)
@@ -35,11 +36,25 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
   return new Promise((resolve, reject) => {
     const pages = []
 
+    const mdTypicalPage = path.resolve(`src/templates/mdTypicalPage.js`)
+
     resolve(
       graphql(
         `
           {
-
+            allMarkdownRemark {
+              edges {
+                node {
+                  frontmatter {
+                    layoutType
+                    path
+                  }
+                  fields {
+                    slug
+                  }
+                }
+              }
+            }
             allJavascriptFrontmatter {
               edges {
                 node {
@@ -69,6 +84,20 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
               path: frontmatter.path, // required
               component: path.resolve(edge.node.fileAbsolutePath)
             })
+        })
+
+        // Create from markdown
+        result.data.allMarkdownRemark.edges.forEach(edge => {
+          let frontmatter = edge.node.frontmatter
+          if (frontmatter.layoutType === `page`) {
+            createPage({
+              path: frontmatter.path, // required
+              component: mdTypicalPage,
+              context: {
+                slug: edge.node.fields.slug,
+              },
+            })
+          }
         })
 
         return

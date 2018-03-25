@@ -15,6 +15,7 @@ module.exports = {
         path: `${__dirname}/src/main/`,
       },
     },
+    `gatsby-transformer-remark`,
     `gatsby-transformer-javascript-frontmatter`,
     `gatsby-plugin-sass`,
   ],
