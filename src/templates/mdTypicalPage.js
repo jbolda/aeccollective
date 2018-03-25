@@ -7,7 +7,7 @@ class mdInsetPage extends React.Component {
 
     return (
       <SimpleNav sitemetadata={this.props.data.site.siteMetadata} location={this.props.location}>
-        <div className="box content">
+        <div className="container content">
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </div>
       </SimpleNav>
