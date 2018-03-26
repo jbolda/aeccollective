@@ -1,6 +1,7 @@
 ---
 path: /resources/
+title: Resources
 layoutType: page
 ---
-# Resources
+# List of Resources
 Resources go here.
