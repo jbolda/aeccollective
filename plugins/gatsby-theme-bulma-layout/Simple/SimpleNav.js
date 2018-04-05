@@ -15,7 +15,7 @@ class SimpleLayout extends React.Component {
           <div className="container content has-text-centered">
             <p className="copyright">
               Made with <Heart icon={heartData} alt="heart"/> by{` `}
-              mebers from around the world.
+              members from around the world.
             </p>
             <p className="copyright">
               This is a community exchange of ideas and sources, not a service for information. 
