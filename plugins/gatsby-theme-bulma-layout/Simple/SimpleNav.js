@@ -15,7 +15,13 @@ class SimpleLayout extends React.Component {
           <div className="container content has-text-centered">
             <p className="copyright">
               Made with <Heart icon={heartData} alt="heart"/> by{` `}
-              <a className="copyright" href={sitemetadata.siteTwitterUrl}>Jacob Bolda</a>
+              members from around the world.
+            </p>
+            <p className="copyright">
+              This is a community exchange of ideas and sources, not a service for information. 
+            </p>
+            <p className="copyright">
+              Any and all information posted on this discord and the AEC Collective website that the user chooses to use either in a professional or personal setting is at their own risk and interpretation. This community or any persons in it cannot be held liable for any information or use therein.
             </p>
           </div>
         </section>
