@@ -4,8 +4,6 @@ title: Resources
 layoutType: page
 ---
 # List of Resources
-## Architecture
-WIP
 
 ## Engineering
 ### Civil/Structural
