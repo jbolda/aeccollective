@@ -26,6 +26,13 @@ class SimpleTopNav extends React.Component {
             >
             Code of Conduct
           </Link>
+          <Link
+            to="/resources/"
+            className="navbar-item"
+            style={this.props.location.pathname == '/resources/' ? {backgroundColor: styles.colors.P5, color: styles.colors.P2} : {}}
+            >
+            Resources
+          </Link>
         </div>
       </nav>
     )
