@@ -21,3 +21,20 @@ layoutType: page
 ## Construction
  - equipment
    - Caterpillar provides a book with specifications on each piece of equipment to help estimate performance and productivity. https://www.warrencat.com/performance-handbook/
+
+# Podcasts
+## Engineering
+ - The Engineering Career Coach
+ - The Civil Engineering Podcast
+ - Pragmatic
+ - Causality
+ - Steel Profiles (AISC Podcast)
+ - The Engineering Commons
+ - STEM on Fire
+  - AEC Business
+
+## Construction
+ - ConTechCrew: Construction Technology
+ - Construction Leading Edge: Geared more toward owners of companies. Great info and stories though.
+ - Protractor: Geared more toward owning your own company.
+ - [Construction Career Podcast](http://constructioncareerpodcast.com): answers the questions asked frequently by people looking to break into the Construction Industry
