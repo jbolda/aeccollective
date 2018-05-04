@@ -23,18 +23,20 @@ layoutType: page
    - Caterpillar provides a book with specifications on each piece of equipment to help estimate performance and productivity. https://www.warrencat.com/performance-handbook/
 
 # Podcasts
+## General
+ - [AEC Business](https://aec-business.com/podcast-episodes/)
+
 ## Engineering
- - The Engineering Career Coach
- - The Civil Engineering Podcast
- - Pragmatic
- - Causality
- - Steel Profiles (AISC Podcast)
- - The Engineering Commons
- - STEM on Fire
-  - AEC Business
+ - [The Engineering Career Coach](https://engineeringmanagementinstitute.org/podcasts/)
+ - [The Civil Engineering Podcast](https://engineeringmanagementinstitute.org/podcasts/)
+ - [Pragmatic](http://engineered.network/pragmatic)
+ - [Causality](http://engineered.network/causality)
+ - [Steel Profiles (AISC Podcast)](https://www.aisc.org/education/continuingeducation/podcasts/)
+ - [The Engineering Commons](http://theengineeringcommons.com)
+ - [STEM on Fire](https://stemonfire.com)
 
 ## Construction
- - ConTechCrew: Construction Technology
- - Construction Leading Edge: Geared more toward owners of companies. Great info and stories though.
- - Protractor: Geared more toward owning your own company.
+ - [ConTechCrew](https://jbknowledge.com/category/podcasts): Construction Technology
+ - [Construction Leading Edge](http://www.constructionleadingedge.com): Geared more toward owners of companies. Great info and stories though.
+ - [Protractor](https://protractorpodcast.com): Geared more toward owning your own company.
  - [Construction Career Podcast](http://constructioncareerpodcast.com): answers the questions asked frequently by people looking to break into the Construction Industry
