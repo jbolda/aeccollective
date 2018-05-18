@@ -33,6 +33,13 @@ class SimpleTopNav extends React.Component {
             >
             Resources
           </Link>
+          <Link
+            to="/software/"
+            className="navbar-item"
+            style={this.props.location.pathname == '/software/' ? {backgroundColor: styles.colors.P5, color: styles.colors.P2} : {}}
+            >
+            Software
+          </Link>
         </div>
       </nav>
     )
