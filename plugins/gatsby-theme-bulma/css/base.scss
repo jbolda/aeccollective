@@ -21,9 +21,6 @@ $body-background-color: $P5;
 $navbar-background-color: $P2;
 $navbar-item-color: $P5;
 $footer-background-color: $P2;
-$family-sans-serif: 'Varela Round', sans-serif;
-$family-serif: 'Lora', serif; // Add a serif family
-$family-primary: $family-sans-serif;
 
 $secondary: $P2;
 $secondary-invert: findColorInvert($secondary);
@@ -37,6 +34,26 @@ $addColors: (
   "thirdary":($thirdary, $thirdary-invert)
 );
 $colors: map-merge($colors, $addColors);
+
+section[class*="section is-primary"] {
+    background-color: $P1;
+}
+
+section[class*="section is-secondary"] {
+    background-color: $P2;
+}
+
+section[class*="section is-thirdary"] {
+    background-color: $P3;
+}
+
+section[class*="section is-fourthary"] {
+    background-color: $P4;
+}
+
+section[class*="section is-fifthary"] {
+    background-color: $P5;
+}
 
 @import '~bulma';
 

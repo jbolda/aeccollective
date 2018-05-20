@@ -29,11 +29,14 @@
     "gatsby": "latest",
     "gatsby-link": "latest",
     "gatsby-plugin-sass": "latest",
+    "gatsby-plugin-typography": "^1.7.18",
     "gatsby-source-filesystem": "latest",
     "gatsby-transformer-javascript-frontmatter": "latest",
     "gatsby-transformer-remark": "^1.7.37",
     "jest": "^22.4.2",
     "normalize.css": "^8.0.0",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "typography": "^0.16.17",
+    "typography-theme-lawton": "^0.15.10"
   }
 }
