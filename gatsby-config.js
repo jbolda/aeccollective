@@ -18,5 +18,11 @@ module.exports = {
     `gatsby-transformer-remark`,
     `gatsby-transformer-javascript-frontmatter`,
     `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      }
+    }
   ],
 }
