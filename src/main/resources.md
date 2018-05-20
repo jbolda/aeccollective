@@ -21,6 +21,8 @@ layoutType: page
 ## Construction
  - equipment
    - Caterpillar provides a book with specifications on each piece of equipment to help estimate performance and productivity. https://www.warrencat.com/performance-handbook/
+ - safety
+   - OSHA safety regulations in construction https://www.osha.gov/pls/oshaweb/owastand.display_standard_group?p_toc_level=1&p_part_number=1926
 
 # Podcasts
 ## General
