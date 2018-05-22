@@ -30,6 +30,7 @@
     "gatsby-link": "latest",
     "gatsby-plugin-sass": "latest",
     "gatsby-plugin-typography": "^1.7.18",
+    "gatsby-remark-external-links": "^0.0.4",
     "gatsby-source-filesystem": "latest",
     "gatsby-transformer-javascript-frontmatter": "latest",
     "gatsby-transformer-remark": "^1.7.37",

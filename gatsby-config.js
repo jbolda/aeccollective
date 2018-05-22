@@ -15,7 +15,20 @@ module.exports = {
         path: `${__dirname}/src/main/`,
       },
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-external-links`,
+            options: {
+              target: `_blank`,
+              rel: `nofollow noopener noreferrer`
+            }
+          }
+        ]
+      }
+    },
     `gatsby-transformer-javascript-frontmatter`,
     `gatsby-plugin-sass`,
     {
