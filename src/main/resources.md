@@ -32,6 +32,8 @@ layoutType: page
    - https://www.bigge.com/crane-charts/ Crane Load Charts
  - safety
    - OSHA safety regulations in construction https://www.osha.gov/pls/oshaweb/owastand.display_standard_group?p_toc_level=1&p_part_number=1926
+ - transportation / shipping
+   - A standard truck is ~50ft long with ~3ft overhang (depending on state regulations). For additional Oversize/Overweight Trucking Regulations (2012) information see http://permits.scranet.org/wp-content/uploads/2012/10/SCRA_PM_1012.pdf
 
 # Podcasts
 ## General
