@@ -29,7 +29,7 @@ class SiteIndex extends React.Component {
             <div className="tile is-ancestor">
               <div className="tile is-parent">
                 <article className="tile is-child notification is-thirdary content">
-                  <p>The AEC Collective is a community for the Architecture, Engineering, and Construction. It is uses the Discord program which is a free voice, video and text chat app that you can access via PC, browser, or mobile phone. We look to help mentor those just starting in the industry, and provide a great place for networking with your peers around the world. We can all benefit from understanding each related niche better, but also understanding our own niche outside of our geographic region.</p>
+                  <p>The AEC Collective is a community for the Architecture, Engineering, and Construction. It uses the Discord program which is a free voice, video and text chat app that you can access via PC, browser, or mobile phone. We look to help mentor those just starting in the industry, and provide a great place for networking with your peers around the world. We can all benefit from understanding each related niche better, but also understanding our own niche outside of our geographic region.</p>
                   <p>You can connect to the community by clicking &quot;Connect&quot; on the Discord widget below. It will prompt you to create an account and download the application if you so choose. We look forward to engaging with you!</p>
                 </article>
               </div>
