@@ -30,15 +30,17 @@ layoutType: page
   - pyRevit is a library of Python based scripts for Revit. http://eirannejad.github.io/pyRevit/
 
 ## Construction
- - equipment
-   - Caterpillar provides a book with specifications on each piece of equipment to help estimate performance and productivity. https://www.warrencat.com/performance-handbook/
-   - https://www.jlg.com/en/equipment/equipment-selector JLG Aerial Lift Selection Guide
-   - https://www.bigge.com/crane-charts/ Crane Load Charts
- - safety
-   - OSHA safety regulations in construction https://www.osha.gov/pls/oshaweb/owastand.display_standard_group?p_toc_level=1&p_part_number=1926
- - transportation / shipping
-   - A standard truck is ~50ft long with ~3ft overhang (depending on state regulations). For additional Oversize/Overweight Trucking Regulations (2012) information see http://permits.scranet.org/wp-content/uploads/2012/10/SCRA_PM_1012.pdf
-   - Manual of Uniform Traffic Control Devices (MUTCD) https://mutcd.fhwa.dot.gov/
+- in the field
+  - How to Identify Rebar http://www.crsi.org/index.cfm/steel/identification
+- equipment
+  - Caterpillar provides a book with specifications on each piece of equipment to help estimate performance and productivity. https://www.warrencat.com/performance-handbook/
+  - https://www.jlg.com/en/equipment/equipment-selector JLG Aerial Lift Selection Guide
+  - https://www.bigge.com/crane-charts/ Crane Load Charts
+- safety
+  - OSHA safety regulations in construction https://www.osha.gov/pls/oshaweb/owastand.display_standard_group?p_toc_level=1&p_part_number=1926
+- transportation / shipping
+  - A standard truck is ~50ft long with ~3ft overhang (depending on state regulations). For additional Oversize/Overweight Trucking Regulations (2012) information see http://permits.scranet.org/wp-content/uploads/2012/10/SCRA_PM_1012.pdf
+  - Manual of Uniform Traffic Control Devices (MUTCD) https://mutcd.fhwa.dot.gov/
 
 # Podcasts
 ## General
