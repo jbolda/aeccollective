@@ -20,6 +20,8 @@ layoutType: page
   - AISC (steel) posts their videos from past webinars and conferences at http://www.asic.org/educationarchives
   - http://www.boltcouncil.org/files/2014RCSCSpecification-withErrata.pdf RCSC Specificatin for Structural Joints Using High Strength Bolts (2014)
   - Design Guide for Metal Cladding Fasteners from American Architectural Manufacturers Association (AAMA) which includes various screw capacities. http://www.aamanet.org/event/2017Fall/TIR-A9-14.pdf
+- concrete
+  - UCLA's Design of Prestressed Concrete Lectures (Dirk Bondy) https://www.youtube.com/playlist?list=PLXpvR5DF4MWaUYr0jYLs6XM5QcQRjVl3C
 - general
   - explaining engineering topics (Engineer4Free youtube channel)  https://www.youtube.com/user/Engineer4Free/playlists
 - BIM/CAD/Software
