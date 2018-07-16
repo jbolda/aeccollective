@@ -6,6 +6,8 @@ layoutType: page
 # List of Resources
 
 ## General
+- industry-wide
+  - ENR Top Lists of A/E/C firms by Revenue https://www.enr.com/toplists
 - firestopping
   - https://www.hilti.com/firestops Firestopping systems (with Hilti products)
 
