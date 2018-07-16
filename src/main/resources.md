@@ -8,6 +8,9 @@ layoutType: page
 ## General
 - industry-wide
   - ENR Top Lists of A/E/C firms by Revenue https://www.enr.com/toplists
+- codes and standards
+  - ADA Standards for Accessible Design https://www.ada.gov/2010ADAstandards_index.htm
+  - National Fire Protection Association (NFPA) Codes & Standards are available to read online for free https://www.nfpa.org/Codes-and-Standards/All-Codes-and-Standards/Codes-and-Standards
 - firestopping
   - https://www.hilti.com/firestops Firestopping systems (with Hilti products)
 
