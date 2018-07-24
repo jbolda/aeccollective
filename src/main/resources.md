@@ -2,6 +2,7 @@
 path: /resources/
 title: Resources
 layoutType: page
+templateKey: mdTypicalPage
 ---
 # List of Resources
 

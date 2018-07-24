@@ -20,7 +20,7 @@ class SiteIndex extends React.Component {
               <h2 className="subtitle">
                 Community for those in and interested in the Architecture, Engineering, and Construction (AEC) industry.<br/>
                 If you are involved in buildings or infrastructure, join us!
-              </h2>
+              </h2> 
             </div>
           </div>
         </section>

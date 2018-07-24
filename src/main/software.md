@@ -2,6 +2,7 @@
 path: /software/
 title: Software
 layoutType: page
+templateKey: mdTypicalPage
 ---
 # Engineering Software
 

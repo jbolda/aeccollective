@@ -1,5 +1,7 @@
 const path = require(`path`)
 const crypto = require('crypto');
+const _ = require('lodash')
+
 
 exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   const { createNodeField } = boundActionCreators
@@ -36,8 +38,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
   return new Promise((resolve, reject) => {
     const pages = []
 
-    const mdTypicalPage = path.resolve(`src/templates/mdTypicalPage.js`)
-
     resolve(
       graphql(
         `
@@ -48,6 +48,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                   frontmatter {
                     layoutType
                     path
+                    templateKey
+                    tags
                   }
                   fields {
                     slug
@@ -87,22 +89,26 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         })
 
         // Create from markdown
+        let tags = []
         result.data.allMarkdownRemark.edges.forEach(edge => {
           let frontmatter = edge.node.frontmatter
           if (frontmatter.layoutType === `page`) {
             createPage({
               path: frontmatter.path, // required
-              component: mdTypicalPage,
+              component: path.resolve(`src/templates/${String(frontmatter.templateKey)}.js`),
               context: {
                 slug: edge.node.fields.slug,
               },
             })
           }
+          if (frontmatter.tags) {
+            tags = tags.concat(frontmatter.tags)
+          }
         })
-
+        // Eliminate duplicate tags
+        tags = _.uniq(tags)
         return
       })
     )
   })
 }
-

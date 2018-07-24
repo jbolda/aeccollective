@@ -2,6 +2,7 @@
 path: /code-of-conduct/
 title: AEC Collective Code of Conduct
 layoutType: page
+templateKey: mdTypicalPage
 ---
 
 # Code of Conduct

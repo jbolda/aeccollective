@@ -16,6 +16,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `main`,
+        path: `${__dirname}/src/main/software/`,
+      },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
@@ -36,6 +43,8 @@ module.exports = {
       options: {
         pathToConfigModule: `src/utils/typography`,
       }
-    }
+    },
+  `gatsby-transformer-sharp`,
+  `gatsby-plugin-sharp`
   ],
 }
