@@ -1,9 +1,9 @@
 ---
-path: /software/sofistik
+path: /software/sofistik/
 title: SOFiSTiK
 templateKey: mdSoftware
 tags: ["structural-analysis", "nonlinear-FEA", "structural-design", "concrete-design", "steel-design"]
-logo: /assets/logos/sofistik.png
+logo: ./sofistik.png
 layoutType: page
 userForums: {text: "SOFiSTiK User Forums", link: "https://www.sofistik.com/forum/"}
 userSupport: {text: "SOFiSTiK Technical Support", link: "https://www.sofistik.com/services/technical-support/" }
