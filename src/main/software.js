@@ -23,7 +23,9 @@ class SoftwarePage extends React.Component {
           </div>
         </section>
         <section className="section">
-          <div className="container content">text</div>
+          <div className="container content">
+            {softwareTable(this.props.data.allMarkdownRemark.edges)}
+          </div>
         </section>
       </SimpleNav>
     );
@@ -31,6 +33,27 @@ class SoftwarePage extends React.Component {
 }
 
 export default SoftwarePage;
+
+const softwareTable = (data) => (
+  <table className="table is-striped is-hoverable">
+    <thead>
+      <tr>
+        <th>Software</th>
+        <th>License</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      {data.map(package => (
+        <tr>
+          <th>{package.node.frontmatter.title}</th>
+          <td>{package.node.frontmatter.professionalPricing}</td>
+          <td>{package.node.frontmatter.description}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+);
 
 export const pageQuery = graphql`
   query SoftwarePage {
@@ -49,8 +72,12 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          id
           html
+          frontmatter {
+            title
+            professionalPricing
+            description
+          }
         }
       }
     }
