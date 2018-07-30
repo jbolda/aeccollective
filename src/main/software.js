@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "gatsby-link";
 import SimpleNav from "../../plugins/gatsby-theme-bulma-layout/Simple/SimpleNav";
 
 export const frontmatter = {
@@ -34,7 +33,7 @@ class SoftwarePage extends React.Component {
 
 export default SoftwarePage;
 
-const softwareTable = (data) => (
+const softwareTable = data => (
   <table className="table is-striped is-hoverable">
     <thead>
       <tr>
@@ -44,11 +43,11 @@ const softwareTable = (data) => (
       </tr>
     </thead>
     <tbody>
-      {data.map(package => (
+      {data.map(edge => (
         <tr>
-          <th>{package.node.frontmatter.title}</th>
-          <td>{package.node.frontmatter.professionalPricing}</td>
-          <td>{package.node.frontmatter.description}</td>
+          <th>{edge.node.frontmatter.title}</th>
+          <td>{edge.node.frontmatter.professionalPricing}</td>
+          <td>{edge.node.frontmatter.description}</td>
         </tr>
       ))}
     </tbody>
