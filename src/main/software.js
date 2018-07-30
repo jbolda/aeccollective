@@ -1,9 +1,9 @@
-import React from "react";
-import SimpleNav from "../../plugins/gatsby-theme-bulma-layout/Simple/SimpleNav";
+import React from 'react';
+import SimpleNav from '../../plugins/gatsby-theme-bulma-layout/Simple/SimpleNav';
 
 export const frontmatter = {
-  path: "/software/",
-  layoutType: "inset"
+  path: '/software/',
+  layoutType: 'inset'
 };
 
 class SoftwarePage extends React.Component {
