@@ -3,7 +3,7 @@ path: /software/fieldview/
 title: FieldView
 templateKey: mdSoftware
 tags: ["none"]
-logo: ./sofistik.png
+logo: ./placeholder.png
 layoutType: page
 website: "http://www.ilight.com/en/products/fieldview-17"
 userForums: {text: "forum-placeholder", link: "/forum/"}

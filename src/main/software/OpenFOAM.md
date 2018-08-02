@@ -3,7 +3,7 @@ path: /software/openfoam/
 title: OpenFOAM
 templateKey: mdSoftware
 tags: ["none"]
-logo: ./sofistik.png
+logo: ./placeholder.png
 layoutType: page
 website: "https://www.openfoam.com/"
 userForums: {text: "forum-placeholder", link: "/forum/"}

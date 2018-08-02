@@ -3,7 +3,7 @@ path: /software/gtstrudl/
 title: GT STRUDL
 templateKey: mdSoftware
 tags: ["none"]
-logo: ./sofistik.png
+logo: ./placeholder.png
 layoutType: page
 website: "https://hexagonppm.com/products/analysis-product-family/gt-strudl"
 userForums: {text: "forum-placeholder", link: "/forum/"}

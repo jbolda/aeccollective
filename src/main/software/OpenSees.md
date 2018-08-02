@@ -3,7 +3,7 @@ path: /software/opensees/
 title: OpenSees
 templateKey: mdSoftware
 tags: ["none"]
-logo: ./sofistik.png
+logo: ./placeholder.png
 layoutType: page
 website: "http://opensees.berkeley.edu/"
 userForums: {text: "forum-placeholder", link: "/forum/"}

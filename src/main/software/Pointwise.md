@@ -3,7 +3,7 @@ path: /software/pointwise/
 title: Pointwise
 templateKey: mdSoftware
 tags: ["none"]
-logo: ./sofistik.png
+logo: ./placeholder.png
 layoutType: page
 website: "http://www.pointwise.com/"
 userForums: {text: "forum-placeholder", link: "/forum/"}

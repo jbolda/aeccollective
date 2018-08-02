@@ -3,7 +3,7 @@ path: /software/abaqus/
 title: Abaqus
 templateKey: mdSoftware
 tags: ["none"]
-logo: ./sofistik.png
+logo: ./placeholder.png
 layoutType: page
 website: "https://www.3ds.com/products-services/simulia/products/abaqus/"
 userForums: {text: "forum-placeholder", link: "/forum/"}

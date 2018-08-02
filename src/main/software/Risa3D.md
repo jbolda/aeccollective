@@ -3,7 +3,7 @@ path: /software/risa/
 title: Risa 3d
 templateKey: mdSoftware
 tags: ["none"]
-logo: ./sofistik.png
+logo: ./placeholder.png
 layoutType: page
 website: "https://risa.com/p_risa3d.html"
 userForums: {text: "forum-placeholder", link: "/forum/"}

@@ -3,7 +3,7 @@ path: /software/mastan2/
 title: mastan2
 templateKey: mdSoftware
 tags: ["none"]
-logo: ./sofistik.png
+logo: ./placeholder.png
 layoutType: page
 website: "http://www.mastan2.com/"
 userForums: {text: "forum-placeholder", link: "/forum/"}

@@ -3,7 +3,7 @@ path: /software/tedds/
 title: TEDDS
 templateKey: mdSoftware
 tags: ["none"]
-logo: ./sofistik.png
+logo: ./placeholder.png
 layoutType: page
 website: "https://www.tekla.com/products/tekla-tedds#"
 userForums: {text: "forum-placeholder", link: "/forum/"}
