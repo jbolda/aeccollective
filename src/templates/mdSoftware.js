@@ -1,6 +1,6 @@
-import React from "react";
-import Img from "gatsby-image";
-import SimpleNav from "../../plugins/gatsby-theme-bulma-layout/Simple/SimpleNav";
+import React from 'react';
+import Img from 'gatsby-image';
+import SimpleNav from '../../plugins/gatsby-theme-bulma-layout/Simple/SimpleNav';
 
 class mdSoftwareInsetPage extends React.Component {
   render() {
@@ -15,7 +15,10 @@ class mdSoftwareInsetPage extends React.Component {
           <div className="hero-body">
             <div className="container has-text-centered">
               <h1 className="title">{frontmatter.title}</h1>
-              <Img sizes={frontmatter.logo.childImageSharp.sizes} />
+              <Img
+                sizes={frontmatter.logo.childImageSharp.sizes}
+                style={{ maxWidth: 600, maxHeight: 300 }}
+              />
             </div>
           </div>
         </section>
@@ -43,7 +46,7 @@ class mdSoftwareInsetPage extends React.Component {
                 <td>
                   <a href={frontmatter.userForums.link}>
                     {frontmatter.userForums.text}
-                  </a>{" "}
+                  </a>{' '}
                 </td>
               </tr>
               <tr>
@@ -51,7 +54,7 @@ class mdSoftwareInsetPage extends React.Component {
                 <td>
                   <a href={frontmatter.userSupport.link}>
                     {frontmatter.userSupport.text}
-                  </a>{" "}
+                  </a>{' '}
                 </td>
               </tr>
               <tr>
@@ -59,7 +62,7 @@ class mdSoftwareInsetPage extends React.Component {
                 <td>
                   <a href={frontmatter.tutorials.link}>
                     {frontmatter.tutorials.text}
-                  </a>{" "}
+                  </a>{' '}
                 </td>
               </tr>
             </table>
@@ -106,7 +109,7 @@ export const pageQuery = graphql`
         tags
         logo {
           childImageSharp {
-            sizes {
+            sizes(maxWidth: 600) {
               ...GatsbyImageSharpSizes_tracedSVG
             }
           }
