@@ -7,6 +7,11 @@ templateKey: mdTypicalPage
 # List of Resources
 
 ## General
+- industry-wide
+  - ENR Top Lists of A/E/C firms by Revenue https://www.enr.com/toplists
+- codes and standards
+  - ADA Standards for Accessible Design https://www.ada.gov/2010ADAstandards_index.htm
+  - National Fire Protection Association (NFPA) Codes & Standards are available to read online for free https://www.nfpa.org/Codes-and-Standards/All-Codes-and-Standards/Codes-and-Standards
 - firestopping
   - https://www.hilti.com/firestops Firestopping systems (with Hilti products)
 
@@ -21,20 +26,25 @@ templateKey: mdTypicalPage
   - AISC (steel) posts their videos from past webinars and conferences at http://www.asic.org/educationarchives
   - http://www.boltcouncil.org/files/2014RCSCSpecification-withErrata.pdf RCSC Specificatin for Structural Joints Using High Strength Bolts (2014)
   - Design Guide for Metal Cladding Fasteners from American Architectural Manufacturers Association (AAMA) which includes various screw capacities. http://www.aamanet.org/event/2017Fall/TIR-A9-14.pdf
+- concrete
+  - UCLA's Design of Prestressed Concrete Lectures (Dirk Bondy) https://www.youtube.com/playlist?list=PLXpvR5DF4MWaUYr0jYLs6XM5QcQRjVl3C
 - general
   - explaining engineering topics (Engineer4Free youtube channel)  https://www.youtube.com/user/Engineer4Free/playlists
 - BIM/CAD/Software
   - pyRevit is a library of Python based scripts for Revit. http://eirannejad.github.io/pyRevit/
 
 ## Construction
- - equipment
-   - Caterpillar provides a book with specifications on each piece of equipment to help estimate performance and productivity. https://www.warrencat.com/performance-handbook/
-   - https://www.jlg.com/en/equipment/equipment-selector JLG Aerial Lift Selection Guide
-   - https://www.bigge.com/crane-charts/ Crane Load Charts
- - safety
-   - OSHA safety regulations in construction https://www.osha.gov/pls/oshaweb/owastand.display_standard_group?p_toc_level=1&p_part_number=1926
- - transportation / shipping
-   - A standard truck is ~50ft long with ~3ft overhang (depending on state regulations). For additional Oversize/Overweight Trucking Regulations (2012) information see http://permits.scranet.org/wp-content/uploads/2012/10/SCRA_PM_1012.pdf
+- in the field
+  - How to Identify Rebar http://www.crsi.org/index.cfm/steel/identification
+- equipment
+  - Caterpillar provides a book with specifications on each piece of equipment to help estimate performance and productivity. https://www.warrencat.com/performance-handbook/
+  - https://www.jlg.com/en/equipment/equipment-selector JLG Aerial Lift Selection Guide
+  - https://www.bigge.com/crane-charts/ Crane Load Charts
+- safety
+  - OSHA safety regulations in construction https://www.osha.gov/pls/oshaweb/owastand.display_standard_group?p_toc_level=1&p_part_number=1926
+- transportation / shipping
+  - A standard truck is ~50ft long with ~3ft overhang (depending on state regulations). For additional Oversize/Overweight Trucking Regulations (2012) information see http://permits.scranet.org/wp-content/uploads/2012/10/SCRA_PM_1012.pdf
+  - Manual of Uniform Traffic Control Devices (MUTCD) https://mutcd.fhwa.dot.gov/
 
 # Podcasts
 ## General
