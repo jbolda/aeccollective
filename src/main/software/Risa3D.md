@@ -2,6 +2,7 @@
 path: /software/risa/
 title: Risa 3d
 templateKey: mdSoftware
+discipline: ["Structural Engineering"]
 tags: ["none"]
 logo: ./placeholder.png
 layoutType: page

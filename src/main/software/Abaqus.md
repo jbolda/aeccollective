@@ -2,6 +2,7 @@
 path: /software/abaqus/
 title: Abaqus
 templateKey: mdSoftware
+discipline: ["Structural Engineering"]
 tags: ["none"]
 logo: ./placeholder.png
 layoutType: page

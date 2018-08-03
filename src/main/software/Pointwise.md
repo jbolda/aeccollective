@@ -2,6 +2,7 @@
 path: /software/pointwise/
 title: Pointwise
 templateKey: mdSoftware
+discipline: ["Structural Engineering"]
 tags: ["none"]
 logo: ./placeholder.png
 layoutType: page

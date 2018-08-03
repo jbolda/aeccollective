@@ -2,6 +2,7 @@
 path: /software/prokon/
 title: PROKON
 templateKey: mdSoftware
+discipline: ["Structural Engineering"]
 tags: ["none"]
 logo: ./placeholder.png
 layoutType: page

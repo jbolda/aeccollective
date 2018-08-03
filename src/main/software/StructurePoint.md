@@ -2,6 +2,7 @@
 path: /software/structurepoint/
 title: StructurePoint
 templateKey: mdSoftware
+discipline: ["Structural Engineering"]
 tags: ["none"]
 logo: ./placeholder.png
 layoutType: page

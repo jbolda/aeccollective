@@ -2,6 +2,7 @@
 path: /software/sofistik/
 title: SOFiSTiK
 templateKey: mdSoftware
+discipline: ["Structural Engineering"]
 tags: ["structural-analysis", "nonlinear-FEA", "structural-design", "concrete-design", "steel-design"]
 logo: ./sofistik.png
 layoutType: page

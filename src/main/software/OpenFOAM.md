@@ -2,6 +2,7 @@
 path: /software/openfoam/
 title: OpenFOAM
 templateKey: mdSoftware
+discipline: ["Structural Engineering"]
 tags: ["none"]
 logo: ./placeholder.png
 layoutType: page

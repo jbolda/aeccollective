@@ -2,6 +2,7 @@
 path: /software/tedds/
 title: TEDDS
 templateKey: mdSoftware
+discipline: ["Structural Engineering"]
 tags: ["none"]
 logo: ./placeholder.png
 layoutType: page

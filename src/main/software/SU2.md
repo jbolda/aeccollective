@@ -2,6 +2,7 @@
 path: /software/su2/
 title: SU2
 templateKey: mdSoftware
+discipline: ["Structural Engineering"]
 tags: ["none"]
 logo: ./placeholder.png
 layoutType: page

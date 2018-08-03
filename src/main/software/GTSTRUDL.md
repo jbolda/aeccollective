@@ -2,6 +2,7 @@
 path: /software/gtstrudl/
 title: GT STRUDL
 templateKey: mdSoftware
+discipline: ["Structural Engineering"]
 tags: ["none"]
 logo: ./placeholder.png
 layoutType: page

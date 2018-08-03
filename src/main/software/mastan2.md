@@ -2,6 +2,7 @@
 path: /software/mastan2/
 title: mastan2
 templateKey: mdSoftware
+discipline: ["Structural Engineering"]
 tags: ["none"]
 logo: ./placeholder.png
 layoutType: page

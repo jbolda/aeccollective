@@ -42,6 +42,7 @@ const softwareTable = data => (
     <thead>
       <tr>
         <th>Software</th>
+        <th>Discipline</th>
         <th>License</th>
         <th>Description</th>
       </tr>
@@ -54,6 +55,15 @@ const softwareTable = data => (
               {edge.node.frontmatter.title}
             </a>
           </th>
+          <td>
+            {edge.node.frontmatter.discipline.map((disc, index) => {
+              if (index === 0) {
+                return <span>{disc}</span>;
+              } else {
+                return <span>,{disc}</span>;
+              }
+            })}
+          </td>
           <td>{edge.node.frontmatter.professionalPricing}</td>
           <td>
             <Link to={edge.node.frontmatter.path}>
@@ -87,6 +97,7 @@ export const pageQuery = graphql`
           frontmatter {
             path
             title
+            discipline
             professionalPricing
             description
             website
