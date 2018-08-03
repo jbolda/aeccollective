@@ -1,42 +1,40 @@
-const path = require(`path`)
+const path = require(`path`);
 const crypto = require('crypto');
+const _ = require('lodash');
 
 exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
-  const { createNodeField } = boundActionCreators
-  let slug
+  const { createNodeField } = boundActionCreators;
+  let slug;
   if (
     node.internal.type === `JavascriptFrontmatter` ||
     node.internal.type === `MarkdownRemark`
   ) {
     try {
-      const fileNode = getNode(node.parent)
-      const parsedFilePath = path.parse(fileNode.relativePath)
+      const fileNode = getNode(node.parent);
+      const parsedFilePath = path.parse(fileNode.relativePath);
       if (parsedFilePath.name !== `index` && parsedFilePath.dir !== ``) {
-        slug = `/${parsedFilePath.dir}/${parsedFilePath.name}/`
+        slug = `/${parsedFilePath.dir}/${parsedFilePath.name}/`;
       } else if (parsedFilePath.name === `index` && parsedFilePath.dir === ``) {
-        slug = `/`
+        slug = `/`;
       } else if (parsedFilePath.name === `index` && parsedFilePath.dir !== ``) {
-        slug = `/${parsedFilePath.dir}/`
+        slug = `/${parsedFilePath.dir}/`;
       } else {
-        slug = `/${parsedFilePath.dir}/${parsedFilePath.name}/`
+        slug = `/${parsedFilePath.dir}/${parsedFilePath.name}/`;
       }
 
       // Add slug as a field on the node.
-      createNodeField({ node, name: `slug`, value: slug })
+      createNodeField({ node, name: `slug`, value: slug });
     } catch (error) {
       // nil
     }
-
   }
-}
+};
 
 exports.createPages = ({ graphql, boundActionCreators }) => {
-  const { createPage } = boundActionCreators
+  const { createPage } = boundActionCreators;
 
   return new Promise((resolve, reject) => {
-    const pages = []
-
-    const mdTypicalPage = path.resolve(`src/templates/mdTypicalPage.js`)
+    const pages = [];
 
     resolve(
       graphql(
@@ -48,6 +46,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                   frontmatter {
                     layoutType
                     path
+                    templateKey
+                    tags
                   }
                   fields {
                     slug
@@ -70,39 +70,42 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         `
       ).then(result => {
         if (result.errors) {
-          console.log('--------------errors-------------')
-          console.log(result.errors)
-          console.log('--------------result-------------')
-          console.log(result)
-          reject(result.errors)
+          console.log('--------------errors-------------');
+          console.log(result.errors);
+          console.log('--------------result-------------');
+          console.log(result);
+          reject(result.errors);
         }
 
-
         result.data.allJavascriptFrontmatter.edges.forEach(edge => {
-          let {frontmatter} = edge.node
-            createPage({
-              path: frontmatter.path, // required
-              component: path.resolve(edge.node.fileAbsolutePath)
-            })
-        })
+          let { frontmatter } = edge.node;
+          createPage({
+            path: frontmatter.path, // required
+            component: path.resolve(edge.node.fileAbsolutePath)
+          });
+        });
 
         // Create from markdown
+        let tags = [];
         result.data.allMarkdownRemark.edges.forEach(edge => {
-          let frontmatter = edge.node.frontmatter
-          if (frontmatter.layoutType === `page`) {
-            createPage({
-              path: frontmatter.path, // required
-              component: mdTypicalPage,
-              context: {
-                slug: edge.node.fields.slug,
-              },
-            })
+          let frontmatter = edge.node.frontmatter;
+          createPage({
+            path: frontmatter.path, // required
+            component: path.resolve(
+              `src/templates/${String(frontmatter.templateKey)}.js`
+            ),
+            context: {
+              slug: edge.node.fields.slug
+            }
+          });
+          if (frontmatter.tags) {
+            tags = tags.concat(frontmatter.tags);
           }
-        })
-
-        return
+        });
+        // Eliminate duplicate tags
+        tags = _.uniq(tags);
+        return;
       })
-    )
-  })
-}
-
+    );
+  });
+};
