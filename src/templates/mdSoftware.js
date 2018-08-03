@@ -40,32 +40,18 @@ class mdSoftwareInsetPage extends React.Component {
         <section className="section">
           <div className="container content">
             <h3 className="userSupport">USER SUPPORT</h3>
-            <table>
-              <tr>
-                <td>User forums:</td>
-                <td>
-                  <a href={frontmatter.userForums.link}>
-                    {frontmatter.userForums.text}
-                  </a>{' '}
-                </td>
-              </tr>
-              <tr>
-                <td>Technical Support:</td>
-                <td>
-                  <a href={frontmatter.userSupport.link}>
-                    {frontmatter.userSupport.text}
-                  </a>{' '}
-                </td>
-              </tr>
-              <tr>
-                <td>Tutorials:</td>
-                <td>
-                  <a href={frontmatter.tutorials.link}>
-                    {frontmatter.tutorials.text}
-                  </a>{' '}
-                </td>
-              </tr>
-            </table>
+            <p>
+              <a href={frontmatter.website}>Main Website</a>
+            </p>
+            <p>
+              <a href={frontmatter.userForums}>User forums</a>
+            </p>
+            <p>
+              <a href={frontmatter.userSupport}>Technical Support</a>
+            </p>
+            <p>
+              <a href={frontmatter.tutorials}>Tutorials</a>
+            </p>
           </div>
         </section>
         <section className="section">
@@ -83,7 +69,7 @@ class mdSoftwareInsetPage extends React.Component {
             </table>
           </div>
         </section>
-        <section className="section">
+        {/* <section className="section">
           <div className="container content">
             <h3>PROJECTS</h3>
           </div>
@@ -92,7 +78,7 @@ class mdSoftwareInsetPage extends React.Component {
           <div className="container content">
             <h3>OTHER NOTES</h3>
           </div>
-        </section>
+        </section> */}
       </SimpleNav>
     );
   }
@@ -114,18 +100,10 @@ export const pageQuery = graphql`
             }
           }
         }
-        userForums {
-          text
-          link
-        }
-        userSupport {
-          text
-          link
-        }
-        tutorials {
-          text
-          link
-        }
+        website
+        userForums
+        userSupport
+        tutorials
         studentPricing
         professionalPricing
         description

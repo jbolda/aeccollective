@@ -5,11 +5,10 @@ templateKey: mdSoftware
 discipline: ["Structural Engineering"]
 tags: ["none"]
 logo: ./placeholder.png
-layoutType: page
 website: "https://hexagonppm.com/products/analysis-product-family/gt-strudl"
-userForums: {text: "forum-placeholder", link: "/forum/"}
-userSupport: {text: "support", link: "/technical-support/" }
-tutorials: {text: "tutorials", link: "/tutorials/"}
+userForums: "/forum/"
+userSupport: "/technical-support/"
+tutorials: "/tutorials/"
 studentPricing: Originally Academic, Now Corp
 professionalPricing: Originally Academic, Now Corp
 description: >-

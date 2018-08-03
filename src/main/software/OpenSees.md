@@ -5,11 +5,10 @@ templateKey: mdSoftware
 discipline: ["Structural Engineering"]
 tags: ["none"]
 logo: ./placeholder.png
-layoutType: page
 website: "http://opensees.berkeley.edu/"
-userForums: {text: "forum-placeholder", link: "/forum/"}
-userSupport: {text: "support", link: "/technical-support/" }
-tutorials: {text: "tutorials", link: "/tutorials/"}
+userForums: "/forum/"
+userSupport: "/technical-support/"
+tutorials: "/tutorials/"
 studentPricing: Open Source - Academic
 professionalPricing: Open Source - Academic
 description: >-

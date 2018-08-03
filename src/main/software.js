@@ -60,7 +60,7 @@ const softwareTable = data => (
               if (index === 0) {
                 return <span>{disc}</span>;
               } else {
-                return <span>,{disc}</span>;
+                return <span>, {disc}</span>;
               }
             })}
           </td>

@@ -1,6 +1,6 @@
 const path = require(`path`);
-const crypto = require("crypto");
-const _ = require("lodash");
+const crypto = require('crypto');
+const _ = require('lodash');
 
 exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   const { createNodeField } = boundActionCreators;
@@ -70,9 +70,9 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         `
       ).then(result => {
         if (result.errors) {
-          console.log("--------------errors-------------");
+          console.log('--------------errors-------------');
           console.log(result.errors);
-          console.log("--------------result-------------");
+          console.log('--------------result-------------');
           console.log(result);
           reject(result.errors);
         }
@@ -89,17 +89,15 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         let tags = [];
         result.data.allMarkdownRemark.edges.forEach(edge => {
           let frontmatter = edge.node.frontmatter;
-          if (frontmatter.layoutType === `page`) {
-            createPage({
-              path: frontmatter.path, // required
-              component: path.resolve(
-                `src/templates/${String(frontmatter.templateKey)}.js`
-              ),
-              context: {
-                slug: edge.node.fields.slug
-              }
-            });
-          }
+          createPage({
+            path: frontmatter.path, // required
+            component: path.resolve(
+              `src/templates/${String(frontmatter.templateKey)}.js`
+            ),
+            context: {
+              slug: edge.node.fields.slug
+            }
+          });
           if (frontmatter.tags) {
             tags = tags.concat(frontmatter.tags);
           }

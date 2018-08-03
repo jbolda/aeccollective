@@ -5,11 +5,10 @@ templateKey: mdSoftware
 discipline: ["Structural Engineering"]
 tags: ["structural-analysis", "nonlinear-FEA", "structural-design", "concrete-design", "steel-design"]
 logo: ./sofistik.png
-layoutType: page
 website: "https://www.sofistik.com/"
-userForums: {text: "SOFiSTiK User Forums", link: "https://www.sofistik.com/forum/"}
-userSupport: {text: "SOFiSTiK Technical Support", link: "https://www.sofistik.com/services/technical-support/" }
-tutorials: {text: "SOFiSTiK Official Tutorials", link: "http://www.sofistik.de/documentation/2016/en/tutorials/listoftutorials/list-tutorials.html"}
+userForums: "https://www.sofistik.com/forum/"
+userSupport: "https://www.sofistik.com/services/technical-support/"
+tutorials: "http://www.sofistik.de/documentation/2016/en/tutorials/listoftutorials/list-tutorials.html"
 studentPricing: Free
 professionalPricing: ---
 description: >-
