@@ -9,7 +9,6 @@ export const frontmatter = {
 
 class SoftwarePage extends React.Component {
   render() {
-    console.log(this);
     return (
       <SimpleNav
         sitemetadata={this.props.data.site.siteMetadata}
