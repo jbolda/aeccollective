@@ -107,7 +107,6 @@ export const pageQuery = graphql`
         studentPricing
         professionalPricing
         description
-        projects
         otherNotes
       }
     }

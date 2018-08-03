@@ -13,7 +13,7 @@ studentPricing: Open Source
 professionalPricing: Open Source
 description: >-
   SU2 is an open-source collection of software tools written in C++ and Python for the analysis of partial differential equations (PDEs) and PDE-constrained optimization problems on unstructured meshes with state-of-the-art numerical methods. SU2 is a leading technology for adjoint-based optimization.
-projects: placeHolder
+projects: [{name: "text", link: "www", image: ./placeholder.png, description: "blah blah"}]
 otherNotes: placeHolder
 ---
 

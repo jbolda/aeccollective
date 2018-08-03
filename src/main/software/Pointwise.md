@@ -13,7 +13,7 @@ studentPricing: Paid
 professionalPricing: Paid
 description: >-
   Mesh generation software from Pointwise and its co-founders has been used for CFD preprocessing on applications as diverse as aerodynamic performance of the F-35 Lightning II and reducing fish mortality rates in a hydroelectric project.
-projects: placeHolder
+projects: [{name: "text", link: "www", image: ./placeholder.png, description: "blah blah"}]
 otherNotes: placeHolder
 ---
 

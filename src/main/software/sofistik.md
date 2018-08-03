@@ -15,6 +15,6 @@ description: >-
   SOFiSTiK is a general use structural analysis and finite element analysis program with advanced features.
   It is suitable for steel and concrete design, as well as design in other less conventional materials.
   User input can be done via a series of text files ("Teddys"), or through the graphic user interface in SOFiCAD, based on AutoCAD. 
-projects: placeHolder
+projects: [{name: "text", link: "www", image: ./placeholder.png, description: "blah blah"}]
 otherNotes: placeHolder
 ---

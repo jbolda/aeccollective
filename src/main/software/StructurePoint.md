@@ -13,7 +13,7 @@ studentPricing: Paid
 professionalPricing: Paid
 description: >-
   Includes a full suite of sp* products for designing concrete: spSlab, spBeam, spWall, spColumn, spMats, and spFrame.
-projects: placeHolder
+projects: [{name: "text", link: "www", image: ./placeholder.png, description: "blah blah"}]
 otherNotes: placeHolder
 ---
 

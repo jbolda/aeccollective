@@ -13,7 +13,7 @@ studentPricing: Open Source
 professionalPricing: Open Source
 description: >-
   OpenFOAM has an extensive range of features to solve anything from complex fluid flows involving chemical reactions, turbulence and heat transfer, to acoustics, solid mechanics and electromagnetics.
-projects: placeHolder
+projects: [{name: "text", link: "www", image: ./placeholder.png, description: "blah blah"}]
 otherNotes: placeHolder
 ---
 
