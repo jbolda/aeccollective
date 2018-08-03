@@ -66,8 +66,9 @@ const softwareTable = data => (
           </td>
           <td>{edge.node.frontmatter.professionalPricing}</td>
           <td>
+            <p>{edge.node.frontmatter.description}</p>
             <Link to={edge.node.frontmatter.path}>
-              {edge.node.frontmatter.description}
+              <button className="button is-info">Learn More</button>
             </Link>
           </td>
         </tr>
