@@ -24,7 +24,7 @@ class SoftwarePage extends React.Component {
         </section>
         <section className="section">
           <div className="container content">
-            Below are a few examples of software used in the industry.
+            Below are a few examples of software used in the industry. If you have any that we need to add, let us know!
           </div>
           <div className="container content">
             {softwareTable(this.props.data.allMarkdownRemark.edges)}
