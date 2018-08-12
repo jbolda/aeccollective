@@ -1,0 +1,24 @@
+---
+path: /software/lusas-bridge/
+title: LUSAS Bridge
+templateKey: mdSoftware
+discipline: ["Civil Engineering"]
+tags: ["none"]
+logo: ./lusas.jpg
+website: "http://www.lusas.com/products/bridge_tour_overview.html"
+userForums: "/forum/"
+userSupport: "/technical-support/"
+tutorials: "/tutorials/"
+studentPricing: Paid
+professionalPricing: Paid
+description: >-
+  LUSAS Bridge is a world-leading finite element analysis software application for the analysis, design and assessment of all types of bridge structures.
+projects: [{name: "text", link: "www", image: ./placeholder.png, description: "blah blah"}]
+otherNotes: placeHolder
+---
+
+LUSAS Bridge is a world-leading finite element analysis software application for the analysis, design and assessment of all types of bridge structures. 
+
+Whether you need to carry out a straightforward linear static analysis of a single span road bridge, a dynamic analysis of a slender architectural steel movable footbridge, or a detailed geometrically nonlinear staged erection analysis of a major cable stayed structure involving concrete creep and shrinkage, LUSAS Bridge provides all the facilities you need. 
+
+Extensive results processing, viewing and report generation facilities give you ultimate control over what you plot and print from your analysis. In short, LUSAS Bridge software handles simple grid/grillage and slab structures with ease and has a full range of additional software options and features for more advanced bridge structures.
