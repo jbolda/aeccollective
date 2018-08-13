@@ -15,10 +15,19 @@ class mdSoftwareInsetPage extends React.Component {
           <div className="hero-body">
             <div className="container has-text-centered">
               <h1 className="title">{frontmatter.title}</h1>
-              <Img
-                sizes={frontmatter.logo.childImageSharp.sizes}
-                style={{ maxWidth: 600, maxHeight: 300 }}
-              />
+              {frontmatter.logo.childImageSharp ? (
+                <Img
+                  sizes={frontmatter.logo.childImageSharp.sizes}
+                  style={{ maxWidth: 600, maxHeight: 300 }}
+                />
+              ) : (
+                <div className="image">
+                  <img
+                    src={frontmatter.logo.publicURL}
+                    style={{ maxWidth: 200, width: 200 }}
+                  />
+                </div>
+              )}
             </div>
           </div>
         </section>
@@ -58,14 +67,16 @@ class mdSoftwareInsetPage extends React.Component {
           <div className="container content">
             <h3 className="pricing">PRICING</h3>
             <table>
-              <tr>
-                <td>Student:</td>
-                <td>{frontmatter.studentPricing}</td>
-              </tr>
-              <tr>
-                <td>Professional:</td>
-                <td>{frontmatter.professionalPricing}</td>
-              </tr>
+              <tbody>
+                <tr>
+                  <td>Student:</td>
+                  <td>{frontmatter.studentPricing}</td>
+                </tr>
+                <tr>
+                  <td>Professional:</td>
+                  <td>{frontmatter.professionalPricing}</td>
+                </tr>
+              </tbody>
             </table>
           </div>
         </section>
@@ -94,6 +105,7 @@ export const pageQuery = graphql`
         title
         tags
         logo {
+          publicURL
           childImageSharp {
             sizes(maxWidth: 600) {
               ...GatsbyImageSharpSizes_tracedSVG
