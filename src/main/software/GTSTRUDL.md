@@ -4,7 +4,7 @@ title: GT STRUDL
 templateKey: mdSoftware
 discipline: ["Structural Engineering"]
 tags: ["none"]
-logo: ./placeholder.png
+logo: ./HexagonPPM.png
 website: "https://hexagonppm.com/products/analysis-product-family/gt-strudl"
 userForums: "/forum/"
 userSupport: "/technical-support/"

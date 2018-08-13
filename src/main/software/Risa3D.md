@@ -4,7 +4,7 @@ title: Risa 3d
 templateKey: mdSoftware
 discipline: ["Structural Engineering"]
 tags: ["none"]
-logo: ./placeholder.png
+logo: ./risa.svg
 website: "https://risa.com/p_risa3d.html"
 userForums: "/forum/"
 userSupport: "/technical-support/"

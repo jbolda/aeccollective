@@ -4,7 +4,7 @@ title: OpenFOAM
 templateKey: mdSoftware
 discipline: ["Structural Engineering"]
 tags: ["none"]
-logo: ./placeholder.png
+logo: ./OpenFOAM.png
 website: "https://www.openfoam.com/"
 userForums: "/forum/"
 userSupport: "/technical-support/"

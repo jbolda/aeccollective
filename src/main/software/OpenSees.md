@@ -4,7 +4,7 @@ title: OpenSees
 templateKey: mdSoftware
 discipline: ["Structural Engineering"]
 tags: ["none"]
-logo: ./placeholder.png
+logo: ./OpenSees.gif
 website: "http://opensees.berkeley.edu/"
 userForums: "/forum/"
 userSupport: "/technical-support/"

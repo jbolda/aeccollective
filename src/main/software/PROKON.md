@@ -4,7 +4,7 @@ title: PROKON
 templateKey: mdSoftware
 discipline: ["Structural Engineering"]
 tags: ["none"]
-logo: ./placeholder.png
+logo: ./prokon.png
 website: "https://www.prokon.com"
 userForums: "/forum/"
 userSupport: "/technical-support/"

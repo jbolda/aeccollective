@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import Img from 'gatsby-image';
 import SimpleNav from '../../plugins/gatsby-theme-bulma-layout/Simple/SimpleNav';
 
 export const frontmatter = {
@@ -67,6 +68,7 @@ class SoftwarePage extends React.Component {
                 {tag}
               </div>
             ))}
+            <hr />
           </div>
           <div className="container content">
             {softwareTable(this.state.filteredData)}
@@ -80,24 +82,31 @@ class SoftwarePage extends React.Component {
 export default SoftwarePage;
 
 const softwareTable = data => (
-  <table className="table is-striped is-hoverable">
-    <thead>
-      <tr>
-        <th>Software</th>
-        <th>Discipline</th>
-        <th>License</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      {data.map(edge => (
-        <tr key={edge.node.id}>
-          <th>
-            <a href={edge.node.frontmatter.website} target="_blank">
-              {edge.node.frontmatter.title}
-            </a>
-          </th>
-          <td>
+  <div>
+    {data.map(edge => (
+      <div className="media" key={edge.node.id}>
+        <div className="media-left">
+          <a href={edge.node.frontmatter.website} target="_blank">
+            <strong>{edge.node.frontmatter.title}</strong>
+            {edge.node.frontmatter.logo.childImageSharp ? (
+              <Img
+                className="image"
+                sizes={edge.node.frontmatter.logo.childImageSharp.sizes}
+                style={{ maxWidth: 200, width: 200 }}
+              />
+            ) : (
+              <div className="image">
+                <img
+                  src={edge.node.frontmatter.logo.publicURL}
+                  style={{ maxWidth: 200, width: 200 }}
+                />
+              </div>
+            )}
+          </a>
+        </div>
+        <div className="media-content">
+          <p>
+            <strong>{'Discipline: '}</strong>
             {edge.node.frontmatter.discipline.map((disc, index) => {
               if (index === 0) {
                 return <span key={index}>{disc}</span>;
@@ -105,18 +114,21 @@ const softwareTable = data => (
                 return <span key={index}>, {disc}</span>;
               }
             })}
-          </td>
-          <td>{edge.node.frontmatter.professionalPricing}</td>
-          <td>
+          </p>
+          <p>
+            <strong>{'Pricing: '}</strong>
+            {edge.node.frontmatter.professionalPricing}
+          </p>
+          <div>
             <p>{edge.node.frontmatter.description}</p>
             <Link to={edge.node.frontmatter.path}>
               <button className="button is-info">Learn More</button>
             </Link>
-          </td>
-        </tr>
-      ))}
-    </tbody>
-  </table>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
 );
 
 const pullUniqueTags = dataArray => {
@@ -159,6 +171,14 @@ export const pageQuery = graphql`
             professionalPricing
             description
             website
+            logo {
+              publicURL
+              childImageSharp {
+                sizes(maxWidth: 200) {
+                  ...GatsbyImageSharpSizes_tracedSVG
+                }
+              }
+            }
           }
         }
       }
