@@ -8,6 +8,36 @@ export const frontmatter = {
 };
 
 class SoftwarePage extends React.Component {
+  constructor(props) {
+    super();
+    this.state = pullUniqueTags(props.data.allMarkdownRemark.edges);
+  }
+
+  tagClicked(index) {
+    let newState = {};
+    newState[this.state.uniqueTags[index]] = !this.state[
+      this.state.uniqueTags[index]
+    ];
+    let filterData = edge => {
+      let disciplines = edge.node.frontmatter.discipline;
+      return disciplines.reduce((accumulator, discipline) => {
+        if (accumulator) {
+          return true;
+        } else if (newState[discipline]) {
+          return true;
+        }
+      }, false);
+    };
+    let newFilteredData = this.props.data.allMarkdownRemark.edges.filter(
+      filterData
+    );
+    newState.filteredData =
+      newFilteredData.length === 0
+        ? this.props.data.allMarkdownRemark.edges
+        : newFilteredData;
+    this.setState(newState);
+  }
+
   render() {
     return (
       <SimpleNav
@@ -23,10 +53,23 @@ class SoftwarePage extends React.Component {
         </section>
         <section className="section">
           <div className="container content">
-            Below are a few examples of software used in the industry. If you have any that we need to add, let us know!
+            Below are a few examples of software used in the industry. If you
+            have any that we need to add, let us know!
           </div>
           <div className="container content">
-            {softwareTable(this.props.data.allMarkdownRemark.edges)}
+            <p>Filter by Discipline. Click on the following buttons.</p>
+            {this.state.uniqueTags.map((tag, index) => (
+              <div
+                key={index}
+                className={this.state[tag] ? `button is-info` : `button`}
+                onClick={this.tagClicked.bind(this, index)}
+              >
+                {tag}
+              </div>
+            ))}
+          </div>
+          <div className="container content">
+            {softwareTable(this.state.filteredData)}
           </div>
         </section>
       </SimpleNav>
@@ -48,7 +91,7 @@ const softwareTable = data => (
     </thead>
     <tbody>
       {data.map(edge => (
-        <tr>
+        <tr key={edge.node.id}>
           <th>
             <a href={edge.node.frontmatter.website} target="_blank">
               {edge.node.frontmatter.title}
@@ -57,9 +100,9 @@ const softwareTable = data => (
           <td>
             {edge.node.frontmatter.discipline.map((disc, index) => {
               if (index === 0) {
-                return <span>{disc}</span>;
+                return <span key={index}>{disc}</span>;
               } else {
-                return <span>, {disc}</span>;
+                return <span key={index}>, {disc}</span>;
               }
             })}
           </td>
@@ -75,6 +118,20 @@ const softwareTable = data => (
     </tbody>
   </table>
 );
+
+const pullUniqueTags = dataArray => {
+  let uniqueTags = {};
+  dataArray.forEach(data => {
+    data.node.frontmatter.discipline.forEach(tag => {
+      uniqueTags[tag] = false;
+    });
+  });
+  return {
+    uniqueTags: Object.keys(uniqueTags),
+    filteredData: dataArray,
+    ...uniqueTags
+  };
+};
 
 export const pageQuery = graphql`
   query SoftwarePage {
@@ -93,6 +150,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
+          id
           html
           frontmatter {
             path
