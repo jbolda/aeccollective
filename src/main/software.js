@@ -88,20 +88,7 @@ const softwareTable = data => (
         <div className="media-left">
           <a href={edge.node.frontmatter.website} target="_blank">
             <strong>{edge.node.frontmatter.title}</strong>
-            {edge.node.frontmatter.logo.childImageSharp ? (
-              <Img
-                className="image"
-                sizes={edge.node.frontmatter.logo.childImageSharp.sizes}
-                style={{ maxWidth: 200, width: 200 }}
-              />
-            ) : (
-              <div className="image">
-                <img
-                  src={edge.node.frontmatter.logo.publicURL}
-                  style={{ maxWidth: 200, width: 200 }}
-                />
-              </div>
-            )}
+            {logoImage(edge.node.frontmatter)}
           </a>
         </div>
         <div className="media-content">
@@ -130,6 +117,36 @@ const softwareTable = data => (
     ))}
   </div>
 );
+
+const logoImage = frontmatter => {
+  console.log(frontmatter);
+  if (frontmatter.logo.name === 'placeholder') {
+    return (
+      <Img
+        sizes={frontmatter.logo.childImageSharp.sizes}
+        style={{ maxWidth: 200, width: 200, height: 0 }}
+      />
+    );
+  } else if (frontmatter.logo.childImageSharp) {
+    return (
+      <Img
+        sizes={frontmatter.logo.childImageSharp.sizes}
+        style={{ maxWidth: 200, width: 200 }}
+      />
+    );
+  } else if (frontmatter.logo.publicURL) {
+    return (
+      <div className="image">
+        <img
+          src={frontmatter.logo.publicURL}
+          style={{ maxWidth: 200, width: 200 }}
+        />
+      </div>
+    );
+  } else {
+    return null;
+  }
+};
 
 const pullUniqueTags = dataArray => {
   let uniqueTags = {};
@@ -172,6 +189,7 @@ export const pageQuery = graphql`
             description
             website
             logo {
+              name
               publicURL
               childImageSharp {
                 sizes(maxWidth: 200) {

@@ -6,6 +6,7 @@ class mdSoftwareInsetPage extends React.Component {
   render() {
     const { html, frontmatter } = this.props.data.markdownRemark;
     var softwareTags = frontmatter.tags;
+
     return (
       <SimpleNav
         sitemetadata={this.props.data.site.siteMetadata}
@@ -15,19 +16,7 @@ class mdSoftwareInsetPage extends React.Component {
           <div className="hero-body">
             <div className="container has-text-centered">
               <h1 className="title">{frontmatter.title}</h1>
-              {frontmatter.logo.childImageSharp ? (
-                <Img
-                  sizes={frontmatter.logo.childImageSharp.sizes}
-                  style={{ maxWidth: 600, maxHeight: 300 }}
-                />
-              ) : (
-                <div className="image">
-                  <img
-                    src={frontmatter.logo.publicURL}
-                    style={{ maxWidth: 200, width: 200 }}
-                  />
-                </div>
-              )}
+              {logoImage(frontmatter)}
             </div>
           </div>
         </section>
@@ -100,6 +89,31 @@ class mdSoftwareInsetPage extends React.Component {
 
 export default mdSoftwareInsetPage;
 
+const logoImage = frontmatter => {
+  console.log(frontmatter);
+  if (frontmatter.logo.name === 'placeholder') {
+    return null;
+  } else if (frontmatter.logo.childImageSharp) {
+    return (
+      <Img
+        sizes={frontmatter.logo.childImageSharp.sizes}
+        style={{ maxWidth: 600, maxHeight: 300 }}
+      />
+    );
+  } else if (frontmatter.logo.publicURL) {
+    return (
+      <div className="image">
+        <img
+          src={frontmatter.logo.publicURL}
+          style={{ maxWidth: 200, width: 200 }}
+        />
+      </div>
+    );
+  } else {
+    return null;
+  }
+};
+
 export const pageQuery = graphql`
   query markdownTemplateBySoftware($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
@@ -108,6 +122,7 @@ export const pageQuery = graphql`
         title
         tags
         logo {
+          name
           publicURL
           childImageSharp {
             sizes(maxWidth: 600) {
