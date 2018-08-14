@@ -11,13 +11,13 @@ export const frontmatter = {
 class SoftwarePage extends React.Component {
   constructor(props) {
     super();
-    this.state = pullUniqueTags(props.data.allMarkdownRemark.edges);
+    this.state = pullUnique(props.data.allMarkdownRemark.edges);
   }
 
-  tagClicked(index) {
+  disciplineClicked(index) {
     let newState = {};
-    newState[this.state.uniqueTags[index]] = !this.state[
-      this.state.uniqueTags[index]
+    newState[this.state.uniqueDisciplines[index]] = !this.state[
+      this.state.uniqueDisciplines[index]
     ];
     let filterData = edge => {
       let disciplines = edge.node.frontmatter.discipline;
@@ -59,13 +59,13 @@ class SoftwarePage extends React.Component {
           </div>
           <div className="container content">
             <p>Filter by Discipline. Click on the following buttons.</p>
-            {this.state.uniqueTags.map((tag, index) => (
+            {this.state.uniqueDisciplines.map((discipline, index) => (
               <div
                 key={index}
-                className={this.state[tag] ? `button is-info` : `button`}
-                onClick={this.tagClicked.bind(this, index)}
+                className={this.state[discipline] ? `button is-info` : `button`}
+                onClick={this.disciplineClicked.bind(this, index)}
               >
-                {tag}
+                {discipline}
               </div>
             ))}
             <hr />
@@ -148,17 +148,17 @@ const logoImage = frontmatter => {
   }
 };
 
-const pullUniqueTags = dataArray => {
-  let uniqueTags = {};
+const pullUnique = dataArray => {
+  let uniqueDisciplines = {};
   dataArray.forEach(data => {
-    data.node.frontmatter.discipline.forEach(tag => {
-      uniqueTags[tag] = false;
+    data.node.frontmatter.discipline.forEach(discipline => {
+      uniqueDisciplines[discipline] = false;
     });
   });
   return {
-    uniqueTags: Object.keys(uniqueTags),
+    uniqueDisciplines: Object.keys(uniqueDisciplines),
     filteredData: dataArray,
-    ...uniqueTags
+    ...uniqueDisciplines
   };
 };
 
