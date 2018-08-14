@@ -6,9 +6,8 @@ discipline: ["Structural Engineering"]
 tags: ["none"]
 logo: ./spColumn.svg
 website: "https://www.structurepoint.org/soft/software-profile.asp?l_family_id=58"
-userForums: "/forum/"
-userSupport: "/technical-support/"
-tutorials: "/tutorials/"
+officialLinks: [{name: "", link: ""}]
+tutorials: [{name: "", link: ""}]
 studentPricing: Paid
 professionalPricing: Paid
 description: >-

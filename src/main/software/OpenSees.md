@@ -6,9 +6,8 @@ discipline: ["Structural Engineering"]
 tags: ["none"]
 logo: ./OpenSees.gif
 website: "http://opensees.berkeley.edu/"
-userForums: "/forum/"
-userSupport: "/technical-support/"
-tutorials: "/tutorials/"
+officialLinks: [{name: "", link: ""}]
+tutorials: [{name: "", link: ""}]
 studentPricing: Open Source - Academic
 professionalPricing: Open Source - Academic
 description: >-

@@ -6,9 +6,8 @@ discipline: ["Structural Engineering"]
 tags: ["none"]
 logo: ./scia.svg
 website: "https://www.scia.net/en/software/scia-engineer"
-userForums: "/forum/"
-userSupport: "/technical-support/"
-tutorials: "/tutorials/"
+officialLinks: [{name: "", link: ""}]
+tutorials: [{name: "", link: ""}]
 studentPricing: Paid
 professionalPricing: Paid
 description: >-

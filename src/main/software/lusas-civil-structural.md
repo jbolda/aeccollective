@@ -6,9 +6,8 @@ discipline: ["Structural Engineering"]
 tags: ["none"]
 logo: ./lusas.jpg
 website: "http://www.lusas.com/products/civil_tour_overview.html"
-userForums: "/forum/"
-userSupport: "/technical-support/"
-tutorials: "/tutorials/"
+officialLinks: [{name: "", link: ""}]
+tutorials: [{name: "", link: ""}]
 studentPricing: Paid
 professionalPricing: Paid
 description: >-

@@ -6,9 +6,8 @@ discipline: ["Structural Engineering"]
 tags: ["none"]
 logo: ./prokon.png
 website: "https://www.prokon.com"
-userForums: "/forum/"
-userSupport: "/technical-support/"
-tutorials: "/tutorials/"
+officialLinks: [{name: "", link: ""}]
+tutorials: [{name: "", link: ""}]
 studentPricing: Paid
 professionalPricing: Paid
 description: >-

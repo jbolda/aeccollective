@@ -6,9 +6,8 @@ discipline: ["Civil Engineering", "Structural Engineering"]
 tags: ["none"]
 logo: ./lusas.jpg
 website: "http://www.lusas.com/academic/index.html"
-userForums: "/forum/"
-userSupport: "/technical-support/"
-tutorials: "/tutorials/"
+officialLinks: [{name: "", link: ""}]
+tutorials: [{name: "", link: ""}]
 studentPricing: Paid
 professionalPricing: Paid
 description: >-

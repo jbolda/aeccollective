@@ -6,9 +6,11 @@ discipline: ["Structural Engineering"]
 tags: ["structural-analysis", "nonlinear-FEA"]
 logo: ./code_aster.png
 website: "https://code-aster.org/"
-userForums: "https://www.code-aster.org/forum2/"
-userSupport: "https://www.code-aster.org/V2/spip.php?rubrique22"
-tutorials: "https://www.code-aster.org/V2/spip.php?rubrique68"
+officialLinks: [
+  {name: "Forums", link: "https://www.code-aster.org/forum2/"},
+  {name: "Support", link: "https://www.code-aster.org/V2/spip.php?rubrique22"}
+  ]
+tutorials: [{name: "Tutorials", link: "https://www.code-aster.org/V2/spip.php?rubrique68"}]
 studentPricing: Open Source
 professionalPricing: Open Source
 description: >-

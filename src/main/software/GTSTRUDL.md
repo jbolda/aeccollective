@@ -6,9 +6,8 @@ discipline: ["Structural Engineering"]
 tags: ["none"]
 logo: ./HexagonPPM.png
 website: "https://hexagonppm.com/products/analysis-product-family/gt-strudl"
-userForums: "/forum/"
-userSupport: "/technical-support/"
-tutorials: "/tutorials/"
+officialLinks: [{name: "", link: ""}]
+tutorials: [{name: "", link: ""}]
 studentPricing: Originally Academic, Now Corp
 professionalPricing: Originally Academic, Now Corp
 description: >-

@@ -6,9 +6,8 @@ discipline: ["BIM"]
 tags: ["none"]
 logo: ./tekla.png
 website: "https://www.tekla.com/us/products/tekla-structures"
-userForums: "/forum/"
-userSupport: "/technical-support/"
-tutorials: "/tutorials/"
+officialLinks: [{name: "", link: ""}]
+tutorials: [{name: "", link: ""}]
 studentPricing: Paid
 professionalPricing: Paid
 description: >-

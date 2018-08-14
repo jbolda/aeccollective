@@ -6,9 +6,11 @@ discipline: ["Structural Engineering"]
 tags: ["structural-analysis", "nonlinear-FEA", "structural-design", "concrete-design", "steel-design"]
 logo: ./sofistik.png
 website: "https://www.sofistik.com/"
-userForums: "https://www.sofistik.com/forum/"
-userSupport: "https://www.sofistik.com/services/technical-support/"
-tutorials: "http://www.sofistik.de/documentation/2016/en/tutorials/listoftutorials/list-tutorials.html"
+officialLinks: [
+  {name: "Forums", link: "https://www.sofistik.com/forum/"},
+  {name: "Technical Support", link: "https://www.sofistik.com/services/technical-support/"}
+  ]
+tutorials: [{name: "List of Tutorials", link: "http://www.sofistik.de/documentation/2016/en/tutorials/listoftutorials/list-tutorials.html"}]
 studentPricing: Free
 professionalPricing: ---
 description: >-

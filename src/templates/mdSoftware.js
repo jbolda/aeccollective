@@ -5,7 +5,7 @@ import SimpleNav from '../../plugins/gatsby-theme-bulma-layout/Simple/SimpleNav'
 class mdSoftwareInsetPage extends React.Component {
   render() {
     const { html, frontmatter } = this.props.data.markdownRemark;
-    var softwareTags = frontmatter.tags;
+    let softwareTags = frontmatter.tags;
 
     return (
       <SimpleNav
@@ -44,15 +44,28 @@ class mdSoftwareInsetPage extends React.Component {
             <p>
               <a href={frontmatter.website}>Main Website</a>
             </p>
-            <p>
-              <a href={frontmatter.userForums}>User forums</a>
-            </p>
-            <p>
-              <a href={frontmatter.userSupport}>Technical Support</a>
-            </p>
-            <p>
-              <a href={frontmatter.tutorials}>Tutorials</a>
-            </p>
+            {frontmatter.officialLinks.map(lk => {
+              if (lk.name === '') {
+                return null;
+              } else {
+                return (
+                  <p key={lk.name}>
+                    <a href={lk.link}>{lk.name}</a>
+                  </p>
+                );
+              }
+            })}
+            {frontmatter.tutorials.map(lk => {
+              if (lk.name === '') {
+                return null;
+              } else {
+                return (
+                  <p key={lk.name}>
+                    <a href={lk.link}>{lk.name}</a>
+                  </p>
+                );
+              }
+            })}
           </div>
         </section>
         <section className="section">
@@ -131,9 +144,14 @@ export const pageQuery = graphql`
           }
         }
         website
-        userForums
-        userSupport
-        tutorials
+        officialLinks {
+          name
+          link
+        }
+        tutorials {
+          name
+          link
+        }
         studentPricing
         professionalPricing
         description

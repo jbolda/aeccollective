@@ -6,9 +6,8 @@ discipline: ["Structural Engineering", "Construction Engineering"]
 tags: ["none"]
 logo: ./lstc.png
 website: "http://www.lstc.com/products/ls-dyna"
-userForums: "/forum/"
-userSupport: "http://www.lstc.com/support"
-tutorials: "http://www.lstc.com/training"
+officialLinks: [{name: "Support", link: "http://www.lstc.com/support"}]
+tutorials: [{name: "Training", link: "http://www.lstc.com/training"}]
 studentPricing: Paid
 professionalPricing: Paid
 description: >-

@@ -6,9 +6,8 @@ discipline: ["Structural Engineering", "Civil Engineering"]
 tags: ["none"]
 logo: ./oasys.png
 website: "https://www.oasys-software.com/products/structural/gsa-suite/"
-userForums: "/forum/"
-userSupport: "/technical-support/"
-tutorials: "/tutorials/"
+officialLinks: [{name: "", link: ""}]
+tutorials: [{name: "", link: ""}]
 studentPricing: Paid
 professionalPricing: Paid
 description: >-
