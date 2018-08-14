@@ -32,7 +32,10 @@ class mdSoftwareInsetPage extends React.Component {
           </div>
         </section>
         <section className="section">
-          <div className="container content">{frontmatter.description}</div>
+          <div
+            className="container content"
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
         </section>
         <section className="section">
           <div className="container content">
