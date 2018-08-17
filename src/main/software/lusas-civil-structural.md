@@ -13,7 +13,6 @@ professionalPricing: Paid
 description: >-
   LUSAS Civil & Structural is a world-leading finite element analysis software application for the analysis, design and assessment of all types of structures.
 projects: [{name: "text", link: "www", image: ./placeholder.png, description: "blah blah"}]
-otherNotes: placeHolder
 ---
 
 LUSAS Civil & Structural is a world-leading finite element analysis software application for the analysis, design and assessment of all types of structures. 

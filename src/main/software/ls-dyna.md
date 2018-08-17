@@ -13,7 +13,6 @@ professionalPricing: Paid
 description: >-
   LS-DYNA is a general-purpose finite element program capable of simulating complex real world problems. It is used by the automobile, aerospace, construction, military, manufacturing, and bioengineering industries.
 projects: [{name: "text", link: "www", image: ./placeholder.png, description: "blah blah"}]
-otherNotes: placeHolder
 ---
 
 LS-DYNA is a general-purpose finite element program capable of simulating complex real world problems. It is used by the automobile, aerospace, construction, military, manufacturing, and bioengineering industries. LS-DYNA is optimized for shared and distributed memory Unix, Linux, and Windows based, platforms, and it is fully QA'd by LSTC. The code's origins lie in highly nonlinear, transient dynamic finite element analysis using explicit time integration.

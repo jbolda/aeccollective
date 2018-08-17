@@ -13,7 +13,6 @@ professionalPricing: Paid
 description: >-
   LUSAS Academic software is used by universities and colleges worldwide for finite element research research and teaching / training purposes.
 projects: [{name: "text", link: "www", image: ./placeholder.png, description: "blah blah"}]
-otherNotes: placeHolder
 ---
 
 LUSAS Academic software is used by universities and colleges worldwide for finite element research research and teaching / training purposes. 

@@ -13,7 +13,6 @@ professionalPricing: Paid
 description: >-
   FEM analysis & design of foundations, mats, combined footings, pile caps, slabs on grade, & buried structures.
 projects: [{name: "text", link: "www", image: ./placeholder.png, description: "blah blah"}]
-otherNotes: placeHolder
 ---
 
 Powered by a sophisticated FEM Solver increasing capacity and substantially speeding up solution for large and complex models, spMats v8.12 is widely used for analysis, design and investigation of concrete mat foundations, footings, and slabs on grade.

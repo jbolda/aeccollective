@@ -13,7 +13,6 @@ professionalPricing: Paid
 description: >-
   Design new and investigate existing reinforced concrete beams, joists, one-way, two-way and slab band systems
 projects: [{name: "text", link: "www", image: ./placeholder.png, description: "blah blah"}]
-otherNotes: placeHolder
 ---
 
 Powered by the Equivalent Frame Method of analysis and design per latest American (ACI 318-14) and Canadian (CSA A23.3-14), spSlab v5.00 is widely used for analysis, design, and investigation of two-way slab systems (including waffle and slab bands), beams, and one-way slab systems (including standard and wide module joist systems.

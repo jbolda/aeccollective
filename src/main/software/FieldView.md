@@ -13,7 +13,6 @@ professionalPricing: Paid
 description: >-
   CFD Post-Processing, Visualization and Workflow Automation
 projects: [{name: "text", link: "www", image: ./placeholder.png, description: "blah blah"}]
-otherNotes: placeHolder
 ---
 
 CFD Post-Processing, Visualization and Workflow Automation

@@ -13,7 +13,6 @@ professionalPricing: Paid
 description: >-
   Design new and investigate existing reinforced concrete beams, standard and wide module joists, and one-way slab systems.
 projects: [{name: "text", link: "www", image: ./placeholder.png, description: "blah blah"}]
-otherNotes: placeHolder
 ---
 
 Powered by the dynamic frame analysis and design engine, spBeam v5.00 is widely used for analysis, design, and investigation of beams, and one-way slab systems (including standard and wide module joist systems) per latest American (ACI 318-14) and Canadian (CSA A23.3-14).

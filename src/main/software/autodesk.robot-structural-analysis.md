@@ -13,7 +13,6 @@ professionalPricing: Paid
 description: >-
   Test the effects of structural loads and verify code compliance using advanced BIM (Building Information Modeling) tools. Robot Structural Analysis Professional is available only in the Architecture, Engineering & Construction Collection.
 projects: [{name: "text", link: "www", image: ./placeholder.png, description: "blah blah"}]
-otherNotes: placeHolder
 ---
 
 Test the effects of structural loads and verify code compliance using advanced BIM (Building Information Modeling) tools. Robot Structural Analysis Professional is available only in the Architecture, Engineering & Construction Collection.

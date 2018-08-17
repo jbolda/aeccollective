@@ -13,7 +13,6 @@ professionalPricing: Paid
 description: >-
   Models created with Tekla BIM software carry the accurate, reliable and detailed information needed for successful Building Information Modeling and construction execution. Welcome smoother workflow to your company with Tekla Structures and constructible models.
 projects: [{name: "text", link: "www", image: ./placeholder.png, description: "blah blah"}]
-otherNotes: placeHolder
 ---
 
 # Tekla Structures BIM software

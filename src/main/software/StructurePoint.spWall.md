@@ -13,7 +13,6 @@ professionalPricing: Paid
 description: >-
   FEM analysis, design, and investigation of reinforced concrete, precast, ICF, tilt-up, retaining, architectural, and shear walls.
 projects: [{name: "text", link: "www", image: ./placeholder.png, description: "blah blah"}]
-otherNotes: placeHolder
 ---
 
 From shear walls and retaining walls to precast, ICF, and tilt-up walls, engineers worldwide use spWall v5.01 to optimize complicated wall design, reinforcing, and deflections.

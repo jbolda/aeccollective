@@ -13,7 +13,6 @@ professionalPricing: Paid
 description: >-
   Structural engineers designing buildings, bridges and tensile structures need comprehensive software to get robust results. Tackle any structural engineering challenge with this complete design and analysis package. GSA Suite wraps the benefits of all the GSA variants into one single offering.
 projects: [{name: "text", link: "www", image: ./placeholder.png, description: "blah blah"}]
-otherNotes: placeHolder
 ---
 
 The intuitive software allows engineers to design structural models with 1D, 2D and 3D finite elements however large or complex. With inbuilt form finding routines and API links to your own programs, GSA Suite allows you do create the optimum structure. It will then design your steelwork and concrete reinforcement, check for seismic response and human induced vibration, calculate buckling capacities, and can even tell you where you have made mistakes in your model.

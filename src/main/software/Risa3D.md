@@ -13,7 +13,6 @@ professionalPricing: Paid
 description: >-
   User friendliness combined with advanced analysis capabilities make this industry standard software a very powerful tool for the analysis and optimization of all types of structures and all common structural materials, including steel, concrete, wood, aluminum and masonry.
 projects: [{name: "text", link: "www", image: ./placeholder.png, description: "blah blah"}]
-otherNotes: placeHolder
 ---
 
 User friendliness combined with advanced analysis capabilities make this industry standard software a very powerful tool for the analysis and optimization of all types of structures and all common structural materials, including steel, concrete, wood, aluminum and masonry.

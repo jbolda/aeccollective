@@ -13,7 +13,6 @@ professionalPricing: Paid
 description: >-
   Multi-purpose structural modeling and finite element analysis software for two- and three-dimensional buildings and structures with  straightforward, robust, and quick yet simple spCAD graphical interface.
 projects: [{name: "text", link: "www", image: ./placeholder.png, description: "blah blah"}]
-otherNotes: placeHolder
 ---
 
 spFrame, is a feature-rich structural analysis program for two- and three-dimensional structures subject to static loads. Used by academic and industry professionals, it offers a quick and straightforward analysis tool.

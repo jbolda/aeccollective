@@ -13,7 +13,6 @@ professionalPricing: Paid
 description: >-
   SCIA Engineer is an integrated, multi-material structural analysis and design software for all kinds of structures. Its wide range of functionality makes it the ideal partner for the design of office buildings, industrial plants, bridges or any other project, all within the same easy-to-use environment.
 projects: [{name: "text", link: "www", image: ./placeholder.png, description: "blah blah"}]
-otherNotes: placeHolder
 ---
 
 SCIA Engineer is an integrated, multi-material structural analysis and design software for all kinds of structures. Its wide range of functionality makes it the ideal partner for the design of office buildings, industrial plants, bridges or any other project, all within the same easy-to-use environment.

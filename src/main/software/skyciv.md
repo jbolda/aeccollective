@@ -13,7 +13,6 @@ professionalPricing: Paid
 description: >-
   Powerful, Easy-to-use and on the Cloud. Structural Analysis Software, instantly from your web browser.
 projects: [{name: "text", link: "www", image: ./placeholder.png, description: "blah blah"}]
-otherNotes: placeHolder
 ---
 
 SkyCiv offers a range of Cloud Structural engineering software in both Analysis and Design. Our powerful, yet easy-to-use software allows engineers to work quickly and efficiently, with no obstacles in getting started. Simply register and gain instant access to the following:

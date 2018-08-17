@@ -13,7 +13,6 @@ professionalPricing: Paid
 description: >-
   Confidently design any type of structure and share your synchronized model data among your design team, in one integrated set of applications. Complete your steel, concrete, timber, aluminum, and cold-formed steel projects, on time and in budget, regardless of complexity. Design structures anywhere in the world with confidence using over 90 international codes, reducing your team’s need to learn multiple software applications. Increase your design productivity with streamlined workflows to reduce duplication of effort and eliminate errors.
 projects: [{name: "text", link: "www", image: ./placeholder.png, description: "blah blah"}]
-otherNotes: placeHolder
 ---
 
 Confidently design any type of structure and share your synchronized model data among your design team, in one integrated set of applications. Complete your steel, concrete, timber, aluminum, and cold-formed steel projects, on time and in budget, regardless of complexity. Design structures anywhere in the world with confidence using over 90 international codes, reducing your team’s need to learn multiple software applications. Increase your design productivity with streamlined workflows to reduce duplication of effort and eliminate errors.
