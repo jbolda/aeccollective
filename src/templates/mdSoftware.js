@@ -155,7 +155,6 @@ export const pageQuery = graphql`
         studentPricing
         professionalPricing
         description
-        otherNotes
       }
     }
     site {
