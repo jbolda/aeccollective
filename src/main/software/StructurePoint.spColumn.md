@@ -3,7 +3,7 @@ path: /software/spColumn/
 title: StructurePoint spColumn
 templateKey: mdSoftware
 discipline: ["Structural Engineering"]
-tags: ["none"]
+tags: ["Concrete Design", "Structural Analysis", "Column Design", "Interaction Diagrams"]
 logo: ./spColumn.svg
 website: "https://www.structurepoint.org/soft/software-profile.asp?l_family_id=58"
 officialLinks: [{name: "", link: ""}]
