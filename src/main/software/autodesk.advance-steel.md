@@ -2,7 +2,7 @@
 path: /software/advance-steel/
 title: Autodesk Advance Steel
 templateKey: mdSoftware
-discipline: ["Structural Engineering", "Detailing", "Steel Fabrication"]
+discipline: ["Structural Engineering", "Detailer", "Steel Fabrication"]
 tags: ["BIM", "Steel Detailing", "Steel Connections"]
 logo: ./autodesk.advance-steel.png
 website: "https://www.autodesk.com/products/advance-steel/overview"
