@@ -3,7 +3,7 @@ path: /software/gsa/
 title: Oasys GSA
 templateKey: mdSoftware
 discipline: ["Structural Engineering", "Civil Engineering"]
-tags: ["none"]
+tags: ["FEA", "Structural Analysis", "API"]
 logo: ./oasys.png
 website: "https://www.oasys-software.com/products/structural/gsa-suite/"
 officialLinks: [{name: "", link: ""}]
