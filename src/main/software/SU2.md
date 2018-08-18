@@ -2,9 +2,9 @@
 path: /software/su2/
 title: SU2
 templateKey: mdSoftware
-discipline: ["Structural Engineering"]
-tags: ["none"]
-logo: ./placeholder.png
+discipline: ["Structural Engineering", "Mechanical Engineering"]
+tags: ["Computational Fluid Dynamics", "Partial Differential Equations"]
+logo: ./SU2.png
 website: "https://su2code.github.io/"
 officialLinks: [{name: "", link: ""}]
 tutorials: [{name: "", link: ""}]
