@@ -2,8 +2,8 @@
 path: /software/tekla-structures/
 title: Tekla Structures
 templateKey: mdSoftware
-discipline: ["Structural Engineering"]
-tags: ["none"]
+discipline: ["Structural Engineering", "Detailer"]
+tags: ["BIM", "Modeling", "Steel Fabrication"]
 logo: ./tekla.png
 website: "https://www.tekla.com/us/products/tekla-structures"
 officialLinks: [{name: "", link: ""}]
