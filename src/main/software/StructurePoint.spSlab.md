@@ -3,7 +3,7 @@ path: /software/spslab/
 title: StructurePoint spSlab
 templateKey: mdSoftware
 discipline: ["Structural Engineering"]
-tags: ["none"]
+tags: ["Concrete Design", "Structural Analysis", "Two-Way Slab Design", "Beam Design", "One-Way Slab Design"]
 logo: ./spSlab.svg
 website: "https://www.structurepoint.org/soft/software-profile.asp?l_family_id=55"
 officialLinks: [{name: "", link: ""}]
