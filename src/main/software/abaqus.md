@@ -3,8 +3,8 @@ path: /software/abaqus/
 title: Abaqus
 templateKey: mdSoftware
 discipline: ["Structural Engineering"]
-tags: ["none"]
-logo: ./placeholder.png
+tags: ["FEA", "Dynamic Loads", "Thermal"]
+logo: ./DassaultSystemes.png
 website: "https://www.3ds.com/products-services/simulia/products/abaqus/"
 officialLinks: [{name: "", link: ""}]
 tutorials: [{name: "", link: ""}]
