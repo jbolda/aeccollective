@@ -3,8 +3,16 @@ path: /software/staad/
 title: STAAD
 templateKey: mdSoftware
 discipline: ["Structural Engineering"]
-tags: ["none"]
-logo: ./placeholder.png
+tags: [
+  "3D Structural Analysis",
+  "Structural Design",
+  "Steel Design",
+  "Concrete Design",
+  "Timber Design",
+  "Aluminum Design",
+  "Cold-Formed Steel Design"
+  ]
+logo: ./Bentley.png
 website: "https://www.bentley.com/en/products/brands/staad"
 officialLinks: [{name: "", link: ""}]
 tutorials: [{name: "", link: ""}]
