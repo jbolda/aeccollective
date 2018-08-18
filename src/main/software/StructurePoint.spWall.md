@@ -3,7 +3,7 @@ path: /software/spwall/
 title: StructurePoint spWall
 templateKey: mdSoftware
 discipline: ["Structural Engineering"]
-tags: ["none"]
+tags: ["Concrete Design", "Structural Analysis", "FEM", "Second Order Analysis", "Wall Design", "Panel Design"]
 logo: ./spWall.svg
 website: "https://www.structurepoint.org/soft/software-profile.asp?l_family_id=56"
 officialLinks: [{name: "", link: ""}]
