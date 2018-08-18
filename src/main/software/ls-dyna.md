@@ -3,7 +3,7 @@ path: /software/ls-dyna/
 title: LS-DYNA
 templateKey: mdSoftware
 discipline: ["Structural Engineering", "Construction Engineering"]
-tags: ["none"]
+tags: ["FEA", "Nonlinear Analysis", "Dynamic Loads"]
 logo: ./lstc.png
 website: "http://www.lstc.com/products/ls-dyna"
 officialLinks: [{name: "Support", link: "http://www.lstc.com/support"}]
