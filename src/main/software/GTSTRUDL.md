@@ -2,8 +2,8 @@
 path: /software/gtstrudl/
 title: GT STRUDL
 templateKey: mdSoftware
-discipline: ["Structural Engineering"]
-tags: ["none"]
+discipline: ["Structural Engineering", "Civil Engineering"]
+tags: ["Structural Analysis", "Steel Design", "Concrete Design", "Multiple Modal Analysis"]
 logo: ./HexagonPPM.png
 website: "https://hexagonppm.com/products/analysis-product-family/gt-strudl"
 officialLinks: [{name: "", link: ""}]
