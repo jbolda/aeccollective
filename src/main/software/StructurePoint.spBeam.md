@@ -3,7 +3,7 @@ path: /software/spbeam/
 title: StructurePoint spBeam
 templateKey: mdSoftware
 discipline: ["Structural Engineering"]
-tags: ["none"]
+tags: ["Concrete Design", "Structural Analysis", "Slab Design", "Beam Design"]
 logo: ./spBeam.svg
 website: "https://www.structurepoint.org/soft/software-profile.asp?l_family_id=52"
 officialLinks: [{name: "", link: ""}]
