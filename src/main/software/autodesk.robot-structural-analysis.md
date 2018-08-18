@@ -3,7 +3,7 @@ path: /software/robot-structural-analysis/
 title: Autodesk Robot Structural Analysis
 templateKey: mdSoftware
 discipline: ["Structural Engineering"]
-tags: ["none"]
+tags: ["Structural Analysis", "BIM"]
 logo: ./autodesk.robot-structural-analysis.png
 website: "https://www.autodesk.com/products/robot-structural-analysis/overview"
 officialLinks: [{name: "", link: ""}]
