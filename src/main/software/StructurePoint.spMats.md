@@ -3,7 +3,7 @@ path: /software/spmats/
 title: StructurePoint spMats
 templateKey: mdSoftware
 discipline: ["Structural Engineering"]
-tags: ["none"]
+tags: ["Concrete Design", "Structural Analysis", "FEM", "Plate Bending Theory", "Mat Foundation Design"]
 logo: ./spMats.svg
 website: "https://www.structurepoint.org/soft/software-profile.asp?l_family_id=50"
 officialLinks: [{name: "", link: ""}]
