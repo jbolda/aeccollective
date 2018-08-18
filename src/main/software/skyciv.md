@@ -3,7 +3,7 @@ path: /software/skyciv/
 title: SkyCiv
 templateKey: mdSoftware
 discipline: ["Structural Engineering"]
-tags: ["none"]
+tags: ["Structural Analysis", "Web App", "Section Properties", "API", "Linear Analysis"]
 logo: ./SkyCiv.png
 website: "https://skyciv.com/"
 officialLinks: [{name: "", link: ""}]
