@@ -3,7 +3,7 @@ path: /software/spframe/
 title: StructurePoint spFrame
 templateKey: mdSoftware
 discipline: ["Structural Engineering"]
-tags: ["none"]
+tags: ["Concrete Design", "Structural Analysis", "Frame Analysis"]
 logo: ./spFrame.svg
 website: "https://www.structurepoint.org/soft/software-profile.asp?l_family_id=34"
 officialLinks: [{name: "", link: ""}]
