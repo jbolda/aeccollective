@@ -108,6 +108,7 @@ const softwareTable = data => (
           </p>
           <div>
             <p>{edge.node.frontmatter.description}</p>
+            <div>{edge.node.tags.map(tag => <span className="tag is-primary">{tag}</span>)}</div>
             <Link to={edge.node.frontmatter.path}>
               <button className="button is-info">Learn More</button>
             </Link>
@@ -185,6 +186,7 @@ export const pageQuery = graphql`
             path
             title
             discipline
+            tags
             professionalPricing
             description
             website
