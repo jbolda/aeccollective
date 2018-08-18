@@ -3,7 +3,7 @@ path: /software/lusas-academic/
 title: LUSAS Academic
 templateKey: mdSoftware
 discipline: ["Civil Engineering", "Structural Engineering"]
-tags: ["none"]
+tags: ["FEA", "Structural Analysis"]
 logo: ./lusas.jpg
 website: "http://www.lusas.com/academic/index.html"
 officialLinks: [{name: "", link: ""}]
