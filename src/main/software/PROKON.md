@@ -2,11 +2,11 @@
 path: /software/prokon/
 title: PROKON
 templateKey: mdSoftware
-discipline: ["Structural Engineering"]
-tags: ["none"]
+discipline: ["Structural Engineering", "Civil Engineering"]
+tags: ["Structural Analysis", "Structural Design", "FEA", "Frame Analysis", "Detailing", "BIM"]
 logo: ./prokon.png
 website: "https://www.prokon.com"
-officialLinks: [{name: "", link: ""}]
+officialLinks: [{name: "Section Properties Web App", link: "https://www.prokon.com/web-apps/websec"}]
 tutorials: [{name: "", link: ""}]
 studentPricing: Paid
 professionalPricing: Paid
