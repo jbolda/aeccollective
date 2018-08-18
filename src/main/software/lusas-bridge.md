@@ -3,7 +3,7 @@ path: /software/lusas-bridge/
 title: LUSAS Bridge
 templateKey: mdSoftware
 discipline: ["Civil Engineering"]
-tags: ["none"]
+tags: ["FEA", "Structural Analysis", "Bridge Design", "Dynamic Loads", "Staged Erection"]
 logo: ./lusas.jpg
 website: "http://www.lusas.com/products/bridge_tour_overview.html"
 officialLinks: [{name: "", link: ""}]
