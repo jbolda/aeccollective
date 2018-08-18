@@ -3,7 +3,7 @@ path: /software/scia-engineer/
 title: SCIA Engineer
 templateKey: mdSoftware
 discipline: ["Structural Engineering"]
-tags: ["none"]
+tags: ["Structural Analysis", "Modeling", "BIM Links"]
 logo: ./scia.svg
 website: "https://www.scia.net/en/software/scia-engineer"
 officialLinks: [{name: "", link: ""}]
