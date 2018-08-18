@@ -2,11 +2,14 @@
 path: /software/opensees/
 title: OpenSees
 templateKey: mdSoftware
-discipline: ["Structural Engineering"]
-tags: ["none"]
+discipline: ["Structural Engineering", "Geotechnical Engineering"]
+tags: ["Seismic Analysis", "Nonlinear Response"]
 logo: ./OpenSees.gif
 website: "http://opensees.berkeley.edu/"
-officialLinks: [{name: "", link: ""}]
+officialLinks: [
+  {name: "Official Wiki", link: "http://opensees.berkeley.edu/wiki/index.php/Main_Page"},
+  {name: "Message Board", link: "http://opensees.berkeley.edu/community/index.php"}
+  ]
 tutorials: [{name: "", link: ""}]
 studentPricing: Open Source - Academic
 professionalPricing: Open Source - Academic
@@ -16,3 +19,12 @@ projects: [{name: "text", link: "www", image: ./placeholder.png, description: "b
 ---
 
 The Open System for Earthquake Engineering Simulation (OpenSees) is a software framework for simulating the seismic response of structural and geotechnical systems. OpenSees has advanced capabilities for modeling and analyzing the nonlinear response of systems using a wide range of material models, elements, and solution algorithms. The software is designed for parallel computing to allow scalable simulations on high-end computers or for parameter studies.
+
+## Capabilities
+OpenSees has advanced capabilities for modeling and analyzing the nonlinear response of systems using a wide range of material models, elements, and solution algorithms. The software is designed for parallel computing to allow scalable simulations on high-end computers or for parameter studies.
+
+### Modeling
+OpenSees providing beam-column elements and continuum elements for structural and geotechnical models. A wide range of uniaxial materials and section models are available for beam-columns.
+
+### Analysis
+Nonlinear analysis requires a wide range of algorithms and solution methods. OpenSees provides nonlinear static and dynamic methods, equation solvers, and methods for handling constraints.
