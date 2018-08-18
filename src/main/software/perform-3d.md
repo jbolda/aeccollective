@@ -3,7 +3,7 @@ path: /software/perform-3d/
 title: Perform-3D
 templateKey: mdSoftware
 discipline: ["Structural Engineering"]
-tags: ["none"]
+tags: ["Nonlinear Analysis", "Displacement-Based Design", "Seismic Design"]
 logo: ./perform-3d.png
 website: "https://www.csiamerica.com/products/perform-3d"
 officialLinks: [{name: "", link: ""}]
