@@ -3,7 +3,7 @@ path: /software/lusas-civil-structural/
 title: LUSAS Civil & Structural
 templateKey: mdSoftware
 discipline: ["Structural Engineering"]
-tags: ["none"]
+tags: ["FEA", "Structural Analysis", "Dynamic Loads"]
 logo: ./lusas.jpg
 website: "http://www.lusas.com/products/civil_tour_overview.html"
 officialLinks: [{name: "", link: ""}]
