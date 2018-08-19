@@ -15,28 +15,45 @@ class SoftwarePage extends React.Component {
   }
 
   disciplineClicked(index) {
-    let newState = {};
-    newState[this.state.uniqueDisciplines[index]] = !this.state[
-      this.state.uniqueDisciplines[index]
-    ];
-    let filterData = edge => {
-      let disciplines = edge.node.frontmatter.discipline;
-      return disciplines.reduce((accumulator, discipline) => {
-        if (accumulator) {
-          return true;
-        } else if (newState[discipline]) {
-          return true;
-        }
-      }, false);
-    };
-    let newFilteredData = this.props.data.allMarkdownRemark.edges.filter(
-      filterData
-    );
-    newState.filteredData =
-      newFilteredData.length === 0
-        ? this.props.data.allMarkdownRemark.edges
-        : newFilteredData;
-    this.setState(newState);
+    this.setState((prevState, props) => {
+      let newState = { ...prevState };
+      newState.disciplineButtons[
+        prevState.uniqueDisciplines[index]
+      ] = !prevState.disciplineButtons[prevState.uniqueDisciplines[index]];
+
+      let filterData = edge => {
+        let availableDisciplines = edge.node.frontmatter.discipline.reduce(
+          (accumulator, discipline) => {
+            accumulator[discipline] = true;
+            return accumulator;
+          },
+          {}
+        );
+        let disciplines = prevState.uniqueDisciplines;
+        return disciplines.reduce((accumulator, discipline) => {
+          if (
+            newState.disciplineButtons[discipline] &&
+            !availableDisciplines[discipline]
+          ) {
+            return false;
+          } else {
+            return accumulator;
+          }
+        }, true);
+      };
+
+      newState.filteredData = [
+        ...props.data.allMarkdownRemark.edges.filter(filterData)
+      ];
+
+      // newState.filteredData =
+      //   newFilteredData.length === 0
+      //     ? [...props.data.allMarkdownRemark.edges]
+      //     : newFilteredData;
+
+      console.log(newState);
+      return newState;
+    });
   }
 
   render() {
@@ -64,7 +81,9 @@ class SoftwarePage extends React.Component {
                 <div
                   key={index}
                   className={
-                    this.state[discipline] ? `button is-info` : `button`
+                    this.state.disciplineButtons[discipline]
+                      ? `button is-info`
+                      : `button`
                   }
                   onClick={this.disciplineClicked.bind(this, index)}
                 >
@@ -72,6 +91,9 @@ class SoftwarePage extends React.Component {
                 </div>
               ))}
             </div>
+            <div>{`We are showing ${
+              this.state.filteredData.length
+            } software titles matching your criteria.`}</div>
             <hr />
           </div>
           <div className="container content">
@@ -87,50 +109,55 @@ export default SoftwarePage;
 
 const softwareTable = data => (
   <div>
-    {data.map(edge => (
-      <div className="media" key={edge.node.id}>
-        <div className="media-left">
-          <a href={edge.node.frontmatter.website} target="_blank">
-            <strong>{edge.node.frontmatter.title}</strong>
-            {logoImage(edge.node.frontmatter)}
-          </a>
-        </div>
-        <div className="media-content">
-          <p>
-            <strong>{'Discipline: '}</strong>
-            {edge.node.frontmatter.discipline.map((disc, index) => {
-              if (index === 0) {
-                return <span key={index}>{disc}</span>;
-              } else {
-                return <span key={index}>, {disc}</span>;
-              }
-            })}
-          </p>
-          <p>
-            <strong>{'Pricing: '}</strong>
-            {edge.node.frontmatter.professionalPricing}
-          </p>
-          <div>
-            <p>{edge.node.frontmatter.description}</p>
-            <div className="tags">
-              {edge.node.frontmatter.tags.map(tag => (
-                <span className="tag is-secondary">{tag}</span>
-              ))}
-            </div>
+    {data.length === 0 ? (
+      <span>No matching software.</span>
+    ) : (
+      data.map(edge => (
+        <div className="media" key={edge.node.id}>
+          <div className="media-left">
+            <a href={edge.node.frontmatter.website} target="_blank">
+              <strong>{edge.node.frontmatter.title}</strong>
+              {logoImage(edge.node.frontmatter)}
+            </a>
+          </div>
+          <div className="media-content">
+            <p>
+              <strong>{'Discipline: '}</strong>
+              {edge.node.frontmatter.discipline.map((disc, index) => {
+                if (index === 0) {
+                  return <span key={index}>{disc}</span>;
+                } else {
+                  return <span key={index}>, {disc}</span>;
+                }
+              })}
+            </p>
+            <p>
+              <strong>{'Pricing: '}</strong>
+              {edge.node.frontmatter.professionalPricing}
+            </p>
             <div>
-              <Link to={edge.node.frontmatter.path}>
-                <button className="button is-info">Learn More</button>
-              </Link>
+              <p>{edge.node.frontmatter.description}</p>
+              <div className="tags">
+                {edge.node.frontmatter.tags.map(tag => (
+                  <span key={tag} className="tag is-secondary">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <div>
+                <Link to={edge.node.frontmatter.path}>
+                  <button className="button is-info">Learn More</button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    ))}
+      ))
+    )}
   </div>
 );
 
 const logoImage = frontmatter => {
-  console.log(frontmatter);
   if (frontmatter.logo.name === 'placeholder') {
     return (
       <Img
@@ -160,14 +187,14 @@ const logoImage = frontmatter => {
 };
 
 const pullUnique = dataArray => {
-  let uniqueDisciplines = {};
+  let uniqueDisciplines = { disciplineButtons: {} };
   dataArray.forEach(data => {
     data.node.frontmatter.discipline.forEach(discipline => {
-      uniqueDisciplines[discipline] = false;
+      uniqueDisciplines.disciplineButtons[discipline] = false;
     });
   });
   return {
-    uniqueDisciplines: Object.keys(uniqueDisciplines),
+    uniqueDisciplines: Object.keys(uniqueDisciplines.disciplineButtons),
     filteredData: dataArray,
     ...uniqueDisciplines
   };
