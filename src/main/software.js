@@ -59,15 +59,19 @@ class SoftwarePage extends React.Component {
           </div>
           <div className="container content">
             <p>Filter by Discipline. Click on the following buttons.</p>
-            {this.state.uniqueDisciplines.map((discipline, index) => (
-              <div
-                key={index}
-                className={this.state[discipline] ? `button is-info` : `button`}
-                onClick={this.disciplineClicked.bind(this, index)}
-              >
-                {discipline}
-              </div>
-            ))}
+            <div className="buttons">
+              {this.state.uniqueDisciplines.map((discipline, index) => (
+                <div
+                  key={index}
+                  className={
+                    this.state[discipline] ? `button is-info` : `button`
+                  }
+                  onClick={this.disciplineClicked.bind(this, index)}
+                >
+                  {discipline}
+                </div>
+              ))}
+            </div>
             <hr />
           </div>
           <div className="container content">
