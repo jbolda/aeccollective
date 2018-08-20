@@ -12,9 +12,9 @@ class mdSoftwareInsetPage extends React.Component {
         sitemetadata={this.props.data.site.siteMetadata}
         location={this.props.location}
       >
-        <section className="section hero">
+        <section className="hero is-small">
           <div className="hero-body">
-            <div className="container has-text-centered">
+            <div className="container">
               <h1 className="title">{frontmatter.title}</h1>
               {logoImage(frontmatter)}
             </div>
@@ -110,16 +110,13 @@ const logoImage = frontmatter => {
     return (
       <Img
         sizes={frontmatter.logo.childImageSharp.sizes}
-        style={{ maxWidth: 600, maxHeight: 300 }}
+        style={{ maxHeight: 300, maxWidth: 600 }}
       />
     );
   } else if (frontmatter.logo.publicURL) {
     return (
       <div className="image">
-        <img
-          src={frontmatter.logo.publicURL}
-          style={{ maxWidth: 200, width: 200 }}
-        />
+        <img src={frontmatter.logo.publicURL} style={{ maxHeight: 300 }} />
       </div>
     );
   } else {
@@ -138,7 +135,7 @@ export const pageQuery = graphql`
           name
           publicURL
           childImageSharp {
-            sizes(maxWidth: 600) {
+            sizes(maxWidth: 600, quality: 90) {
               ...GatsbyImageSharpSizes_tracedSVG
             }
           }
