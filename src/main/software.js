@@ -61,13 +61,15 @@ class SoftwarePage extends React.Component {
             <h1 className="title">AEC Industry Software</h1>
           </div>
           <div className="container content">
+            <p>
             We have created and are continually growing a list of software
             used within the industry. If we are missing any software that you
             use within the Architecture, Engineering and Construction industries,
-            let us know! We would love to have you join the community by clicking
+            let us know! We would love to have you join and tell us in the community by clicking
             the <Link to={'/'}>join button on the widget on the homepage</Link>.
-            Otherwise feel free to reach out via email at
+            Otherwise feel free to reach out via email at{' '}
             <a href="mailto:hello@aeccollective.com">hello@aeccollective.com</a>.
+            </p>
           </div>
           <div className="container content">
             <p>Filter by Discipline. Click on the following buttons.</p>
