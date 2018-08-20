@@ -46,12 +46,6 @@ class SoftwarePage extends React.Component {
         ...props.data.allMarkdownRemark.edges.filter(filterData)
       ];
 
-      // newState.filteredData =
-      //   newFilteredData.length === 0
-      //     ? [...props.data.allMarkdownRemark.edges]
-      //     : newFilteredData;
-
-      console.log(newState);
       return newState;
     });
   }
@@ -63,16 +57,17 @@ class SoftwarePage extends React.Component {
         location={this.props.location}
       >
         <section className="section">
-          <div className="hero-body">
-            <div className="container has-text-centered">
-              <h1 className="title">AEC Industry Software</h1>
-            </div>
+          <div className="container has-text-centered">
+            <h1 className="title">AEC Industry Software</h1>
           </div>
-        </section>
-        <section className="section">
           <div className="container content">
-            Below are a few examples of software used in the industry. If you
-            have any that we need to add, let us know!
+            We have created and are continually growing a list of software
+            used within the industry. If we are missing any software that you
+            use within the Architecture, Engineering and Construction industries,
+            let us know! We would love to have you join the community by clicking
+            the <Link to={'/'}>join button on the widget on the homepage</Link>.
+            Otherwise feel free to reach out via email at
+            <a href="mailto:hello@aeccollective.com">hello@aeccollective.com</a>.
           </div>
           <div className="container content">
             <p>Filter by Discipline. Click on the following buttons.</p>
