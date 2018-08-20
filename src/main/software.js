@@ -113,44 +113,49 @@ const softwareTable = data => (
       <span>No matching software.</span>
     ) : (
       data.map(edge => (
-        <div className="media" key={edge.node.id}>
-          <div className="media-left">
-            <a href={edge.node.frontmatter.website} target="_blank">
-              <strong>{edge.node.frontmatter.title}</strong>
-              {logoImage(edge.node.frontmatter)}
-            </a>
-          </div>
-          <div className="media-content">
-            <p>
-              <strong>{'Discipline: '}</strong>
-              {edge.node.frontmatter.discipline.map((disc, index) => {
-                if (index === 0) {
-                  return <span key={index}>{disc}</span>;
-                } else {
-                  return <span key={index}>, {disc}</span>;
-                }
-              })}
-            </p>
-            <p>
-              <strong>{'Pricing: '}</strong>
-              {edge.node.frontmatter.professionalPricing}
-            </p>
-            <div>
-              <p>{edge.node.frontmatter.description}</p>
-              <div className="tags">
-                {edge.node.frontmatter.tags.map(tag => (
-                  <span key={tag} className="tag is-secondary">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-              <div>
-                <Link to={edge.node.frontmatter.path}>
-                  <button className="button is-info">Learn More</button>
-                </Link>
+        <div>
+          <div className="columns" key={edge.node.id}>
+            <div className="column is-one-quarter">
+              <a href={edge.node.frontmatter.website} target="_blank">
+                <strong>{edge.node.frontmatter.title}</strong>
+                {logoImage(edge.node.frontmatter)}
+              </a>
+            </div>
+            <div className="column">
+              <div className="content">
+                <p>
+                  <strong>{'Discipline: '}</strong>
+                  {edge.node.frontmatter.discipline.map((disc, index) => {
+                    if (index === 0) {
+                      return <span key={index}>{disc}</span>;
+                    } else {
+                      return <span key={index}>, {disc}</span>;
+                    }
+                  })}
+                </p>
+                <p>
+                  <strong>{'Pricing: '}</strong>
+                  {edge.node.frontmatter.professionalPricing}
+                </p>
+                <div>
+                  <p>{edge.node.frontmatter.description}</p>
+                  <div className="tags">
+                    {edge.node.frontmatter.tags.map(tag => (
+                      <span key={tag} className="tag is-secondary">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <div>
+                    <Link to={edge.node.frontmatter.path}>
+                      <button className="button is-info">Learn More</button>
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+          <hr />
         </div>
       ))
     )}
