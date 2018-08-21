@@ -103,7 +103,6 @@ class mdSoftwareInsetPage extends React.Component {
 export default mdSoftwareInsetPage;
 
 const logoImage = frontmatter => {
-  console.log(frontmatter);
   if (frontmatter.logo.name === 'placeholder') {
     return null;
   } else if (frontmatter.logo.childImageSharp) {
