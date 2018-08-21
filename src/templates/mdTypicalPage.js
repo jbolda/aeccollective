@@ -1,18 +1,19 @@
-import React from "react"
-import SimpleNav from "../../plugins/gatsby-theme-bulma-layout/Simple/SimpleNav"
+import React from "react";
+import SimpleNav from "../../plugins/gatsby-theme-bulma-layout/Simple/SimpleNav";
 
 class mdInsetPage extends React.Component {
   render() {
-    const {html, frontmatter} = this.props.data.markdownRemark
+    const { html, frontmatter } = this.props.data.markdownRemark;
 
     return (
-      <SimpleNav sitemetadata={this.props.data.site.siteMetadata} location={this.props.location}>
+      <SimpleNav
+        sitemetadata={this.props.data.site.siteMetadata}
+        location={this.props.location}
+      >
         <section className="section hero">
           <div className="hero-body">
             <div className="container has-text-centered">
-              <h1 className="title">
-                {frontmatter.title}
-              </h1>
+              <h1 className="title">{frontmatter.title}</h1>
             </div>
           </div>
         </section>
@@ -22,11 +23,11 @@ class mdInsetPage extends React.Component {
           </div>
         </section>
       </SimpleNav>
-    )
+    );
   }
 }
 
-export default mdInsetPage
+export default mdInsetPage;
 
 export const pageQuery = graphql`
   query markdownTemplateBySlug($slug: String!) {
@@ -47,4 +48,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
