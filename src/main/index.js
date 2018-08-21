@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "gatsby-link";
 import SimpleNav from "../../plugins/gatsby-theme-bulma-layout/Simple/SimpleNav";
 
 export const frontmatter = {
@@ -17,10 +16,12 @@ class SiteIndex extends React.Component {
         <section className="hero is-secondary is-fullheight">
           <div className="hero-body">
             <div className="container has-text-centered">
+              <Logo icon={this.props.data.logo.publicURL} alt="Logo" />
               <h1 className="title">AEC Collective</h1>
               <h2 className="subtitle">
                 Community for those in and interested in the Architecture,
-                Engineering, and Construction (AEC) industry.<br />
+                Engineering, and Construction (AEC) industry.
+                <br />
                 If you are involved in buildings or infrastructure, join us!
               </h2>
             </div>
@@ -56,8 +57,8 @@ class SiteIndex extends React.Component {
                     src="https://discordapp.com/widget?id=412087578498695171&theme=dark"
                     width="350"
                     height="500"
-                    allowtransparency="true"
-                    frameborder="0"
+                    allowTransparency="true"
+                    frameBorder="0"
                   />
                 </div>
               </div>
@@ -71,6 +72,17 @@ class SiteIndex extends React.Component {
 
 export default SiteIndex;
 
+const Logo = ({ icon, alt }) => (
+  <img
+    className="image"
+    src={icon}
+    alt={alt}
+    style={{
+      maxHeight: `150px`
+    }}
+  />
+);
+
 export const pageQuery = graphql`
   query SiteIndex {
     site {
@@ -82,6 +94,9 @@ export const pageQuery = graphql`
         siteTwitterUrl
         siteTwitterPretty
       }
+    }
+    logo: file(relativePath: { eq: "logos/aecc_logo_white.svg" }) {
+      publicURL
     }
   }
 `;
