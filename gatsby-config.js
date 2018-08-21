@@ -5,15 +5,22 @@ module.exports = {
     siteAuthor: `Jacob Bolda`,
     siteEmail: `me@jacobbolda.com`,
     siteTwitterUrl: "https://twitter.com/jacob_bolda",
-    siteTwitterPretty: "@jacob_bolda",
+    siteTwitterPretty: "@jacob_bolda"
   },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `main`,
-        path: `${__dirname}/src/main/`,
-      },
+        path: `${__dirname}/src/main/`
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `assets`,
+        path: `${__dirname}/src/assets/`
+      }
     },
     {
       resolve: `gatsby-transformer-remark`,
@@ -34,8 +41,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-typography`,
       options: {
-        pathToConfigModule: `src/utils/typography`,
+        pathToConfigModule: `src/utils/typography`
       }
     }
-  ],
-}
+  ]
+};
