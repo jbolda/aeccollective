@@ -2,8 +2,8 @@ const path = require(`path`);
 const crypto = require('crypto');
 const _ = require('lodash');
 
-exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
-  const { createNodeField } = boundActionCreators;
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions;
   let slug;
   if (
     node.internal.type === `JavascriptFrontmatter` ||
@@ -30,8 +30,8 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   }
 };
 
-exports.createPages = ({ graphql, boundActionCreators }) => {
-  const { createPage } = boundActionCreators;
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions;
 
   return new Promise((resolve, reject) => {
     const pages = [];

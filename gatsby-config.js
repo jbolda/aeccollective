@@ -45,6 +45,15 @@ module.exports = {
       }
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-google-tagmanager`,
+      options: {
+        id: "GTM-KM7BM6N",
+        includeInDevelopment: false
+        // gtmAuth: "YOUR_GOOGLE_TAGMANAGER_ENVIROMENT_AUTH_STRING",
+        // gtmPreview: "YOUR_GOOGLE_TAGMANAGER_ENVIROMENT_PREVIEW_NAME",
+      }
+    },
   ]
 };

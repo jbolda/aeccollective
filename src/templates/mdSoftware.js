@@ -1,4 +1,5 @@
 import React from 'react';
+import { graphql } from 'gatsby'
 import Img from 'gatsby-image';
 import SimpleNav from '../../plugins/gatsby-theme-bulma-layout/Simple/SimpleNav';
 
@@ -110,12 +111,15 @@ const logoImage = frontmatter => {
       <Img
         sizes={frontmatter.logo.childImageSharp.sizes}
         style={{ maxHeight: 300, maxWidth: 600 }}
+        alt={`${frontmatter.title} logo`}
       />
     );
   } else if (frontmatter.logo.publicURL) {
     return (
       <div className="image">
-        <img src={frontmatter.logo.publicURL} style={{ maxHeight: 300 }} />
+        <img src={frontmatter.logo.publicURL}
+          style={{ maxHeight: 300 }} 
+          alt={`${frontmatter.title} logo`}/>
       </div>
     );
   } else {

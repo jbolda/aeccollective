@@ -1,4 +1,5 @@
 import React from "react";
+import { graphql } from 'gatsby'
 import SimpleNav from "../../plugins/gatsby-theme-bulma-layout/Simple/SimpleNav";
 
 export const frontmatter = {
@@ -54,6 +55,7 @@ class SiteIndex extends React.Component {
               <div className="tile is-parent">
                 <div className="tile is-child has-text-centered">
                   <iframe
+                    title="discord-widget"
                     src="https://discordapp.com/widget?id=412087578498695171&theme=dark"
                     width="350"
                     height="500"

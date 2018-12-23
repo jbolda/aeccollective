@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image';
 import SimpleNav from '../../plugins/gatsby-theme-bulma-layout/Simple/SimpleNav';
 
@@ -113,7 +113,7 @@ const softwareTable = data => (
         <div>
           <div className="columns" key={edge.node.id}>
             <div className="column is-one-quarter">
-              <a href={edge.node.frontmatter.website} target="_blank">
+              <a href={edge.node.frontmatter.website} target="_blank" rel="noopener noreferrer">
                 <strong>{edge.node.frontmatter.title}</strong>
                 {logoImage(edge.node.frontmatter)}
               </a>
@@ -165,6 +165,7 @@ const logoImage = frontmatter => {
       <Img
         sizes={frontmatter.logo.childImageSharp.sizes}
         style={{ maxWidth: 200, width: 200, height: 0 }}
+        alt={`${frontmatter.title} logo`}
       />
     );
   } else if (frontmatter.logo.childImageSharp) {
@@ -172,6 +173,7 @@ const logoImage = frontmatter => {
       <Img
         sizes={frontmatter.logo.childImageSharp.sizes}
         style={{ maxWidth: 200, width: 200 }}
+        alt={`${frontmatter.title} logo`}
       />
     );
   } else if (frontmatter.logo.publicURL) {
@@ -180,6 +182,7 @@ const logoImage = frontmatter => {
         <img
           src={frontmatter.logo.publicURL}
           style={{ maxWidth: 200, width: 200 }}
+          alt={`${frontmatter.title} logo`}
         />
       </div>
     );
