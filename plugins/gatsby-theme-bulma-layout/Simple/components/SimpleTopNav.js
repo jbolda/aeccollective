@@ -1,7 +1,7 @@
-import React from "react";
-import Link from "gatsby-link";
-import styles from "../palette.json";
-import LogoData from "../assets/aecc_logo.svg";
+import React from 'react';
+import Link from 'gatsby-link';
+import styles from '../palette.json';
+import LogoData from '../assets/aecc_logo.svg';
 
 class SimpleTopNav extends React.Component {
   constructor(props) {
@@ -40,11 +40,11 @@ class SimpleTopNav extends React.Component {
             role="button"
             className={
               this.state.hamburgerActive
-                ? "navbar-burger is-active"
-                : "navbar-burger"
+                ? 'navbar-burger is-active'
+                : 'navbar-burger'
             }
             aria-label="menu"
-            aria-expanded={this.state.hamburgerActive ? "true" : "false"}
+            aria-expanded={this.state.hamburgerActive ? 'true' : 'false'}
             style={{ color: styles.colors.P5 }}
             onClick={this.toggleHamburgerMenu}
           >
@@ -55,7 +55,7 @@ class SimpleTopNav extends React.Component {
         </div>
         <div
           className={
-            this.state.hamburgerActive ? "navbar-menu is-active" : "navbar-menu"
+            this.state.hamburgerActive ? 'navbar-menu is-active' : 'navbar-menu'
           }
         >
           <div className="navbar-end">
@@ -63,7 +63,7 @@ class SimpleTopNav extends React.Component {
               to="/code-of-conduct/"
               className="navbar-item"
               style={
-                this.props.location.pathname == "/code-of-conduct/"
+                this.props.location.pathname == '/code-of-conduct/'
                   ? {
                       backgroundColor: styles.colors.P5,
                       color: styles.colors.P2
@@ -77,7 +77,7 @@ class SimpleTopNav extends React.Component {
               to="/resources/"
               className="navbar-item"
               style={
-                this.props.location.pathname == "/resources/"
+                this.props.location.pathname == '/resources/'
                   ? {
                       backgroundColor: styles.colors.P5,
                       color: styles.colors.P2
@@ -91,7 +91,7 @@ class SimpleTopNav extends React.Component {
               to="/software/"
               className="navbar-item"
               style={
-                this.props.location.pathname == "/software/"
+                this.props.location.pathname == '/software/'
                   ? {
                       backgroundColor: styles.colors.P5,
                       color: styles.colors.P2

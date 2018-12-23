@@ -4,8 +4,8 @@ module.exports = {
     siteDescr: `AEC Collective`,
     siteAuthor: `Jacob Bolda`,
     siteEmail: `me@jacobbolda.com`,
-    siteTwitterUrl: "https://twitter.com/jacob_bolda",
-    siteTwitterPretty: "@jacob_bolda"
+    siteTwitterUrl: 'https://twitter.com/jacob_bolda',
+    siteTwitterPretty: '@jacob_bolda'
   },
   plugins: [
     {
@@ -49,11 +49,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-tagmanager`,
       options: {
-        id: "GTM-KM7BM6N",
+        id: 'GTM-KM7BM6N',
         includeInDevelopment: false
         // gtmAuth: "YOUR_GOOGLE_TAGMANAGER_ENVIROMENT_AUTH_STRING",
         // gtmPreview: "YOUR_GOOGLE_TAGMANAGER_ENVIROMENT_PREVIEW_NAME",
       }
-    },
+    }
   ]
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import SimpleNav from '../../plugins/gatsby-theme-bulma-layout/Simple/SimpleNav';
 
@@ -62,13 +62,17 @@ class SoftwarePage extends React.Component {
           </div>
           <div className="container content">
             <p>
-            We have created and are continually growing a list of software
-            used within the industry. If we are missing any software that you
-            use within the Architecture, Engineering and Construction industries,
-            let us know! We would love to have you join and tell us in the community by clicking
-            the <Link to={'/'}>join button on the widget on the homepage</Link>.
-            Otherwise feel free to reach out via email at{' '}
-            <a href="mailto:hello@aeccollective.com">hello@aeccollective.com</a>.
+              We have created and are continually growing a list of software
+              used within the industry. If we are missing any software that you
+              use within the Architecture, Engineering and Construction
+              industries, let us know! We would love to have you join and tell
+              us in the community by clicking the{' '}
+              <Link to={'/'}>join button on the widget on the homepage</Link>.
+              Otherwise feel free to reach out via email at{' '}
+              <a href="mailto:hello@aeccollective.com">
+                hello@aeccollective.com
+              </a>
+              .
             </p>
           </div>
           <div className="container content">
@@ -113,7 +117,11 @@ const softwareTable = data => (
         <div>
           <div className="columns" key={edge.node.id}>
             <div className="column is-one-quarter">
-              <a href={edge.node.frontmatter.website} target="_blank" rel="noopener noreferrer">
+              <a
+                href={edge.node.frontmatter.website}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <strong>{edge.node.frontmatter.title}</strong>
                 {logoImage(edge.node.frontmatter)}
               </a>

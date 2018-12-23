@@ -1,10 +1,10 @@
-import React from "react";
-import { graphql } from 'gatsby'
-import SimpleNav from "../../plugins/gatsby-theme-bulma-layout/Simple/SimpleNav";
+import React from 'react';
+import { graphql } from 'gatsby';
+import SimpleNav from '../../plugins/gatsby-theme-bulma-layout/Simple/SimpleNav';
 
 export const frontmatter = {
-  path: "/",
-  layoutType: "inset"
+  path: '/',
+  layoutType: 'inset'
 };
 
 class SiteIndex extends React.Component {
