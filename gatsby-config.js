@@ -7,6 +7,7 @@ module.exports = {
     siteTwitterUrl: 'https://twitter.com/jacob_bolda',
     siteTwitterPretty: '@jacob_bolda'
   },
+  __experimentalThemes: [{ resolve: `gatsby-theme-bulma`, options: { root: __dirname } }],
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,

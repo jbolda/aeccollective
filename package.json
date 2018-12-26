@@ -37,6 +37,7 @@
     "gatsby-remark-images": "^3.0.1",
     "gatsby-remark-relative-images": "^0.2.1",
     "gatsby-source-filesystem": "2.0.12",
+    "gatsby-theme-bulma": "2.0.0-alpha.4",
     "gatsby-transformer-javascript-frontmatter": "2.0.5",
     "gatsby-transformer-remark": "^2.1.17",
     "gatsby-transformer-sharp": "^2.1.9",
