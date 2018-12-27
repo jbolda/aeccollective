@@ -1,5 +1,5 @@
 import React from 'react';
-import MasterLayout from 'gatsby-theme-bulma/src/components/MasterLayout';
+import MasterLayout from 'gatsby-theme-bulma-core/src/components/MasterLayout';
 import SimpleTopNav from './components/SimpleTopNav';
 import heartData from './assets/heart-white.svg';
 

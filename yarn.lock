@@ -5486,10 +5486,10 @@ gatsby-source-filesystem@2.0.12:
     valid-url "^1.0.9"
     xstate "^3.1.0"
 
-gatsby-theme-bulma@2.0.0-alpha.4:
-  version "2.0.0-alpha.4"
-  resolved "https://registry.yarnpkg.com/gatsby-theme-bulma/-/gatsby-theme-bulma-2.0.0-alpha.4.tgz#0f6e71782a05e982163583928c101f981a0a1ee0"
-  integrity sha512-3bQ0pfzfRewzIAdfl3a1LPNApW/Ry/SIagC3qi6A2FvgXCdYh1RxxzyD+ZeKehqwLogkxnkENjzb6sMhGXvN2w==
+gatsby-theme-bulma-core@^2.0.0-alpha.2:
+  version "2.0.0-alpha.3"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-bulma-core/-/gatsby-theme-bulma-core-2.0.0-alpha.3.tgz#7f51cc7a0f3d813f232ca7ce643ed5c7cd10d4a1"
+  integrity sha512-3KU/KG5szs9QZbtk0CCJNEQYYVIG+tfN2jFq8C6ss4tO5KN98nic8VoeZZy6hIn3h6pScBX2syFfKBa0vJcCBQ==
   dependencies:
     bulma "^0.7.2"
     debug "^4.1.1"
