@@ -4,14 +4,12 @@ import SimpleNavQuery from '../../../../../.cache/gatsby-theme-bulma-layout/Simp
 import MasterLayout from "gatsby-theme-bulma-core/src/components/MasterLayout";
 import SimpleTopNav from "./components/SimpleTopNav";
 
-import styles from "./palette.json";
-
 const SimpleNav = ({ location, site, children }) => (
   <MasterLayout siteMetadata={site.siteMetadata} id="SimpleLayout">
     <SimpleTopNav
       siteMetadata={site.siteMetadata}
       location={location}
-      textColor={styles.colors.P5}
+      textColor={site.siteMetadata.palette.colors.P5}
     />
     {children}
     <section className="footer">
@@ -23,6 +21,9 @@ const SimpleNav = ({ location, site, children }) => (
             {site.siteMetadata.siteAuthor}
           </a>
         </p>
+        {!site.siteMetadata.siteDisclaimer ? null : (
+          <div class="copyright content" dangerouslySetInnerHTML={{__html: site.siteMetadata.siteDisclaimer}} />
+        )}
       </div>
     </section>
   </MasterLayout>
