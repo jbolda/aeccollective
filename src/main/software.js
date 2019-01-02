@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import SimpleNav from '../../plugins/gatsby-theme-bulma-layout/Simple/SimpleNav';
+import SimpleNav from '../../plugins/gatsby-theme-bulma-layout/src/components/Simple/SimpleNav';
 
 export const frontmatter = {
   path: '/software/',

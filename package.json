@@ -26,7 +26,7 @@
   "homepage": "https://github.com/jbolda/aeccollective#readme",
   "dependencies": {
     "bulma": "0.6.2",
-    "gatsby": "2.0.75",
+    "gatsby": "^2.0.78",
     "gatsby-image": "^2.0.25",
     "gatsby-link": "2.0.7",
     "gatsby-plugin-google-tagmanager": "^2.0.7",

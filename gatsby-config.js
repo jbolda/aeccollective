@@ -5,9 +5,16 @@ module.exports = {
     siteAuthor: `Jacob Bolda`,
     siteEmail: `me@jacobbolda.com`,
     siteTwitterUrl: 'https://twitter.com/jacob_bolda',
-    siteTwitterPretty: '@jacob_bolda'
+    siteTwitterPretty: '@jacob_bolda',
+    navLinks: [
+      {text: 'Code of Conduct', url: '/code-of-conduct/'},
+      {text: 'Resources', url: '/resources/'},
+      {text: 'Software', url: '/software/'}
+    ]
   },
-  __experimentalThemes: [{ resolve: `gatsby-theme-bulma-core`, options: { root: __dirname } }],
+  __experimentalThemes: [
+    { resolve: `gatsby-theme-bulma-core`, options: { root: __dirname } }
+  ],
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
