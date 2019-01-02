@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
     siteTitle: `AEC Collective`,
-    siteDescr: `AEC Collective`,
+    siteDescr: `Community for those in and interested in the Architecture, Engineering, and Construction (AEC) industry.
+      If you are involved in buildings or infrastructure, join us!`,
     siteAuthor: `members from around the world`,
     siteEmail: `me@jacobbolda.com`,
     siteTwitterUrl: 'https://twitter.com/AECCollective',
