@@ -12,32 +12,34 @@ module.exports = {
       to use either in a professional or personal setting is at their own risk and interpretation.
       This community or any persons in it cannot be held liable for any information or use therein.</p>`,
     navLinks: [
-      {text: 'Code of Conduct', url: '/code-of-conduct/'},
-      {text: 'Resources', url: '/resources/'},
-      {text: 'Software', url: '/software/'}
+      { text: 'Code of Conduct', url: '/code-of-conduct/' },
+      { text: 'Resources', url: '/resources/' },
+      { text: 'Software', url: '/software/' }
     ],
     palette: {
-      "colors": {
-        "P1": "#000000",
-        "P2": "#192C3B",
-        "P3": "#52777D",
-        "P4": "#9EBBA9",
-        "P5": "#F4F4F4"
-        }
+      colors: {
+        P1: '#000000',
+        P2: '#192C3B',
+        P3: '#52777D',
+        P4: '#9EBBA9',
+        P5: '#F4F4F4'
       }
+    }
   },
   __experimentalThemes: [
     {
       resolve: `gatsby-theme-bulma-core`,
-      options: { root: __dirname, palette: {
-        "colors": {
-          "P1": "#000000",
-          "P2": "#192C3B",
-          "P3": "#52777D",
-          "P4": "#9EBBA9",
-          "P5": "#F4F4F4"
+      options: {
+        root: __dirname,
+        palette: {
+          colors: {
+            P1: '#000000',
+            P2: '#192C3B',
+            P3: '#52777D',
+            P4: '#9EBBA9',
+            P5: '#F4F4F4'
           }
-        } 
+        }
       }
     }
   ],

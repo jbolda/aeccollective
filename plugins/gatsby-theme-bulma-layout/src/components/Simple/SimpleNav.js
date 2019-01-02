@@ -1,8 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 import SimpleNavQuery from '../../../../../.cache/gatsby-theme-bulma-layout/SimpleNavQuery';
-import MasterLayout from "gatsby-theme-bulma-core/src/components/MasterLayout";
-import SimpleTopNav from "./components/SimpleTopNav";
+import MasterLayout from 'gatsby-theme-bulma-core/src/components/MasterLayout';
+import SimpleTopNav from './components/SimpleTopNav';
 
 const SimpleNav = ({ location, site, children }) => (
   <MasterLayout siteMetadata={site.siteMetadata} id="SimpleLayout">
@@ -22,14 +22,19 @@ const SimpleNav = ({ location, site, children }) => (
           </a>
         </p>
         {!site.siteMetadata.siteDisclaimer ? null : (
-          <div class="copyright content" dangerouslySetInnerHTML={{__html: site.siteMetadata.siteDisclaimer}} />
+          <div
+            class="copyright content"
+            dangerouslySetInnerHTML={{
+              __html: site.siteMetadata.siteDisclaimer
+            }}
+          />
         )}
       </div>
     </section>
   </MasterLayout>
 );
 
-export default props => <SimpleNav site={SimpleNavQuery} {...props}/>
+export default props => <SimpleNav site={SimpleNavQuery} {...props} />;
 
 SimpleNav.propTypes = {
   site: PropTypes.shape({
@@ -52,4 +57,4 @@ const Heart = ({ height, width, fill, style }) => (
   </svg>
 );
 
-Heart.defaultProps = { height: "25px", width: "25px", fill: "#F4F4F4" };
+Heart.defaultProps = { height: '25px', width: '25px', fill: '#F4F4F4' };

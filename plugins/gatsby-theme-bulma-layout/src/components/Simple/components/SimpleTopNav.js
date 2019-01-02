@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "gatsby";
-import styles from "../palette.json";
+import React from 'react';
+import { Link } from 'gatsby';
+import styles from '../palette.json';
 
 class SimpleTopNav extends React.Component {
   constructor(props) {
@@ -19,17 +19,29 @@ class SimpleTopNav extends React.Component {
 
   render() {
     return (
-      <nav className="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+      <nav
+        className="navbar is-fixed-top"
+        role="navigation"
+        aria-label="main navigation"
+      >
         <div className="navbar-brand">
           <Link
             to="/"
             className="navbar-item"
-            style={this.props.location.pathname === '/' ? {backgroundColor: styles.colors.P5} : {}}
-            >
+            style={
+              this.props.location.pathname === '/'
+                ? { backgroundColor: styles.colors.P5 }
+                : {}
+            }
+          >
             <span
               className="title"
-              style={this.props.location.pathname === '/' ? {color: styles.colors.P2} : {color: styles.colors.P5}}
-              >
+              style={
+                this.props.location.pathname === '/'
+                  ? { color: styles.colors.P2 }
+                  : { color: styles.colors.P5 }
+              }
+            >
               {this.props.siteMetadata.siteTitle}
             </span>
           </Link>
@@ -54,15 +66,24 @@ class SimpleTopNav extends React.Component {
         {!this.props.siteMetadata.navLinks ? null : (
           <div
             className={
-              this.state.hamburgerActive ? 'navbar-menu is-active' : 'navbar-menu'
+              this.state.hamburgerActive
+                ? 'navbar-menu is-active'
+                : 'navbar-menu'
             }
           >
             <div className="navbar-end">
               {this.props.siteMetadata.navLinks.map(link => (
                 <Link
-                to={link.url}
-                className="navbar-item"
-                style={this.props.location.pathname === '/' ? {backgroundColor: styles.colors.P5, color: styles.colors.P2} : {}}
+                  to={link.url}
+                  className="navbar-item"
+                  style={
+                    this.props.location.pathname === '/'
+                      ? {
+                          backgroundColor: styles.colors.P5,
+                          color: styles.colors.P2
+                        }
+                      : {}
+                  }
                 >
                   {link.text}
                 </Link>
@@ -71,7 +92,7 @@ class SimpleTopNav extends React.Component {
           </div>
         )}
       </nav>
-    )
+    );
   }
 }
 
