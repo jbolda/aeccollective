@@ -5563,10 +5563,10 @@ gatsby-theme-bulma-core@^2.0.0-alpha.2:
     normalize.css "^8.0.1"
     prismjs "^1.15.0"
 
-gatsby-theme-bulma-layout@2.0.0-alpha.3:
-  version "2.0.0-alpha.3"
-  resolved "https://registry.yarnpkg.com/gatsby-theme-bulma-layout/-/gatsby-theme-bulma-layout-2.0.0-alpha.3.tgz#1cc7cfc90d7ef71d8d7b54bd33f4cd131fcecde3"
-  integrity sha512-xF8avbTi+srCSbTkytv+BIGZp4hF3TQeLTCJ0UbmnK+nFoiLnTfENxw/koQmqXTx0VX+WxNM3tIoYCfU9Vb8wg==
+gatsby-theme-bulma-layout@2.0.0-alpha.9:
+  version "2.0.0-alpha.9"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-bulma-layout/-/gatsby-theme-bulma-layout-2.0.0-alpha.9.tgz#b5c8a338d0c033a0166be1770a7f8ae3b8776d9a"
+  integrity sha512-dQA+TdZcVUx2rpjJ9017Cnb1qiJw42PooHhJsx78m1qqewwE32YSSW6z+d3PZKX98nRw0wNmwCOG43Eqiw7w6Q==
 
 gatsby-transformer-javascript-frontmatter@2.0.5:
   version "2.0.5"
