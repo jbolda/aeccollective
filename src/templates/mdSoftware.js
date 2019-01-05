@@ -10,7 +10,6 @@ class mdSoftwareInsetPage extends React.Component {
 
     return (
       <SimpleNav
-        sitemetadata={this.props.data.site.siteMetadata}
         location={this.props.location}
       >
         <section className="hero is-small">
@@ -157,16 +156,6 @@ export const pageQuery = graphql`
         studentPricing
         professionalPricing
         description
-      }
-    }
-    site {
-      siteMetadata {
-        siteTitle
-        siteDescr
-        siteAuthor
-        siteEmail
-        siteTwitterUrl
-        siteTwitterPretty
       }
     }
   }

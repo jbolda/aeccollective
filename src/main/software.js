@@ -53,7 +53,6 @@ class SoftwarePage extends React.Component {
   render() {
     return (
       <SimpleNav
-        sitemetadata={this.props.data.site.siteMetadata}
         location={this.props.location}
       >
         <section className="section">
@@ -215,16 +214,6 @@ const pullUnique = dataArray => {
 
 export const pageQuery = graphql`
   query SoftwarePage {
-    site {
-      siteMetadata {
-        siteTitle
-        siteDescr
-        siteAuthor
-        siteEmail
-        siteTwitterUrl
-        siteTwitterPretty
-      }
-    }
     allMarkdownRemark(
       filter: { frontmatter: { templateKey: { eq: "mdSoftware" } } }
     ) {

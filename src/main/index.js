@@ -11,7 +11,6 @@ class SiteIndex extends React.Component {
   render() {
     return (
       <SimpleNav
-        sitemetadata={this.props.data.site.siteMetadata}
         location={this.props.location}
       >
         <section className="hero is-secondary is-fullheight">
@@ -87,16 +86,6 @@ const Logo = ({ icon, alt }) => (
 
 export const pageQuery = graphql`
   query SiteIndex {
-    site {
-      siteMetadata {
-        siteTitle
-        siteDescr
-        siteAuthor
-        siteEmail
-        siteTwitterUrl
-        siteTwitterPretty
-      }
-    }
     logo: file(relativePath: { eq: "logos/aecc_logo_white.svg" }) {
       publicURL
     }

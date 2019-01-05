@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     siteTitle: `AEC Collective`,
-    siteDescr: `Community for those in and interested in the Architecture, Engineering, and Construction (AEC) industry.
+    siteDescription: `Community for those in and interested in the Architecture, Engineering, and Construction (AEC) industry.
       If you are involved in buildings or infrastructure, join us!`,
     siteAuthor: `members from around the world`,
     siteEmail: `me@jacobbolda.com`,
@@ -40,6 +40,12 @@ module.exports = {
             P5: '#F4F4F4'
           }
         }
+      }
+    },
+    {
+      resolve: `gatsby-theme-bulma-layout`,
+      options: {
+        root: __dirname
       }
     }
   ],

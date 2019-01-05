@@ -8,7 +8,6 @@ class mdInsetPage extends React.Component {
 
     return (
       <SimpleNav
-        sitemetadata={this.props.data.site.siteMetadata}
         location={this.props.location}
       >
         <section className="section hero">
@@ -36,16 +35,6 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-      }
-    }
-    site {
-      siteMetadata {
-        siteTitle
-        siteDescr
-        siteAuthor
-        siteEmail
-        siteTwitterUrl
-        siteTwitterPretty
       }
     }
   }
