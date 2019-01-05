@@ -1081,6 +1081,7 @@ alphanum-sort@^1.0.0:
 amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
+  integrity sha1-SlKCrBZHKek2Gbz9OtFR+BfOkfU=
 
 ansi-align@^2.0.0:
   version "2.0.0"
@@ -2102,11 +2103,6 @@ better-queue@^3.8.6, better-queue@^3.8.7:
     node-eta "^0.9.0"
     uuid "^3.0.0"
 
-big.js@^3.1.3:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/big.js/-/big.js-3.2.0.tgz#a5fc298b81b9e0dca2e458824784b65c52ba588e"
-  integrity sha512-+hN/Zh2D08Mx65pZ/4g5bsmNiZUuChDiQfTUQ7qJr4/kuopCr88xZsAXv6mBoZEsUI4OuGHlX59qE94K2mMW8Q==
-
 big.js@^5.2.2:
   version "5.2.2"
   resolved "https://registry.yarnpkg.com/big.js/-/big.js-5.2.2.tgz#65f0af382f578bcdc742bd9c281e9cb2d7768328"
@@ -2470,10 +2466,6 @@ builtin-status-codes@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/builtin-status-codes/-/builtin-status-codes-3.0.0.tgz#85982878e21b98e1c66425e03d0174788f569ee8"
   integrity sha1-hZgoeOIbmOHGZCXgPQF0eI9Wnug=
-
-bulma@0.6.2:
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/bulma/-/bulma-0.6.2.tgz#f4b1d11d5acc51a79644eb0a2b0b10649d3d71f5"
 
 bulma@^0.7.2:
   version "0.7.2"
@@ -3662,6 +3654,7 @@ debug@^4.0.1, debug@^4.1.0, debug@^4.1.1, debug@~4.1.0:
 decamelize@^1.0.0, decamelize@^1.1.1, decamelize@^1.1.2, decamelize@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/decamelize/-/decamelize-1.2.0.tgz#f6534d15148269b20352e7bee26f501f9a191290"
+  integrity sha1-9lNNFRSCabIDUue+4m9QH5oZEpA=
 
 decamelize@^2.0.0:
   version "2.0.0"
@@ -5218,6 +5211,7 @@ for-own@^0.1.4:
 for-own@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/for-own/-/for-own-1.0.0.tgz#c63332f415cedc4b04dbfe70cf836494c53cb44b"
+  integrity sha1-xjMy9BXO3EsE2/5wz4NklMU8tEs=
   dependencies:
     for-in "^1.0.1"
 
@@ -5452,7 +5446,7 @@ gatsby-plugin-page-creator@^2.0.5:
     parse-filepath "^1.0.1"
     slash "^1.0.0"
 
-gatsby-plugin-sass@2.0.7:
+gatsby-plugin-sass@^2.0.7:
   version "2.0.7"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-sass/-/gatsby-plugin-sass-2.0.7.tgz#dde3d488e9e9a9774f100e37eb69dddfac3fed86"
   integrity sha512-kbdoy7JKN9LHSup3PlBNCIWdHBbGO9uK6MMi0Ta7XYFkcM874RxPMyMgih+0JE3C1qyxv7LfTgO8BujdzwM79g==
@@ -5553,20 +5547,22 @@ gatsby-source-filesystem@2.0.12:
     valid-url "^1.0.9"
     xstate "^3.1.0"
 
-gatsby-theme-bulma-core@^2.0.0-alpha.2:
-  version "2.0.0-alpha.9"
-  resolved "https://registry.yarnpkg.com/gatsby-theme-bulma-core/-/gatsby-theme-bulma-core-2.0.0-alpha.9.tgz#ae92c95f4c6034918b20a2dbd0312c395c7cbb90"
-  integrity sha512-ADhQqlxx+6wsvhFjJog5qwzvlFapNNhe3D5KhoRcTGRQgxLiLrF5VK1LD52e6WTtptp4OIYkZ0ZWvNcvOHOcKA==
+gatsby-theme-bulma-core@^2.0.0-alpha.20:
+  version "2.0.0-alpha.20"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-bulma-core/-/gatsby-theme-bulma-core-2.0.0-alpha.20.tgz#8211c49907d36aa949be7c29b1e72770d622c2b8"
+  integrity sha512-OP5LeTw+8L0QmSb8hOzWmkRIR94gCvqoWCzAGnitnciP2o6m4F5OjVqP3Us1GDhziceZ9qMmn7f6O+CG0CcxRA==
   dependencies:
     bulma "^0.7.2"
     debug "^4.1.1"
+    gatsby-plugin-sass "^2.0.7"
+    node-sass "^4.11.0"
     normalize.css "^8.0.1"
     prismjs "^1.15.0"
 
-gatsby-theme-bulma-layout@2.0.0-alpha.9:
-  version "2.0.0-alpha.9"
-  resolved "https://registry.yarnpkg.com/gatsby-theme-bulma-layout/-/gatsby-theme-bulma-layout-2.0.0-alpha.9.tgz#b5c8a338d0c033a0166be1770a7f8ae3b8776d9a"
-  integrity sha512-dQA+TdZcVUx2rpjJ9017Cnb1qiJw42PooHhJsx78m1qqewwE32YSSW6z+d3PZKX98nRw0wNmwCOG43Eqiw7w6Q==
+gatsby-theme-bulma-layout@^2.0.0-alpha.15:
+  version "2.0.0-alpha.15"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-bulma-layout/-/gatsby-theme-bulma-layout-2.0.0-alpha.15.tgz#21e897b5c4af7defa6e451e1407186fc1196671b"
+  integrity sha512-/7uPchleHvO/ARI8EjErAHVQEG4GUva3idlWIJ3nAG8tp5EUv1wJ6YdZaEgGq951HV+/9BHb+lUxPi6tlX9miA==
 
 gatsby-transformer-javascript-frontmatter@2.0.5:
   version "2.0.5"
@@ -7950,7 +7946,7 @@ json3@^3.3.2:
   resolved "https://registry.yarnpkg.com/json3/-/json3-3.3.2.tgz#3c0434743df93e2f5c42aee7b19bcb483575f4e1"
   integrity sha1-PAQ0dD35Pi9cQq7nsZvLSDV19OE=
 
-json5@^0.5.0, json5@^0.5.1:
+json5@^0.5.1:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/json5/-/json5-0.5.1.tgz#1eade7acc012034ad84e2396767ead9fa5495821"
   integrity sha1-Hq3nrMASA0rYTiOWdn6tn6VJWCE=
@@ -8143,15 +8139,7 @@ loader-runner@^2.3.0:
   resolved "https://registry.yarnpkg.com/loader-runner/-/loader-runner-2.3.1.tgz#026f12fe7c3115992896ac02ba022ba92971b979"
   integrity sha512-By6ZFY7ETWOc9RFaAIb23IjJVcM4dvJC/N57nmdz9RSkMXvAXGI7SyVlAw3v8vjtDRlqThgVDVmTnr9fqMlxkw==
 
-loader-utils@^1.0.1:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-1.1.0.tgz#c98aef488bcceda2ffb5e2de646d6a754429f5cd"
-  dependencies:
-    big.js "^3.1.3"
-    emojis-list "^2.0.0"
-    json5 "^0.5.0"
-
-loader-utils@^1.0.2, loader-utils@^1.1.0:
+loader-utils@^1.0.1, loader-utils@^1.0.2, loader-utils@^1.1.0:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-1.2.3.tgz#1ff5dc6911c9f0a062531a4c04b609406108c2c7"
   integrity sha512-fkpz8ejdnEMG3s37wGL07iSBDg99O9D5yflE9RGNH3hRdx9SOwYfnGYdZOUIZitN8E+E2vkq3MUMYMvPYl5ZZA==

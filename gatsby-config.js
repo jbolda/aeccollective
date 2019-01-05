@@ -15,16 +15,7 @@ module.exports = {
       { text: 'Code of Conduct', url: '/code-of-conduct/' },
       { text: 'Resources', url: '/resources/' },
       { text: 'Software', url: '/software/' }
-    ],
-    palette: {
-      colors: {
-        P1: '#000000',
-        P2: '#25274D',
-        P3: '#464866',
-        P4: '#2E9CCA',
-        P5: '#F4F4F4'
-      }
-    }
+    ]
   },
   __experimentalThemes: [
     {
@@ -79,7 +70,6 @@ module.exports = {
       }
     },
     `gatsby-transformer-javascript-frontmatter`,
-    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {
