@@ -61,7 +61,7 @@ class SiteIndex extends React.Component {
                     src="https://discordapp.com/widget?id=412087578498695171&theme=dark"
                     width="350"
                     height="500"
-                    allowTransparency="true"
+                    allowtransparency="true"
                     frameBorder="0"
                   />
                 </div>
