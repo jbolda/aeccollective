@@ -86,6 +86,20 @@ module.exports = {
         // gtmAuth: "YOUR_GOOGLE_TAGMANAGER_ENVIROMENT_AUTH_STRING",
         // gtmPreview: "YOUR_GOOGLE_TAGMANAGER_ENVIROMENT_PREVIEW_NAME",
       }
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `AEC Collective`,
+        short_name: `AECC`,
+        start_url: `/`,
+        background_color: `#464866`,
+        theme_color: `#25274D`,
+        // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
+        // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
+        display: `standalone`,
+        icon: `src/assets/logos/aecc_logo.png`, // This path is relative to the root of the site.
+      },
     }
   ]
 };
