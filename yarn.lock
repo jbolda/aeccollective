@@ -5547,10 +5547,10 @@ gatsby-source-filesystem@2.0.12:
     valid-url "^1.0.9"
     xstate "^3.1.0"
 
-gatsby-theme-bulma-core@^2.0.0-alpha.22:
-  version "2.0.0-alpha.22"
-  resolved "https://registry.yarnpkg.com/gatsby-theme-bulma-core/-/gatsby-theme-bulma-core-2.0.0-alpha.22.tgz#03e0dd4a0f63847f0d71f3e70058784b001e208d"
-  integrity sha512-fF4Q++0hiCNspfhfuZwl10Yx2TlpycNkOMFuSxI1uIIefd1BwV0zrEaJrcFMdQ5jeqZmdUDFj27IuVU6QL3wdQ==
+gatsby-theme-bulma-core@^2.0.0-alpha.23:
+  version "2.0.0-alpha.23"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-bulma-core/-/gatsby-theme-bulma-core-2.0.0-alpha.23.tgz#7a60130d3594d7c72f432f22e5f8cd17ca61f213"
+  integrity sha512-NnvB9WFlqFr+TnhCM2nk+fjNJa+qE8C3c3wjKtNSZhX6ltjs23HFCMEzSLQJvPgtQhJGI04spWa/yPUJvzHhXw==
   dependencies:
     bulma "^0.7.2"
     debug "^4.1.1"
@@ -5559,10 +5559,10 @@ gatsby-theme-bulma-core@^2.0.0-alpha.22:
     normalize.css "^8.0.1"
     prismjs "^1.15.0"
 
-gatsby-theme-bulma-layout@^2.0.0-alpha.17:
-  version "2.0.0-alpha.17"
-  resolved "https://registry.yarnpkg.com/gatsby-theme-bulma-layout/-/gatsby-theme-bulma-layout-2.0.0-alpha.17.tgz#80e9aced3a7d1f4301726773aa29dc703d584479"
-  integrity sha512-IFFyvkQMqohnjpc5iT+o/BxHnM+1e2M9Xe+XP+lrfbvY/tTam8CT7EN1iSFpyZbR1j9SnWngy8EUUjs0ANYSvg==
+gatsby-theme-bulma-layout@^2.0.0-alpha.18:
+  version "2.0.0-alpha.18"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-bulma-layout/-/gatsby-theme-bulma-layout-2.0.0-alpha.18.tgz#dea95a1c35871fe2346e35e71b100166c65c1e8e"
+  integrity sha512-6XjiXcLvVwz5VUqotcRXXeS2jV46OPpAYYg0vqHiV9nOdo8xiqFsVj5H2/mZ4GewbKkVbja+NI/VVLfvJeJc3A==
 
 gatsby-transformer-javascript-frontmatter@2.0.5:
   version "2.0.5"
