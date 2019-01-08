@@ -1,16 +1,19 @@
-import React from "react";
-import SimpleNav from "../../plugins/gatsby-theme-bulma-layout/Simple/SimpleNav";
+import React from 'react';
+import { graphql } from 'gatsby';
+import SimpleNav from 'gatsby-theme-bulma-layout/src/components/Simple/SimpleNav';
+import LogoData from "../assets/logos/aecc_logo.svg";
+import LogoInverse from "../assets/logos/aecc_logo_white.svg";
 
 export const frontmatter = {
-  path: "/",
-  layoutType: "inset"
+  path: '/',
+  layoutType: 'inset'
 };
 
 class SiteIndex extends React.Component {
   render() {
     return (
       <SimpleNav
-        sitemetadata={this.props.data.site.siteMetadata}
+        logo={{data: LogoData, inverse: LogoInverse, alt: 'Architecture Engineering and Construction Collective Logo'}}
         location={this.props.location}
       >
         <section className="hero is-secondary is-fullheight">
@@ -54,10 +57,11 @@ class SiteIndex extends React.Component {
               <div className="tile is-parent">
                 <div className="tile is-child has-text-centered">
                   <iframe
+                    title="discord-widget"
                     src="https://discordapp.com/widget?id=412087578498695171&theme=dark"
                     width="350"
                     height="500"
-                    allowTransparency="true"
+                    allowtransparency="true"
                     frameBorder="0"
                   />
                 </div>
@@ -85,16 +89,6 @@ const Logo = ({ icon, alt }) => (
 
 export const pageQuery = graphql`
   query SiteIndex {
-    site {
-      siteMetadata {
-        siteTitle
-        siteDescr
-        siteAuthor
-        siteEmail
-        siteTwitterUrl
-        siteTwitterPretty
-      }
-    }
     logo: file(relativePath: { eq: "logos/aecc_logo_white.svg" }) {
       publicURL
     }

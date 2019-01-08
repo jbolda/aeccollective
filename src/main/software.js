@@ -1,7 +1,9 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import { Link, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import SimpleNav from '../../plugins/gatsby-theme-bulma-layout/Simple/SimpleNav';
+import SimpleNav from 'gatsby-theme-bulma-layout/src/components/Simple/SimpleNav';
+import LogoData from "../assets/logos/aecc_logo.svg";
+import LogoInverse from "../assets/logos/aecc_logo_white.svg";
 
 export const frontmatter = {
   path: '/software/',
@@ -53,7 +55,7 @@ class SoftwarePage extends React.Component {
   render() {
     return (
       <SimpleNav
-        sitemetadata={this.props.data.site.siteMetadata}
+        logo={{data: LogoData, inverse: LogoInverse, alt: 'Architecture Engineering and Construction Collective Logo'}}
         location={this.props.location}
       >
         <section className="section">
@@ -62,13 +64,17 @@ class SoftwarePage extends React.Component {
           </div>
           <div className="container content">
             <p>
-            We have created and are continually growing a list of software
-            used within the industry. If we are missing any software that you
-            use within the Architecture, Engineering and Construction industries,
-            let us know! We would love to have you join and tell us in the community by clicking
-            the <Link to={'/'}>join button on the widget on the homepage</Link>.
-            Otherwise feel free to reach out via email at{' '}
-            <a href="mailto:hello@aeccollective.com">hello@aeccollective.com</a>.
+              We have created and are continually growing a list of software
+              used within the industry. If we are missing any software that you
+              use within the Architecture, Engineering and Construction
+              industries, let us know! We would love to have you join and tell
+              us in the community by clicking the{' '}
+              <Link to={'/'}>join button on the widget on the homepage</Link>.
+              Otherwise feel free to reach out via email at{' '}
+              <a href="mailto:hello@aeccollective.com">
+                hello@aeccollective.com
+              </a>
+              .
             </p>
           </div>
           <div className="container content">
@@ -113,7 +119,11 @@ const softwareTable = data => (
         <div>
           <div className="columns" key={edge.node.id}>
             <div className="column is-one-quarter">
-              <a href={edge.node.frontmatter.website} target="_blank">
+              <a
+                href={edge.node.frontmatter.website}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <strong>{edge.node.frontmatter.title}</strong>
                 {logoImage(edge.node.frontmatter)}
               </a>
@@ -165,6 +175,7 @@ const logoImage = frontmatter => {
       <Img
         sizes={frontmatter.logo.childImageSharp.sizes}
         style={{ maxWidth: 200, width: 200, height: 0 }}
+        alt={`${frontmatter.title} logo`}
       />
     );
   } else if (frontmatter.logo.childImageSharp) {
@@ -172,6 +183,7 @@ const logoImage = frontmatter => {
       <Img
         sizes={frontmatter.logo.childImageSharp.sizes}
         style={{ maxWidth: 200, width: 200 }}
+        alt={`${frontmatter.title} logo`}
       />
     );
   } else if (frontmatter.logo.publicURL) {
@@ -180,6 +192,7 @@ const logoImage = frontmatter => {
         <img
           src={frontmatter.logo.publicURL}
           style={{ maxWidth: 200, width: 200 }}
+          alt={`${frontmatter.title} logo`}
         />
       </div>
     );
@@ -204,16 +217,6 @@ const pullUnique = dataArray => {
 
 export const pageQuery = graphql`
   query SoftwarePage {
-    site {
-      siteMetadata {
-        siteTitle
-        siteDescr
-        siteAuthor
-        siteEmail
-        siteTwitterUrl
-        siteTwitterPretty
-      }
-    }
     allMarkdownRemark(
       filter: { frontmatter: { templateKey: { eq: "mdSoftware" } } }
     ) {

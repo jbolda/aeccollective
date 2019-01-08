@@ -1,5 +1,8 @@
-import React from "react";
-import SimpleNav from "../../plugins/gatsby-theme-bulma-layout/Simple/SimpleNav";
+import React from 'react';
+import { graphql } from 'gatsby';
+import SimpleNav from 'gatsby-theme-bulma-layout/src/components/Simple/SimpleNav';
+import LogoData from "../assets/logos/aecc_logo.svg";
+import LogoInverse from "../assets/logos/aecc_logo_white.svg";
 
 class mdInsetPage extends React.Component {
   render() {
@@ -7,7 +10,7 @@ class mdInsetPage extends React.Component {
 
     return (
       <SimpleNav
-        sitemetadata={this.props.data.site.siteMetadata}
+        logo={{data: LogoData, inverse: LogoInverse, alt: 'Architecture Engineering and Construction Collective Logo'}}
         location={this.props.location}
       >
         <section className="section hero">
@@ -35,16 +38,6 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-      }
-    }
-    site {
-      siteMetadata {
-        siteTitle
-        siteDescr
-        siteAuthor
-        siteEmail
-        siteTwitterUrl
-        siteTwitterPretty
       }
     }
   }
