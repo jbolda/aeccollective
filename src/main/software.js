@@ -2,6 +2,8 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import SimpleNav from 'gatsby-theme-bulma-layout/src/Simple/SimpleNav.js';
+import LogoData from '../assets/logos/aecc_logo.svg';
+import LogoInverse from '../assets/logos/aecc_logo_white.svg';
 
 export const frontmatter = {
   path: '/software/',
@@ -53,7 +55,11 @@ class SoftwarePage extends React.Component {
   render() {
     return (
       <SimpleNav
-        logo={{data: LogoData, inverse: LogoInverse, alt: 'Architecture Engineering and Construction Collective Logo'}}
+        logo={{
+          data: LogoData,
+          inverse: LogoInverse,
+          alt: 'Architecture Engineering and Construction Collective Logo'
+        }}
         location={this.props.location}
       >
         <section className="section">
@@ -92,9 +98,7 @@ class SoftwarePage extends React.Component {
                 </div>
               ))}
             </div>
-            <div>{`We are showing ${
-              this.state.filteredData.length
-            } software titles matching your criteria.`}</div>
+            <div>{`We are showing ${this.state.filteredData.length} software titles matching your criteria.`}</div>
             <hr />
           </div>
           <div className="container content">
