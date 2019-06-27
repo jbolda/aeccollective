@@ -1,9 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import SimpleNav from 'gatsby-theme-bulma-layout/src/components/Simple/SimpleNav';
-import LogoData from "../assets/logos/aecc_logo.svg";
-import LogoInverse from "../assets/logos/aecc_logo_white.svg";
+import SimpleNav from 'gatsby-theme-bulma-layout/src/Simple/SimpleNav.js';
 
 class mdSoftwareInsetPage extends React.Component {
   render() {

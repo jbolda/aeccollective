@@ -1,8 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import SimpleNav from 'gatsby-theme-bulma-layout/src/components/Simple/SimpleNav';
-import LogoData from "../assets/logos/aecc_logo.svg";
-import LogoInverse from "../assets/logos/aecc_logo_white.svg";
+import SimpleNav from 'gatsby-theme-bulma-layout/src/Simple/SimpleNav.js';
 
 export const frontmatter = {
   path: '/',
