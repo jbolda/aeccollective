@@ -5,6 +5,7 @@ module.exports = {
       If you are involved in buildings or infrastructure, join us!`,
     siteAuthor: `members from around the world`,
     siteEmail: `me@jacobbolda.com`,
+    siteContact: 'https://twitter.com/AECCollective',
     siteTwitterUrl: 'https://twitter.com/AECCollective',
     siteTwitterPretty: '@AECCollective',
     siteDisclaimer: `<p>This is a community exchange of ideas and sources, not a service for information.</p>
@@ -98,8 +99,8 @@ module.exports = {
         // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
         // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: `standalone`,
-        icon: `src/assets/logos/aecc_logo.png`, // This path is relative to the root of the site.
-      },
+        icon: `src/assets/logos/aecc_logo.png` // This path is relative to the root of the site.
+      }
     }
   ]
 };
