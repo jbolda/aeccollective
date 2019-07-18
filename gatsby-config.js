@@ -22,16 +22,7 @@ module.exports = {
     {
       resolve: `gatsby-theme-bulma-core`,
       options: {
-        root: __dirname,
-        palette: {
-          colors: {
-            P1: '#000000',
-            P2: '#25274D',
-            P3: '#464866',
-            P4: '#2E9CCA',
-            P5: '#F4F4F4'
-          }
-        }
+        root: __dirname
       }
     },
     {
