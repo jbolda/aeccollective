@@ -3,5 +3,5 @@ export default {
   P2: '#25274D',
   P3: '#464866',
   P4: '#F4F4F4',
-  P5: '#2E9CCA'
+  P5: '#F4F4F4'
 };
