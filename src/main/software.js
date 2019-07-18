@@ -157,7 +157,7 @@ const softwareTable = data => (
                   </div>
                   <div>
                     <Link to={edge.node.frontmatter.path}>
-                      <button className="button is-info">Learn More</button>
+                      <button className="button is-thirdary">Learn More</button>
                     </Link>
                   </div>
                 </div>
