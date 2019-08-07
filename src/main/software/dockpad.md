@@ -1,0 +1,18 @@
+---
+path: /software/dockpad/
+title: DockPad
+templateKey: mdSoftware
+discipline: ["Construction Engineering"]
+tags: ["Scheduling", "Excel Add-in", "Mobile App", "Web App", "API Available"]
+logo: ./dockpad.png
+website: "https://www.dockpad.io"
+officialLinks: [{name: "", link: ""}]
+tutorials: [{name: "", link: ""}]
+studentPricing: Paid
+professionalPricing: Paid
+description: >-
+  A simple to use tracking, collaboration and analytics Multi-Schedule platform for the Construction Industry. 
+projects: [{name: "text", link: "www", image: ./placeholder.png, description: "blah blah"}]
+---
+
+Easily distribute you schedule to you entire team. Keep using your favorite desktop schedule creation software with intergration for P6, MS Project, ASTA Project and more. Easily keep you team in sync with a easy to use Excel Plugin. Easily get notifications in the field through our mobile app or email, and always be on the same page as your team for now on.
