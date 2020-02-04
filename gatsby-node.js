@@ -7,7 +7,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   let slug;
   if (
     node.internal.type === `JavascriptFrontmatter` ||
-    node.internal.type === `MarkdownRemark`
+    node.internal.type === `Mdx`
   ) {
     try {
       const fileNode = getNode(node.parent);
@@ -40,7 +40,7 @@ exports.createPages = ({ graphql, actions }) => {
       graphql(
         `
           {
-            allMarkdownRemark {
+            allMdx {
               edges {
                 node {
                   frontmatter {
@@ -87,7 +87,7 @@ exports.createPages = ({ graphql, actions }) => {
 
         // Create from markdown
         let tags = [];
-        result.data.allMarkdownRemark.edges.forEach(edge => {
+        result.data.allMdx.edges.forEach(edge => {
           let frontmatter = edge.node.frontmatter;
           createPage({
             path: frontmatter.path, // required
@@ -107,21 +107,5 @@ exports.createPages = ({ graphql, actions }) => {
         return;
       })
     );
-  });
-};
-
-exports.onPreExtractQueries = async ({ store }) => {
-  const config = store.getState().config;
-
-  const filePath = `./.cache/gatsby-theme-bulma-layout/`;
-  const fileName = 'SimpleNavQuery.js';
-  const siteMetadata = `export default { siteMetadata: ${JSON.stringify(
-    config.siteMetadata
-  )} }`;
-  await fs.mkdir(filePath, { recursive: true }, err => {
-    if (err) throw err;
-    fs.writeFile(`${filePath}${fileName}`, siteMetadata, err => {
-      if (err) throw err;
-    });
   });
 };

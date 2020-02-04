@@ -18,20 +18,6 @@ module.exports = {
       { text: 'Software', url: '/software/' }
     ]
   },
-  __experimentalThemes: [
-    {
-      resolve: `gatsby-theme-bulma-core`,
-      options: {
-        root: __dirname
-      }
-    },
-    {
-      resolve: `gatsby-theme-bulma-layout`,
-      options: {
-        root: __dirname
-      }
-    }
-  ],
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -47,10 +33,20 @@ module.exports = {
         path: `${__dirname}/src/assets/`
       }
     },
+    `gatsby-transformer-javascript-frontmatter`,
+    `gatsby-plugin-theme-ui`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        plugins: [
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590
+            }
+          },
           {
             resolve: `gatsby-remark-external-links`,
             options: {
@@ -61,15 +57,6 @@ module.exports = {
         ]
       }
     },
-    `gatsby-transformer-javascript-frontmatter`,
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`
-      }
-    },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-google-tagmanager`,
       options: {
@@ -92,6 +79,8 @@ module.exports = {
         display: `standalone`,
         icon: `src/assets/logos/aecc_logo.png` // This path is relative to the root of the site.
       }
-    }
+    },
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-netlify`
   ]
 };
