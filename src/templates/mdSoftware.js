@@ -1,17 +1,17 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import SimpleNav from 'gatsby-theme-bulma-layout/src/Simple/SimpleNav.js';
+import Nav from '@jbolda/gatsby-theme-layout/src/nav.js';
 import LogoData from '../assets/logos/aecc_logo.svg';
 import LogoInverse from '../assets/logos/aecc_logo_white.svg';
 
 class mdSoftwareInsetPage extends React.Component {
   render() {
-    const { html, frontmatter } = this.props.data.markdownRemark;
+    const { body, frontmatter } = this.props.data.markdownRemark;
     let softwareTags = frontmatter.tags;
 
     return (
-      <SimpleNav
+      <Nav
         logo={{
           data: LogoData,
           inverse: LogoInverse,
@@ -30,7 +30,7 @@ class mdSoftwareInsetPage extends React.Component {
         <section className="section">
           <div
             className="container content"
-            dangerouslySetInnerHTML={{ __html: html }}
+            dangerouslySetInnerHTML={{ __html: body }}
           />
         </section>
         <section className="section">
@@ -102,7 +102,7 @@ class mdSoftwareInsetPage extends React.Component {
             <h3>OTHER NOTES</h3>
           </div>
         </section> */}
-      </SimpleNav>
+      </Nav>
     );
   }
 }
@@ -137,8 +137,8 @@ const logoImage = frontmatter => {
 
 export const pageQuery = graphql`
   query markdownTemplateBySoftware($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
+    mdx(fields: { slug: { eq: $slug } }) {
+      body
       frontmatter {
         title
         tags

@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import SimpleNav from 'gatsby-theme-bulma-layout/src/Simple/SimpleNav.js';
+import Nav from '@jbolda/gatsby-theme-layout/src/nav.js';
 import LogoData from '../assets/logos/aecc_logo.svg';
 import LogoInverse from '../assets/logos/aecc_logo_white.svg';
 
@@ -12,7 +12,7 @@ export const frontmatter = {
 class SiteIndex extends React.Component {
   render() {
     return (
-      <SimpleNav
+      <Nav
         logo={{
           data: LogoData,
           inverse: LogoInverse,
@@ -73,7 +73,7 @@ class SiteIndex extends React.Component {
             </div>
           </div>
         </section>
-      </SimpleNav>
+      </Nav>
     );
   }
 }

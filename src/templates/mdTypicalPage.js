@@ -1,15 +1,15 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import SimpleNav from 'gatsby-theme-bulma-layout/src/Simple/SimpleNav.js';
+import Nav from '@jbolda/gatsby-theme-layout/src/nav.js';
 import LogoData from '../assets/logos/aecc_logo.svg';
 import LogoInverse from '../assets/logos/aecc_logo_white.svg';
 
 class mdInsetPage extends React.Component {
   render() {
-    const { html, frontmatter } = this.props.data.markdownRemark;
+    const { body, frontmatter } = this.props.data.markdownRemark;
 
     return (
-      <SimpleNav
+      <Nav
         logo={{
           data: LogoData,
           inverse: LogoInverse,
@@ -26,10 +26,10 @@ class mdInsetPage extends React.Component {
         </section>
         <section className="section">
           <div className="container content">
-            <div dangerouslySetInnerHTML={{ __html: html }} />
+            <div dangerouslySetInnerHTML={{ __html: body }} />
           </div>
         </section>
-      </SimpleNav>
+      </Nav>
     );
   }
 }
@@ -38,8 +38,8 @@ export default mdInsetPage;
 
 export const pageQuery = graphql`
   query markdownTemplateBySlug($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
+    mdx(fields: { slug: { eq: $slug } }) {
+      body
       frontmatter {
         title
       }

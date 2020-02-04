@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import SimpleNav from 'gatsby-theme-bulma-layout/src/Simple/SimpleNav.js';
+import Nav from '@jbolda/gatsby-theme-layout/src/nav.js';
 import LogoData from '../assets/logos/aecc_logo.svg';
 import LogoInverse from '../assets/logos/aecc_logo_white.svg';
 
@@ -13,7 +13,7 @@ export const frontmatter = {
 class SoftwarePage extends React.Component {
   constructor(props) {
     super();
-    this.state = pullUnique(props.data.allMarkdownRemark.edges);
+    this.state = pullUnique(props.data.allMdx.edges);
   }
 
   disciplineClicked(index) {
@@ -54,7 +54,7 @@ class SoftwarePage extends React.Component {
 
   render() {
     return (
-      <SimpleNav
+      <Nav
         logo={{
           data: LogoData,
           inverse: LogoInverse,
@@ -105,7 +105,7 @@ class SoftwarePage extends React.Component {
             {softwareTable(this.state.filteredData)}
           </div>
         </section>
-      </SimpleNav>
+      </Nav>
     );
   }
 }
@@ -219,13 +219,11 @@ const pullUnique = dataArray => {
 
 export const pageQuery = graphql`
   query SoftwarePage {
-    allMarkdownRemark(
-      filter: { frontmatter: { templateKey: { eq: "mdSoftware" } } }
-    ) {
+    allMdx(filter: { frontmatter: { templateKey: { eq: "mdSoftware" } } }) {
       edges {
         node {
           id
-          html
+          body
           frontmatter {
             path
             title
