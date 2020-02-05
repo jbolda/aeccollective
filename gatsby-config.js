@@ -22,8 +22,14 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `main`,
-        path: `${__dirname}/src/main/`
+        name: `software`,
+        path: `${__dirname}/src/software/`
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-page-creator',
+      options: {
+        path: `${__dirname}/src/software`
       }
     },
     {
@@ -40,6 +46,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
+        defaultLayouts: {
+          software: require.resolve('./src/templates/mdSoftware.js'),
+          default: require.resolve('./src/templates/mdTypicalPage.js')
+        },
         gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-images`,
