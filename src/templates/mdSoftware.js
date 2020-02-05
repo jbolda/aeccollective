@@ -1,7 +1,7 @@
 import React from 'react';
-import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import Nav from '@jbolda/gatsby-theme-layout/src/nav.js';
+import { Box, Heading } from 'theme-ui';
 import LogoData from '../assets/logos/aecc_logo.svg';
 import LogoInverse from '../assets/logos/aecc_logo_white.svg';
 
@@ -28,10 +28,7 @@ class mdSoftwareInsetPage extends React.Component {
           </div>
         </section>
         <section className="section">
-          <div
-            className="container content"
-            dangerouslySetInnerHTML={{ __html: body }}
-          />
+          <div className="container content">{this.props.children}</div>
         </section>
         <section className="section">
           <div className="container content">
@@ -134,36 +131,3 @@ const logoImage = frontmatter => {
     return null;
   }
 };
-
-export const pageQuery = graphql`
-  query markdownTemplateBySoftware($slug: String!) {
-    mdx(fields: { slug: { eq: $slug } }) {
-      body
-      frontmatter {
-        title
-        tags
-        logo {
-          name
-          publicURL
-          childImageSharp {
-            sizes(maxWidth: 600, quality: 90) {
-              ...GatsbyImageSharpSizes_tracedSVG
-            }
-          }
-        }
-        website
-        officialLinks {
-          name
-          link
-        }
-        tutorials {
-          name
-          link
-        }
-        studentPricing
-        professionalPricing
-        description
-      }
-    }
-  }
-`;
