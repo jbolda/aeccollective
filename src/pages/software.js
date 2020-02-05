@@ -5,15 +5,10 @@ import Nav from '@jbolda/gatsby-theme-layout/src/nav.js';
 import LogoData from '../assets/logos/aecc_logo.svg';
 import LogoInverse from '../assets/logos/aecc_logo_white.svg';
 
-export const frontmatter = {
-  path: '/software/',
-  layoutType: 'inset'
-};
-
 class SoftwarePage extends React.Component {
   constructor(props) {
     super();
-    this.state = pullUnique(props.data.allMdx.edges);
+    this.state = pullUnique(props.data.software.nodes);
   }
 
   disciplineClicked(index) {
@@ -219,9 +214,14 @@ const pullUnique = dataArray => {
 
 export const pageQuery = graphql`
   query SoftwarePage {
-    allMdx(filter: { frontmatter: { templateKey: { eq: "mdSoftware" } } }) {
-      edges {
-        node {
+    software: allFile(
+      filter: {
+        sourceInstanceName: { eq: "software" }
+        internal: { mediaType: { eq: "text/mdx" } }
+      }
+    ) {
+      nodes {
+        node: childMdx {
           id
           body
           frontmatter {
