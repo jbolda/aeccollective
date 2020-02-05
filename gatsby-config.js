@@ -39,7 +39,6 @@ module.exports = {
         path: `${__dirname}/src/assets/`
       }
     },
-    `gatsby-transformer-javascript-frontmatter`,
     `gatsby-plugin-theme-ui`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,

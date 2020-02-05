@@ -6,12 +6,9 @@
   "scripts": {
     "develop": "gatsby develop",
     "dev:hard": "gatsby clean && gatsby develop",
-    "build": "gatsby clean & yarn jest & gatsby build",
+    "build": "gatsby clean & gatsby build",
     "serve": "gatsby serve",
-    "jest": "jest",
-    "test": "yarn lint && yarn jest",
-    "test:update": "jest --updateSnapshot",
-    "test:watch": "jest --watch",
+    "test": "echo 'no-op'",
     "pretty": "prettier --write \"{{src,plugins}/**/*.js,*.js}\""
   },
   "repository": {
@@ -27,23 +24,22 @@
     "@jbolda/gatsby-theme-components": "^0.0.1",
     "@jbolda/gatsby-theme-layout": "^0.3.2",
     "@mdx-js/mdx": "^1.5.5",
-    "gatsby": "2.19.7",
-    "gatsby-image": "2.2.39",
-    "gatsby-link": "2.2.28",
-    "gatsby-plugin-google-tagmanager": "2.1.24",
-    "gatsby-plugin-manifest": "2.2.39",
+    "gatsby": "2.19.12",
+    "gatsby-image": "2.2.40",
+    "gatsby-link": "2.2.29",
+    "gatsby-plugin-google-tagmanager": "2.1.25",
+    "gatsby-plugin-manifest": "2.2.41",
     "gatsby-plugin-mdx": "^1.0.70",
     "gatsby-plugin-netlify": "^2.1.32",
     "gatsby-plugin-react-helmet": "^3.1.22",
-    "gatsby-plugin-sharp": "2.4.3",
+    "gatsby-plugin-sharp": "2.4.5",
     "gatsby-plugin-theme-ui": "^0.3.0",
     "gatsby-remark-external-links": "0.0.4",
-    "gatsby-remark-images": "3.1.42",
+    "gatsby-remark-images": "3.1.44",
     "gatsby-remark-relative-images": "0.2.3",
-    "gatsby-source-filesystem": "2.1.46",
-    "gatsby-transformer-javascript-frontmatter": "2.1.23",
-    "gatsby-transformer-remark": "2.6.48",
-    "gatsby-transformer-sharp": "2.3.13",
+    "gatsby-source-filesystem": "2.1.48",
+    "gatsby-transformer-remark": "2.6.50",
+    "gatsby-transformer-sharp": "2.3.14",
     "netlify-plugin-gatsby-cache": "0.2.0",
     "react": "16.12.0",
     "react-dom": "16.12.0",
@@ -51,7 +47,6 @@
     "theme-ui": "^0.3.1"
   },
   "devDependencies": {
-    "jest": "24.9.0",
     "prettier": "1.19.1"
   }
 }
