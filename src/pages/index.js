@@ -5,11 +5,6 @@ import { Flex, Box, Heading, Text } from 'theme-ui';
 import LogoData from '../assets/logos/aecc_logo.svg';
 import LogoInverse from '../assets/logos/aecc_logo_white.svg';
 
-export const frontmatter = {
-  path: '/',
-  layoutType: 'inset'
-};
-
 class SiteIndex extends React.Component {
   render() {
     return (
