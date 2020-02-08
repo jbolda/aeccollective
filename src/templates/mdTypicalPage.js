@@ -13,7 +13,10 @@ export default ({ children, location }) => (
     }}
     location={location}
   >
-    <Box as="section" sx={{ width: '98%' }}>
+    <Box
+      as="section"
+      sx={{ width: ['95%', '85%', '60%'], mx: ['2.5%', '7.5%', '20%'] }}
+    >
       {children}
     </Box>
   </Nav>
