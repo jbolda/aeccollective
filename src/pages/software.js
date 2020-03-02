@@ -112,7 +112,8 @@ class SoftwarePage extends React.Component {
                   borderWidth: '3px',
                   '&:hover': {
                     bg: 'secondary'
-                  }
+                  },
+                  transition: 'all 0.4s'
                 }}
                 onClick={this.disciplineClicked.bind(this, index)}
               >
@@ -142,11 +143,7 @@ const softwareTable = data =>
   ) : (
     data.map(node => (
       <Card key={node.id} sx={{ p: 3, my: 6 }}>
-        <Link
-          href={node.childMdx.frontmatter.path}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link as={GatsbyLink} to={node.childMdx.frontmatter.path}>
           <Heading as={'h3'}>{node.childMdx.frontmatter.title}</Heading>
           {logoImage(node.childMdx.frontmatter)}
         </Link>
@@ -166,20 +163,7 @@ const softwareTable = data =>
         </Text>
         <Text>{node.childMdx.frontmatter.description}</Text>
         {node.childMdx.frontmatter.tags.map(tag => (
-          <Badge
-            key={tag}
-            sx={{
-              mr: 3,
-              py: 0,
-              px: 3,
-              borderRadius: 8,
-              bg: 'background',
-              color: 'text',
-              borderColor: `text`,
-              borderStyle: `inset`,
-              borderWidth: '3px'
-            }}
-          >
+          <Badge key={tag} sx={{ px: 2, m: 4 }}>
             {tag}
           </Badge>
         ))}

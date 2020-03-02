@@ -7,7 +7,6 @@ import LogoInverse from '../assets/logos/aecc_logo_white.svg';
 
 class mdSoftwareInsetPage extends React.Component {
   render() {
-    console.log(this);
     const { frontmatter } = this.props.pageContext;
     let softwareTags = frontmatter.tags;
 
