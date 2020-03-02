@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link as GatsbyLink, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import Nav from '@jbolda/gatsby-theme-layout/src/nav.js';
+import Nav from '../components/nav';
 import {
   Box,
   Divider,
@@ -14,8 +14,6 @@ import {
   Badge,
   Link
 } from 'theme-ui';
-import LogoData from '../assets/logos/aecc_logo.svg';
-import LogoInverse from '../assets/logos/aecc_logo_white.svg';
 
 class SoftwarePage extends React.Component {
   constructor(props) {
@@ -59,14 +57,7 @@ class SoftwarePage extends React.Component {
 
   render() {
     return (
-      <Nav
-        logo={{
-          data: LogoData,
-          inverse: LogoInverse,
-          alt: 'Architecture Engineering and Construction Collective Logo'
-        }}
-        location={this.props.location}
-      >
+      <Nav location={this.props.location}>
         <Box
           as="section"
           sx={{ width: ['95%', '85%', '60%'], mx: ['2.5%', '7.5%', '20%'] }}

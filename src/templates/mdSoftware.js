@@ -1,9 +1,7 @@
 import React from 'react';
 import Img from 'gatsby-image';
-import Nav from '@jbolda/gatsby-theme-layout/src/nav.js';
+import Nav from '../components/nav';
 import { Flex, Box, Heading, Text, Badge, Link } from 'theme-ui';
-import LogoData from '../assets/logos/aecc_logo.svg';
-import LogoInverse from '../assets/logos/aecc_logo_white.svg';
 
 class mdSoftwareInsetPage extends React.Component {
   render() {
@@ -11,14 +9,7 @@ class mdSoftwareInsetPage extends React.Component {
     let softwareTags = frontmatter.tags;
 
     return (
-      <Nav
-        logo={{
-          data: LogoData,
-          inverse: LogoInverse,
-          alt: 'Architecture Engineering and Construction Collective Logo'
-        }}
-        location={this.props.location}
-      >
+      <Nav location={this.props.location}>
         <Flex
           sx={{
             width: ['95%', '85%', '60%'],
