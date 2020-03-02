@@ -233,7 +233,23 @@ export default {
       ...bodyTextStandards
     },
     a: {
-      color: 'primary',
+      color: 'text',
+      '&:link': {
+        textDecorationLine: 'underline',
+        textDecorationStyle: 'solid',
+        textDecorationColor: 'primary'
+      },
+      '&:visited': {
+        textDecorationLine: 'underline',
+        textDecorationStyle: 'solid',
+        textDecorationColor: 'secondary'
+      },
+      '&:hover': {
+        textDecorationLine: 'underline',
+        textDecorationColor: 'muted',
+        textDecorationStyle: 'solid',
+        textDecorationThickness: '4px'
+      },
       ...bodyTextStandards
     },
     pre: {
