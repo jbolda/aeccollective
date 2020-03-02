@@ -1,7 +1,19 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { Link as GatsbyLink, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import Nav from '@jbolda/gatsby-theme-layout/src/nav.js';
+import {
+  Box,
+  Divider,
+  Container,
+  Heading,
+  Text,
+  Button,
+  Image,
+  Card,
+  Badge,
+  Link
+} from 'theme-ui';
 import LogoData from '../assets/logos/aecc_logo.svg';
 import LogoInverse from '../assets/logos/aecc_logo_white.svg';
 
@@ -18,8 +30,8 @@ class SoftwarePage extends React.Component {
         prevState.uniqueDisciplines[index]
       ] = !prevState.disciplineButtons[prevState.uniqueDisciplines[index]];
 
-      let filterData = edge => {
-        let availableDisciplines = edge.node.frontmatter.discipline.reduce(
+      let filterData = node => {
+        let availableDisciplines = node.childMdx.frontmatter.discipline.reduce(
           (accumulator, discipline) => {
             accumulator[discipline] = true;
             return accumulator;
@@ -39,9 +51,7 @@ class SoftwarePage extends React.Component {
         }, true);
       };
 
-      newState.filteredData = [
-        ...props.data.allMarkdownRemark.edges.filter(filterData)
-      ];
+      newState.filteredData = [...props.data.software.nodes.filter(filterData)];
 
       return newState;
     });
@@ -57,49 +67,68 @@ class SoftwarePage extends React.Component {
         }}
         location={this.props.location}
       >
-        <section className="section">
-          <div className="container has-text-centered">
-            <h1 className="title">AEC Industry Software</h1>
-          </div>
-          <div className="container content">
-            <p>
-              We have created and are continually growing a list of software
-              used within the industry. If we are missing any software that you
-              use within the Architecture, Engineering and Construction
-              industries, let us know! We would love to have you join and tell
-              us in the community by clicking the{' '}
-              <Link to={'/'}>join button on the widget on the homepage</Link>.
-              Otherwise feel free to reach out via email at{' '}
-              <a href="mailto:hello@aeccollective.com">
-                hello@aeccollective.com
-              </a>
-              .
-            </p>
-          </div>
-          <div className="container content">
-            <p>Filter by Discipline. Click on the following buttons.</p>
-            <div className="buttons">
-              {this.state.uniqueDisciplines.map((discipline, index) => (
-                <div
-                  key={index}
-                  className={
-                    this.state.disciplineButtons[discipline]
-                      ? `button is-info`
-                      : `button`
+        <Box
+          as="section"
+          sx={{ width: ['95%', '85%', '60%'], mx: ['2.5%', '7.5%', '20%'] }}
+        >
+          <Heading as="h1">AEC Industry Software</Heading>
+          <Text as="p">
+            We have created and are continually growing a list of software used
+            within the industry. If we are missing any software that you use
+            within the Architecture, Engineering and Construction industries,
+            let us know! We would love to have you join and tell us in the
+            community by clicking the{' '}
+            <Link as={GatsbyLink} to={'/'}>
+              join button on the widget on the homepage
+            </Link>
+            . Otherwise feel free to reach out via email at{' '}
+            <Link href="mailto:hello@aeccollective.com">
+              hello@aeccollective.com
+            </Link>
+            .
+          </Text>
+        </Box>
+        <Box
+          as="section"
+          sx={{ width: ['95%', '85%', '60%'], mx: ['2.5%', '7.5%', '20%'] }}
+        >
+          <Text as="p">
+            Filter by Discipline. Click on the following buttons.
+          </Text>
+          <Container>
+            {this.state.uniqueDisciplines.map((discipline, index) => (
+              <Button
+                key={index}
+                sx={{
+                  m: 2,
+                  bg: this.state.disciplineButtons[discipline]
+                    ? `primary`
+                    : `background`,
+                  color: 'text',
+                  borderColor: this.state.disciplineButtons[discipline]
+                    ? `text`
+                    : `secondary`,
+                  borderStyle: `solid`,
+                  borderWidth: '3px',
+                  '&:hover': {
+                    bg: 'secondary'
                   }
-                  onClick={this.disciplineClicked.bind(this, index)}
-                >
-                  {discipline}
-                </div>
-              ))}
-            </div>
-            <div>{`We are showing ${this.state.filteredData.length} software titles matching your criteria.`}</div>
-            <hr />
-          </div>
-          <div className="container content">
-            {softwareTable(this.state.filteredData)}
-          </div>
-        </section>
+                }}
+                onClick={this.disciplineClicked.bind(this, index)}
+              >
+                {discipline}
+              </Button>
+            ))}
+          </Container>
+          <Text>{`We are showing ${this.state.filteredData.length} software titles matching your criteria.`}</Text>
+          <Divider />
+        </Box>
+        <Box
+          as="section"
+          sx={{ width: ['95%', '85%', '60%'], mx: ['2.5%', '7.5%', '20%'] }}
+        >
+          {softwareTable(this.state.filteredData)}
+        </Box>
       </Nav>
     );
   }
@@ -107,91 +136,81 @@ class SoftwarePage extends React.Component {
 
 export default SoftwarePage;
 
-const softwareTable = data => (
-  <div>
-    {data.length === 0 ? (
-      <span>No matching software.</span>
-    ) : (
-      data.map(edge => (
-        <div>
-          <div className="columns" key={edge.node.id}>
-            <div className="column is-one-quarter">
-              <a
-                href={edge.node.frontmatter.website}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <strong>{edge.node.frontmatter.title}</strong>
-                {logoImage(edge.node.frontmatter)}
-              </a>
-            </div>
-            <div className="column">
-              <div className="content">
-                <p>
-                  <strong>{'Discipline: '}</strong>
-                  {edge.node.frontmatter.discipline.map((disc, index) => {
-                    if (index === 0) {
-                      return <span key={index}>{disc}</span>;
-                    } else {
-                      return <span key={index}>, {disc}</span>;
-                    }
-                  })}
-                </p>
-                <p>
-                  <strong>{'Pricing: '}</strong>
-                  {edge.node.frontmatter.professionalPricing}
-                </p>
-                <div>
-                  <p>{edge.node.frontmatter.description}</p>
-                  <div className="tags">
-                    {edge.node.frontmatter.tags.map(tag => (
-                      <span key={tag} className="tag is-secondary">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <div>
-                    <Link to={edge.node.frontmatter.path}>
-                      <button className="button is-thirdary">Learn More</button>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <hr />
-        </div>
-      ))
-    )}
-  </div>
-);
+const softwareTable = data =>
+  data.length === 0 ? (
+    <Text>No matching software.</Text>
+  ) : (
+    data.map(node => (
+      <Card key={node.id} sx={{ p: 3, my: 6 }}>
+        <Link
+          href={node.childMdx.frontmatter.path}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Heading as={'h3'}>{node.childMdx.frontmatter.title}</Heading>
+          {logoImage(node.childMdx.frontmatter)}
+        </Link>
+        <Text>
+          {'Discipline: '}
+          {node.childMdx.frontmatter.discipline.map((disc, index) => {
+            if (index === 0) {
+              return <span key={index}>{disc}</span>;
+            } else {
+              return <span key={index}>, {disc}</span>;
+            }
+          })}
+        </Text>
+        <Text>
+          {'Pricing: '}
+          {node.childMdx.frontmatter.professionalPricing}
+        </Text>
+        <Text>{node.childMdx.frontmatter.description}</Text>
+        {node.childMdx.frontmatter.tags.map(tag => (
+          <Badge
+            key={tag}
+            sx={{
+              mr: 3,
+              py: 0,
+              px: 3,
+              borderRadius: 8,
+              bg: 'background',
+              color: 'text',
+              borderColor: `text`,
+              borderStyle: `inset`,
+              borderWidth: '3px'
+            }}
+          >
+            {tag}
+          </Badge>
+        ))}
+      </Card>
+    ))
+  );
 
 const logoImage = frontmatter => {
-  if (frontmatter.logo.name === 'placeholder') {
+  if (frontmatter?.logo?.name === 'placeholder') {
     return (
       <Img
         sizes={frontmatter.logo.childImageSharp.sizes}
-        style={{ maxWidth: 200, width: 200, height: 0 }}
+        style={{ maxWidth: 200, width: 200, height: 0, marginBottom: '12px' }}
         alt={`${frontmatter.title} logo`}
       />
     );
-  } else if (frontmatter.logo.childImageSharp) {
+  } else if (frontmatter?.logo?.childImageSharp) {
     return (
       <Img
         sizes={frontmatter.logo.childImageSharp.sizes}
-        style={{ maxWidth: 200, width: 200 }}
+        style={{ maxWidth: 200, width: 200, marginBottom: '12px' }}
         alt={`${frontmatter.title} logo`}
       />
     );
-  } else if (frontmatter.logo.publicURL) {
+  } else if (frontmatter?.logo?.publicURL) {
     return (
-      <div className="image">
-        <img
-          src={frontmatter.logo.publicURL}
-          style={{ maxWidth: 200, width: 200 }}
-          alt={`${frontmatter.title} logo`}
-        />
-      </div>
+      <Image
+        src={frontmatter.logo.publicURL}
+        sx={{ maxWidth: 200, width: 200, marginBottom: '12px' }}
+        alt={`${frontmatter.title} logo`}
+      />
     );
   } else {
     return null;
@@ -201,7 +220,7 @@ const logoImage = frontmatter => {
 const pullUnique = dataArray => {
   let uniqueDisciplines = { disciplineButtons: {} };
   dataArray.forEach(data => {
-    data.node.frontmatter.discipline.forEach(discipline => {
+    data.childMdx.frontmatter.discipline.forEach(discipline => {
       uniqueDisciplines.disciplineButtons[discipline] = false;
     });
   });
@@ -221,7 +240,7 @@ export const pageQuery = graphql`
       }
     ) {
       nodes {
-        node: childMdx {
+        childMdx {
           id
           body
           frontmatter {
