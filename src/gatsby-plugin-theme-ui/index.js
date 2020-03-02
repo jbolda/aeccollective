@@ -52,7 +52,8 @@ export default {
     heading: {
       ...headingTextStandards,
       letterSpacing: 'heading',
-      my: 5
+      my: 5,
+      color: 'text'
     },
     body: {
       ...bodyTextStandards,
