@@ -40,6 +40,7 @@ module.exports = {
       }
     },
     `gatsby-plugin-theme-ui`,
+    `gatsby-theme-style-guide`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     {
