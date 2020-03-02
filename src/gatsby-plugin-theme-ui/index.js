@@ -66,6 +66,19 @@ export default {
       borderColor: 'muted'
     }
   },
+  badges: {
+    primary: {
+      mr: 3,
+      py: 0,
+      px: 3,
+      borderRadius: 8,
+      bg: 'background',
+      color: 'text',
+      borderColor: `text`,
+      borderStyle: `inset`,
+      borderWidth: '3px'
+    }
+  },
   jboldaGatsbyTheme: {
     layout: {
       heading: {
