@@ -133,7 +133,7 @@ const softwareTable = data =>
     <Text>No matching software.</Text>
   ) : (
     data.map(node => (
-      <Card key={node.id} sx={{ p: 3, my: 6 }}>
+      <Card key={node.id} sx={{ px: 8, py: 3, my: 6 }}>
         <Link as={GatsbyLink} to={node.childMdx.frontmatter.path}>
           <Heading as={'h3'}>{node.childMdx.frontmatter.title}</Heading>
           {logoImage(node.childMdx.frontmatter)}
