@@ -102,59 +102,48 @@ export default {
       color: 'text'
     },
     h1: {
-      color: 'text',
       ...headingTextStandards,
       fontSize: 5
     },
     h2: {
-      color: 'text',
       ...headingTextStandards,
       fontSize: 4
     },
     h3: {
-      color: 'text',
       ...headingTextStandards,
       fontSize: 3
     },
     h4: {
-      color: 'text',
       ...headingTextStandards,
       fontSize: 2
     },
     h5: {
-      color: 'text',
       ...headingTextStandards,
       fontSize: 1
     },
     h6: {
-      color: 'text',
       ...headingTextStandards,
       fontSize: 0
     },
     p: {
-      color: 'text',
       ...bodyTextStandards
     },
     span: {
-      color: 'text',
       ...bodyTextStandards
     },
     a: {
-      color: 'text',
+      color: 'muted',
+      textDecorationColor: 'primary',
       '&:link': {
-        textDecorationLine: 'underline',
-        textDecorationStyle: 'solid',
+        background: 'muted',
+        textDecoration: 'underline solid',
         textDecorationColor: 'primary'
       },
       '&:visited': {
-        textDecorationLine: 'underline',
-        textDecorationStyle: 'solid',
         textDecorationColor: 'secondary'
       },
       '&:hover': {
-        textDecorationLine: 'underline',
         textDecorationColor: 'muted',
-        textDecorationStyle: 'solid',
         textDecorationThickness: '4px'
       },
       ...bodyTextStandards
