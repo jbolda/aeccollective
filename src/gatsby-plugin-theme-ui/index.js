@@ -1,11 +1,3 @@
-const colors = {
-  P1: '#000000',
-  P2: '#25274D',
-  P3: '#464866',
-  P4: '#F4F4F4',
-  P5: '#F4F4F4'
-};
-
 const headingTextStandards = {
   fontFamily: 'heading',
   fontWeight: 'heading',
@@ -41,18 +33,18 @@ export default {
     heading: 1.5
   },
   colors: {
-    text: '#F4F4F4',
-    background: '#25274D',
-    primary: '#25274D',
-    secondary: '#464866',
-    muted: '#F4F4F4',
+    text: '#25274D',
+    background: '#F4F4F4',
+    primary: '#82ccdd',
+    secondary: '#60a3bc',
+    muted: '#25274D',
     modes: {
       dark: {
         text: '#F4F4F4',
         background: '#25274D',
-        primary: '#25274D',
+        primary: '#60a3bc',
         secondary: '#464866',
-        muted: '#F4F4F4'
+        muted: '#82ccdd'
       }
     }
   },
@@ -65,6 +57,13 @@ export default {
     body: {
       ...bodyTextStandards,
       letterSpacing: 'body'
+    }
+  },
+  cards: {
+    primary: {
+      borderRadius: 4,
+      boxShadow: '0 0 8px rgba(0, 0, 0, 0.125)',
+      borderColor: 'muted'
     }
   },
   jboldaGatsbyTheme: {
