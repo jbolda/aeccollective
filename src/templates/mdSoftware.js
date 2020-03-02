@@ -1,13 +1,14 @@
 import React from 'react';
 import Img from 'gatsby-image';
 import Nav from '@jbolda/gatsby-theme-layout/src/nav.js';
-import { Box, Heading } from 'theme-ui';
+import { Flex, Box, Heading, Text, Badge, Link } from 'theme-ui';
 import LogoData from '../assets/logos/aecc_logo.svg';
 import LogoInverse from '../assets/logos/aecc_logo_white.svg';
 
 class mdSoftwareInsetPage extends React.Component {
   render() {
-    const { frontmatter } = this.props.pathContext;
+    console.log(this);
+    const { frontmatter } = this.props.pageContext;
     let softwareTags = frontmatter.tags;
 
     return (
@@ -19,86 +20,68 @@ class mdSoftwareInsetPage extends React.Component {
         }}
         location={this.props.location}
       >
-        <section className="hero is-small">
-          <div className="hero-body">
-            <div className="container">
-              <h1 className="title">{frontmatter.title}</h1>
-              {logoImage(frontmatter)}
-            </div>
-          </div>
-        </section>
-        <section className="section">
-          <div className="container content">{this.props.children}</div>
-        </section>
-        <section className="section">
-          <div className="container content">
-            <h3 className="specialties">SPECIALTIES</h3>
+        <Flex
+          sx={{
+            width: ['95%', '85%', '60%'],
+            mx: ['2.5%', '7.5%', '20%'],
+            flexDirection: 'column'
+          }}
+        >
+          <Box as={'section'}>
+            <Heading as="h1">{frontmatter.title}</Heading>
+            {logoImage(frontmatter)}
+          </Box>
+          <Box>{this.props.children}</Box>
+          <Box as={'section'}>
+            <Heading as="h3" className="specialties">
+              SPECIALTIES
+            </Heading>
             <div className="tags">
               {softwareTags.map(tag => (
-                <span className="tag is-medium" key={tag}>
+                <Badge key={tag} sx={{ px: 2, m: 4 }}>
                   {tag}
-                </span>
+                </Badge>
               ))}
             </div>
-          </div>
-        </section>
-        <section className="section">
-          <div className="container content">
-            <h3 className="userSupport">USER SUPPORT</h3>
-            <p>
-              <a href={frontmatter.website}>Main Website</a>
-            </p>
-            {frontmatter.officialLinks.map(lk => {
-              if (lk.name === '') {
-                return null;
-              } else {
-                return (
-                  <p key={lk.name}>
-                    <a href={lk.link}>{lk.name}</a>
-                  </p>
-                );
-              }
-            })}
-            {frontmatter.tutorials.map(lk => {
-              if (lk.name === '') {
-                return null;
-              } else {
-                return (
-                  <p key={lk.name}>
-                    <a href={lk.link}>{lk.name}</a>
-                  </p>
-                );
-              }
-            })}
-          </div>
-        </section>
-        <section className="section">
-          <div className="container content">
-            <h3 className="pricing">PRICING</h3>
-            <table>
-              <tbody>
-                <tr>
-                  <td>Student:</td>
-                  <td>{frontmatter.studentPricing}</td>
-                </tr>
-                <tr>
-                  <td>Professional:</td>
-                  <td>{frontmatter.professionalPricing}</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-        {/* <section className="section">
-          <div className="container content">
-            <h3>PROJECTS</h3>
-          </div>
-        </section>
-        <section className="section">
-          <div className="container content">
-            <h3>OTHER NOTES</h3>
-          </div>
-        </section> */}
+          </Box>
+          <Box as={'section'}>
+            <div className="container content">
+              <Heading as="h3" className="userSupport">
+                USER SUPPORT
+              </Heading>
+              <Link href={frontmatter.website}>Main Website</Link>
+              {frontmatter.officialLinks.map(lk => {
+                if (lk.name === '') {
+                  return null;
+                } else {
+                  return (
+                    <Link key={lk.name} href={lk.link}>
+                      {lk.name}
+                    </Link>
+                  );
+                }
+              })}
+              {frontmatter.tutorials.map(lk => {
+                if (lk.name === '') {
+                  return null;
+                } else {
+                  return (
+                    <Link key={lk.name} href={lk.link}>
+                      {lk.name}
+                    </Link>
+                  );
+                }
+              })}
+            </div>
+          </Box>
+          <Box as={'section'}>
+            <Heading as="h3" className="pricing">
+              PRICING
+            </Heading>
+            <Text>{`Student: ${frontmatter.studentPricing}`}</Text>
+            <Text>{`Professional: ${frontmatter.professionalPricing}`}</Text>
+          </Box>
+        </Flex>
       </Nav>
     );
   }
