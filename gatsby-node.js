@@ -1,67 +1,25 @@
 const path = require(`path`);
 const _ = require('lodash');
-const fs = require('fs');
-
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions;
-  let slug;
-  if (
-    node.internal.type === `JavascriptFrontmatter` ||
-    node.internal.type === `MarkdownRemark`
-  ) {
-    try {
-      const fileNode = getNode(node.parent);
-      const parsedFilePath = path.parse(fileNode.relativePath);
-      if (parsedFilePath.name !== `index` && parsedFilePath.dir !== ``) {
-        slug = `/${parsedFilePath.dir}/${parsedFilePath.name}/`;
-      } else if (parsedFilePath.name === `index` && parsedFilePath.dir === ``) {
-        slug = `/`;
-      } else if (parsedFilePath.name === `index` && parsedFilePath.dir !== ``) {
-        slug = `/${parsedFilePath.dir}/`;
-      } else {
-        slug = `/${parsedFilePath.dir}/${parsedFilePath.name}/`;
-      }
-
-      // Add slug as a field on the node.
-      createNodeField({ node, name: `slug`, value: slug });
-    } catch (error) {
-      // nil
-    }
-  }
-};
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
   return new Promise((resolve, reject) => {
-    const pages = [];
-
     resolve(
       graphql(
         `
           {
-            allMarkdownRemark {
-              edges {
-                node {
-                  frontmatter {
-                    layoutType
-                    path
-                    templateKey
-                    tags
-                  }
-                  fields {
-                    slug
-                  }
-                }
+            allFile(
+              filter: {
+                sourceInstanceName: { eq: "software" }
+                ext: { eq: ".mdx" }
               }
-            }
-            allJavascriptFrontmatter {
-              edges {
-                node {
-                  fileAbsolutePath
+            ) {
+              nodes {
+                childMdx {
                   frontmatter {
-                    layoutType
                     path
+                    tags
                   }
                 }
               }
@@ -77,29 +35,18 @@ exports.createPages = ({ graphql, actions }) => {
           reject(result.errors);
         }
 
-        result.data.allJavascriptFrontmatter.edges.forEach(edge => {
-          let { frontmatter } = edge.node;
-          createPage({
-            path: frontmatter.path, // required
-            component: path.resolve(edge.node.fileAbsolutePath)
-          });
-        });
-
         // Create from markdown
         let tags = [];
-        result.data.allMarkdownRemark.edges.forEach(edge => {
-          let frontmatter = edge.node.frontmatter;
-          createPage({
-            path: frontmatter.path, // required
-            component: path.resolve(
-              `src/templates/${String(frontmatter.templateKey)}.js`
-            ),
-            context: {
-              slug: edge.node.fields.slug
+        result.data.allFile.nodes.forEach(node => {
+          if (node && node.childMdx && node.childMdx.frontmatter) {
+            const frontmatter = node.childMdx.frontmatter;
+            createPage({
+              path: frontmatter.path, // required
+              component: path.resolve(`src/templates/mdSoftware.js`)
+            });
+            if (frontmatter.tags) {
+              tags = tags.concat(frontmatter.tags);
             }
-          });
-          if (frontmatter.tags) {
-            tags = tags.concat(frontmatter.tags);
           }
         });
         // Eliminate duplicate tags
@@ -107,21 +54,5 @@ exports.createPages = ({ graphql, actions }) => {
         return;
       })
     );
-  });
-};
-
-exports.onPreExtractQueries = async ({ store }) => {
-  const config = store.getState().config;
-
-  const filePath = `./.cache/gatsby-theme-bulma-layout/`;
-  const fileName = 'SimpleNavQuery.js';
-  const siteMetadata = `export default { siteMetadata: ${JSON.stringify(
-    config.siteMetadata
-  )} }`;
-  await fs.mkdir(filePath, { recursive: true }, err => {
-    if (err) throw err;
-    fs.writeFile(`${filePath}${fileName}`, siteMetadata, err => {
-      if (err) throw err;
-    });
   });
 };
