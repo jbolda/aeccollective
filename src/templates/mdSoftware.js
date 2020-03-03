@@ -1,13 +1,12 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import Nav from '../components/nav';
 import { Flex, Box, Heading, Text, Badge, Link } from 'theme-ui';
 
 class mdSoftwareInsetPage extends React.Component {
   render() {
-    const { frontmatter } = this.props.pageContext;
-    let softwareTags = frontmatter.tags;
-
+    const { frontmatter } = this.props.data.mdx;
     return (
       <Nav location={this.props.location}>
         <Flex
@@ -27,7 +26,7 @@ class mdSoftwareInsetPage extends React.Component {
               SPECIALTIES
             </Heading>
             <div className="tags">
-              {softwareTags.map(tag => (
+              {frontmatter?.tags.map(tag => (
                 <Badge key={tag} sx={{ px: 2, m: 4 }}>
                   {tag}
                 </Badge>
@@ -104,3 +103,35 @@ const logoImage = frontmatter => {
     return null;
   }
 };
+
+export const pageQuery = graphql`
+  query markdownTemplateBySoftware($path: String!) {
+    mdx(frontmatter: { path: { eq: $path } }) {
+      frontmatter {
+        title
+        tags
+        logo {
+          name
+          publicURL
+          childImageSharp {
+            sizes(maxWidth: 600, quality: 90) {
+              ...GatsbyImageSharpSizes_tracedSVG
+            }
+          }
+        }
+        website
+        officialLinks {
+          name
+          link
+        }
+        tutorials {
+          name
+          link
+        }
+        studentPricing
+        professionalPricing
+        description
+      }
+    }
+  }
+`;

@@ -27,13 +27,6 @@ module.exports = {
       }
     },
     {
-      resolve: 'gatsby-plugin-page-creator',
-      options: {
-        path: `${__dirname}/src/`,
-        ignore: ['!(software)']
-      }
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `assets`,
