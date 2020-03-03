@@ -34,7 +34,7 @@ class mdSoftwareInsetPage extends React.Component {
             </div>
           </Box>
           <Box as={'section'}>
-            <div className="container content">
+            <Flex sx={{ flexDirection: 'column' }}>
               <Heading as="h3" className="userSupport">
                 USER SUPPORT
               </Heading>
@@ -61,7 +61,7 @@ class mdSoftwareInsetPage extends React.Component {
                   );
                 }
               })}
-            </div>
+            </Flex>
           </Box>
           <Box as={'section'}>
             <Heading as="h3" className="pricing">
