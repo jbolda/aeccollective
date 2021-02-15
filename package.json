@@ -45,8 +45,8 @@
     "gatsby-transformer-remark": "2.8.37",
     "gatsby-transformer-sharp": "2.5.16",
     "netlify-plugin-gatsby-cache": "0.3.2",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
+    "react": "16.14.0",
+    "react-dom": "16.14.0",
     "react-helmet": "6.1.0",
     "theme-ui": "0.3.1"
   },
