@@ -58,74 +58,129 @@ exports.handler = async function (event, context) {
 
   // list of allowed roles
   const allowedRoles = new Map([
-    ['420948305464262659', 'Professional'],
-    ['625449975869997089', 'Business Admin'],
-    ['625450309556371467', 'BIM Specialist'],
-    ['420948044909903872', 'Student'],
-    ['421691951302049812', 'Interested'],
-    ['420954780609937429', 'Architecture'],
-    ['420954942375854080', 'Engineering'],
-    ['625451030116565005', 'Structural'],
-    ['625450766483849248', 'Electrical'],
-    ['625450815150358539', 'Mechanical'],
-    ['420954975083036682', 'Construction']
+    ['Student', '420948044909903872'],
+    ['Professional', '420948305464262659'],
+    ['Business Administration', '625449975869997089'],
+    ['BIM Specialist', '625450309556371467'],
+    ['Interested', '421691951302049812'],
+    ['Architecture', '420954780609937429'],
+    ['Engineering', '420954942375854080'],
+    ['Structural', '625451030116565005'],
+    ['Electrical', '625450766483849248'],
+    ['Mechanical', '625450815150358539'],
+    ['Construction', '420954975083036682']
   ]);
 
-  const requestedRole = body.data.options[0].value;
-  const userID = body.member.user.id;
+  if (body.data.name === 'role' || body.data.name === 'field') {
+    const requestedRole = body.data.options[0].value;
+    const userID = body.member.user.id;
 
-  if (allowedRoles.get(requestedRole)) {
-    try {
-      const roleURL = `${discord_api}/guilds/${GUILD_ID}/members/${userID}/roles/${requestedRole}`;
-      const response = await fetch(roleURL, {
-        method: 'put',
-        headers
-      });
-    } catch (e) {
-      console.error(e);
+    if (allowedRoles.get(requestedRole)) {
+      try {
+        const roleURL = `${discord_api}/guilds/${GUILD_ID}/members/${userID}/roles/${allowedRoles.get(
+          requestedRole
+        )}`;
+        const response = await fetch(roleURL, {
+          method: 'put',
+          headers
+        });
+      } catch (e) {
+        console.error(e);
+        return {
+          statusCode: 200,
+          body: JSON.stringify({
+            type: 4,
+            data: {
+              tts: false,
+              content: `Error setting permissions.`,
+              embeds: [],
+              allowed_mentions: []
+            }
+          })
+        };
+      }
+
       return {
         statusCode: 200,
         body: JSON.stringify({
           type: 4,
           data: {
             tts: false,
-            content: `Error setting permissions.`,
+            content: `${requestedRole} has been added to <@${body.member.user.id}>.`,
             embeds: [],
-            allowed_mentions: []
+            allowed_mentions: { parse: ['users'] }
+          }
+        })
+      };
+    } else {
+      return {
+        statusCode: 200,
+        body: JSON.stringify({
+          type: 4,
+          data: {
+            tts: false,
+            content: `Sorry, <@${body.member.user.id}>, ${requestedRole} is not an allowed option to self assign.`,
+            embeds: [],
+            allowed_mentions: { parse: ['users'] }
           }
         })
       };
     }
+  } else if (body.data.name === 'remove') {
+    const roleToRemove = body.data.options[0].options[0].value;
+    const userID = body.member.user.id;
 
-    return {
-      statusCode: 200,
-      body: JSON.stringify({
-        type: 4,
-        data: {
-          tts: false,
-          content: `The ${allowedRoles.get(
-            requestedRole
-          )} role has been added for you.`,
-          embeds: [],
-          allowed_mentions: []
-        }
-      })
-    };
-  } else {
-    return {
-      statusCode: 200,
-      body: JSON.stringify({
-        type: 4,
-        data: {
-          tts: false,
-          content: `The ${allowedRoles.get(
-            requestedRole
-          )} role is not an allowed option to self assign.`,
-          embeds: [],
-          allowed_mentions: []
-        }
-      })
-    };
+    if (allowedRoles.get(roleToRemove)) {
+      try {
+        const roleURL = `${discord_api}/guilds/${GUILD_ID}/members/${userID}/roles/${allowedRoles.get(
+          roleToRemove
+        )}`;
+        const response = await fetch(roleURL, {
+          method: 'delete',
+          headers
+        });
+      } catch (e) {
+        console.error(e);
+        return {
+          statusCode: 200,
+          body: JSON.stringify({
+            type: 4,
+            data: {
+              tts: false,
+              content: `Error removing permissions.`,
+              embeds: [],
+              allowed_mentions: []
+            }
+          })
+        };
+      }
+
+      return {
+        statusCode: 200,
+        body: JSON.stringify({
+          type: 4,
+          data: {
+            tts: false,
+            content: `${roleToRemove} has been removed from <@${body.member.user.id}>.`,
+            embeds: [],
+            allowed_mentions: { parse: ['users'] }
+          }
+        })
+      };
+    } else {
+      return {
+        statusCode: 200,
+        body: JSON.stringify({
+          type: 4,
+          data: {
+            tts: false,
+            content: `Sorry, <@${body.member.user.id}>, ${roleToRemove} cannot be removed.`,
+            embeds: [],
+            allowed_mentions: { parse: ['users'] }
+          }
+        })
+      };
+    }
   }
 
   return {
@@ -134,7 +189,7 @@ exports.handler = async function (event, context) {
       type: 4,
       data: {
         tts: false,
-        content: 'I am not certain what else to say...',
+        content: 'I am not certain what to do with this...',
         embeds: [],
         allowed_mentions: []
       }
