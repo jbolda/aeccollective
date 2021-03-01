@@ -5459,7 +5459,7 @@ dir-glob@^3.0.1:
   dependencies:
     path-type "^4.0.0"
 
-discord-interactions@^1.3.3:
+discord-interactions@1.3.3:
   version "1.3.3"
   resolved "https://registry.yarnpkg.com/discord-interactions/-/discord-interactions-1.3.3.tgz#3c0d95b775a19a796fbaa56cbb9e2e3b89b0a848"
   integrity sha512-iW50e+pteFEbBFswubZhmDQd9wC1Xh1tqcjbeYY8GLYj4A7A4rS6kDZzN33Y10iSJcuSBWogsW65rQuoKGWhlA==
