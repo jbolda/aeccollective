@@ -75,7 +75,8 @@ exports.handler = async function (event, context) {
     ['Structural', '625451030116565005'],
     ['Electrical', '625450766483849248'],
     ['Mechanical', '625450815150358539'],
-    ['Construction', '420954975083036682']
+    ['Construction', '420954975083036682'],
+    ['Geotechnical', '903695010120212491']
   ]);
 
   if (
