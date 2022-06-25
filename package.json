@@ -52,7 +52,7 @@
   },
   "devDependencies": {
     "discord-interactions": "^2.3.0",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^2.6.7",
     "prettier": "2.3.2"
   },
   "volta": {
