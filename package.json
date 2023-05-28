@@ -53,7 +53,7 @@
   "devDependencies": {
     "discord-interactions": "^2.3.0",
     "node-fetch": "^2.6.1",
-    "prettier": "2.3.2"
+    "prettier": "2.8.8"
   },
   "volta": {
     "node": "14.17.4",
