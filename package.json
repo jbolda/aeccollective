@@ -42,7 +42,7 @@
     "gatsby-remark-relative-images": "2.0.2",
     "gatsby-source-filesystem": "2.11.1",
     "gatsby-theme-style-guide": "0.3.5",
-    "gatsby-transformer-remark": "2.16.1",
+    "gatsby-transformer-remark": "5.25.1",
     "gatsby-transformer-sharp": "2.12.1",
     "netlify-plugin-gatsby-cache": "0.3.2",
     "react": "17.0.1",
