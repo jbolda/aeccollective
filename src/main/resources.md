@@ -53,3 +53,5 @@ layoutType: page
  - [Construction Leading Edge](http://www.constructionleadingedge.com): Geared more toward owners of companies. Great info and stories though.
  - [Protractor](https://protractorpodcast.com): Geared more toward owning your own company.
  - [Construction Career Podcast](http://constructioncareerpodcast.com): answers the questions asked frequently by people looking to break into the Construction Industry
+ - [Elevate Construction](https://open.spotify.com/show/1rwetBd8qXAnMctbY7Kbpq): Elevating construction with interviews, training, and techniques that will make the build environment better for the workers, our customers, companies, and the industry as a whole. Podcasts are published before noon every weekday.
+ - [Lean Construction Blog's Podcast](https://open.spotify.com/show/7wEa5nHZGVt2qIIqgnVgcO?si=ead7b311ed254f86):A podcast dedicated to stories, case studies and lessons learned of applying Lean Construction from around the world.
